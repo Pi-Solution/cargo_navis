@@ -52,7 +52,7 @@ function load_to_screen(){
 	table.innerHTML = '';
 
 	for(var i = 0; i < server_response[0].length; i++){
-
+		console.log("fuck you")
 		table.innerHTML += `
 			<tr id='${i}' class="table_rows">
 				<td width="15%" id=id${i} class="j_id">${server_response[0][i].id}</td>
@@ -60,9 +60,10 @@ function load_to_screen(){
 				<td width="40%">${server_response[0][i].job_date}</td>
 			</tr>
 		`
-		v = document.getElementsByClassName("j_id")
-		current_job_id = v[0].innerHTML;
 	}
+	v = document.getElementsByClassName("j_id")
+	current_job_id = v[start_data].innerHTML;
+
 	add_event_table();
 }
 //add data to main table
