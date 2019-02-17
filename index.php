@@ -46,24 +46,8 @@
 				<p style="float: right;" id="bl">n/a</p>
 			</div>
 			<div id="con_child_right">
-				<div id="con_child_provajder">
-					<p>Provajder:</p>
-				</div>
 				<div id="con_child_provajder_table">
-					<table id="con_child_provajder_table_child">
-						<tr>
-							<td>n/a</td>
-						</tr>
-						<tr>
-							<td>n/a</td>
-						</tr>
-						<tr>
-							<td>n/a</td>
-						</tr>
-						<tr>
-							<td>n/a</td>
-						</tr>		
-					</table>
+					
 				</div>
 				<!--
 				<p style="float: left;">Broj Kontejnera:</p>
@@ -96,23 +80,42 @@
 		</div>
 		<div id="negotiated_price">
 			<div id="negotiated_price_left">
-				<p style="float: left;">Dogovorena cijena ulaz:</p>
-				<p style="float: right;" id="neg_price_in_p">n/a</p>
-				<div style="clear:both;"></div>
-				<p style="float: left;">Dogovorena cijena izlaz:</p>
-				<p style="float: right;" id="neg_price_out_pp">n/a</p>
-				<div style="clear:both;"></div>
-				<p style="float: left;">Kolicina Kontejnera:</p>
-				<p style="float: right;" id="con_amount">n/a</p>
+				<table class="container_table">
+					<tr>
+						<th style="width: 45%">Provajder</th>
+						<th style="width: 45%">Dogovorena cijena</th>
+						<th style="width: 10%"></th> 
+					</tr>
+				</table>
+				<div class="container_table_content">
+					<table id="con_child_provajder_table_child">
+						<tr>
+							<td>n/a</td>
+							<td>n/a</td>
+						</tr>
+						<tr>
+							<td>n/a</td>
+							<td>n/a</td>
+						</tr>
+						<tr>
+							<td>n/a</td>
+							<td>n/a</td>
+						</tr>
+						<tr>
+							<td>n/a</td>
+							<td>n/a</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 			<div id="negotiated_price_right">
-				<table id="container_table">
+				<table class="container_table">
 					<tr>
 						<th>Broj Kontejnera</th>
 						<th>Vrsta Kontejnera</th>
 					</tr>
 				</table>
-				<div id="container_table_content">
+				<div class="container_table_content">
 					<table id="container_table_content_child">
 						<tr>
 							<td>n/a</td>

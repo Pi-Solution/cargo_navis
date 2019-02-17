@@ -100,9 +100,6 @@ function change_content(){
 	document.getElementById("port_from_date").innerHTML = server_response[0][start_data].port_from_date;
 	document.getElementById("port_to").innerHTML = server_response[0][start_data].port_to;
 	document.getElementById("port_to_date").innerHTML = server_response[0][start_data].port_to_date;
-	document.getElementById("neg_price_in_p").innerHTML = server_response[0][start_data].price_in;
-	document.getElementById("neg_price_out_pp").innerHTML = server_response[0][start_data].price_out;
-
 	output_provajders();
 }
 function output_provajders(){
@@ -115,7 +112,9 @@ function output_provajders(){
 		if (server_response[1][i].jobs_id == server_response[0][start_data].id) {
 			provajderi_con.innerHTML += `
 				<tr>
-					<td>${server_response[1][i].provajeri_name}</td>
+					<td style="width: 45%">${server_response[1][i].provajeri_name}</td>
+					<td style="width: 45%">${server_response[1][i].dogovorena_cijena}</td>
+					<td style="width: 10%" class="provajderi_table_button">?</td>
 				</tr>
 			`
 		}
@@ -142,7 +141,7 @@ function output_containers(){
 		}
 	}
 
-	document.getElementById("con_amount").innerHTML = con_counter;
+	//document.getElementById("con_amount").innerHTML = con_counter;
 
 	print_ulazne_fakture();
 	print_izlazne_faktura();
