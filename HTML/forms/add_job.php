@@ -86,7 +86,11 @@
 					<button type="button" class="form_exit" id="form_exit" onclick="show_form('add_job_form')">x</button>
 				</div>
 			</form>
-			
+			<?php
+			//include forms for provajder and container
+			include "add_job_forms/provajderi_form.php";
+			include "add_job_forms/containers_form.php";
+			?>
 		</div>
 	</div>
 

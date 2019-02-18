@@ -186,7 +186,7 @@
 	include "HTML/forms/add_job.php";
 	//forma za dodavanje ulaznih faktura
 	include "HTML/forms/ulaz.php";
-	//forma za dodavanje izlaznoh faktura
+	//forma za dodavanje izlaznih faktura
 	include "HTML/forms/izlaz.php";
 	?>
 
