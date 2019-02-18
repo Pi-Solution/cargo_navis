@@ -86,66 +86,7 @@
 					<button type="button" class="form_exit" id="form_exit" onclick="show_form('add_job_form')">x</button>
 				</div>
 			</form>
-			<div class="form_in_form">
-				<div class="form_header"></div>
-				<div class="form_content">	
-					
-					<?php
-						$v = 0;
-						for($i = 0; $i < 7; $i++){
-							echo '
-							<div class="prov_input" style="top:'.$v.'%;">
-								<div class="prov_header">
-									<div class="prov_header_child">
-										<p>Ime Provajdera</p>
-									</div>
-									<div class="prov_header_child" id="pr2_right">
-										<p>Dogovorena Cijena</p>
-									</div>
-								</div>
-								<input type="text" name="ime_provajdera" class="prov_input_place" placeholder="Ime Provajdera">
-								<input type="number" name="dogovorena_cijena" class="prov_input_place" id="p_right" placeholder="Dogovorena cijena">
-							</div>
-							';
-							$v = $v + 12.5;
-						}
-					?>
-				</div>
-
-				<div class="form_buttons">
-					<button type="button" class="save_button" onclick="send_form_data();">Dalje -></button>
-					<button type="button" class="form_exit" onclick="show_form('add_job_form')">x</button>
-				</div>
-			</div>
-			<div class="form_in_form">
-				<div class="form_header"></div>
-					<div class="form_content">	
-						<div class="containers_info">
-							<div class="containers_info_child">	
-								<textarea class="containers_id"></textarea>
-							</div>
-							<div class="container_right">
-								<div class="container_header">
-									<div class="container_header_child">
-										<p>Vrsta Kontejnera</p>
-									</div>
-								</div>
-								<div class="container_type">
-									<select id="select_container_type">
-										<option>20VD</option>
-										<option>20HC</option>
-										<option>40VD</option>
-										<option>40HC</option>
-									</select>
-								</div>
-							</div>
-						</div>
-					</div>
-				<div class="form_buttons">
-					<button type="button" class="save_button" onclick="send_form_data();">Dalje -></button>
-					<button type="button" class="form_exit" onclick="show_form('add_job_form')">x</button>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 
