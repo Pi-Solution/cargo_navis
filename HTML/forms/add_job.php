@@ -82,7 +82,7 @@
 				</div>
 				<!--             -->
 				<div id="form_buttons" class="form_buttons">
-					<button type="button" class="save_button" id="save_button" onclick="send_form_data();">Dalje -></button>
+					<button type="button" class="save_button" id="save_button" onclick="get_user_input();">Dalje -></button>
 					<button type="button" class="form_exit" id="form_exit" onclick="show_form('add_job_form')">x</button>
 				</div>
 			</form>

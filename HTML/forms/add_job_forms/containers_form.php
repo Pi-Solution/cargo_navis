@@ -24,6 +24,6 @@
 		</div>
 	<div class="form_buttons">
 		<button type="button" class="save_button" onclick="send_form_data();">Dalje -></button>
-		<button type="button" class="form_exit" onclick="show_form('add_job_form')">x</button>
+		<button type="button" class="form_exit" onclick="show_form('add_job_form'); show_form('container_form');">x</button>
 	</div>
 </div>

@@ -9,16 +9,30 @@
 	$input = json_decode(stripslashes(file_get_contents("php://input")),true);
 
 
-	//send to (recive = 0), (send = 1), (update = 2) (delete = 3);
+	//send to (recive = 0), (send = 1), (update = 2), (delete = 3)
 	if ($input[0] == 0) {
+
+		get_data($input);
+
+	}elseif ($input[0] == 1) {
+		send_data($input);
+	}elseif ($input[0] == 2) {
+		temp_send_data($input);
+	}
+	//-------------------------------//
+
+	#get data from db -------------------------------------> to reciver
+	function get_data($input){
 		for ($i=0; $i < count($input[1]) ; $i++) { 
 			$get_data = new Receiver();
 			$get_data->set_collums($input[1][$i]);
 			$data_from_db[] = $get_data->get_db_data();
 		}
 		echo json_encode($data_from_db);
-	}elseif ($input[0] == 1) {
-			//print_r($input);
+	}
+	
+	#save data to db --------------------------------------> to sender
+	function send_data($input){
 		
 		//validate values and 
 		for ($i=0; $i < count($input[1]); $i++) { 
@@ -46,6 +60,4 @@
 			$send->set_var($table_name[$i], $table_value[$i]);
 		}
 		//print_r(count($input[1]));
-
 	}
-

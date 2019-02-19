@@ -1,58 +1,11 @@
-//parametars
-var parametars = new Array();
-//data that goes in parametars
-data = [];
-//server response
-var server_response;
-//variable that
-var start_data = 0;
-// id of current clicked job
-var current_job_id;
-//
-var current_factura = [0, 0];
-//variable is use to deretmenate what form do we need to close in function send_data2 line 255
-var current_form;
-//get data on page load
-function load_data(){
-	var controller = 0;
-	var values1 = ['jobs','*'];
-	var values2 = ['provajderi','*'];
-	var values3 = ['containers', '*'];
-	var values4 = ['fakture_ulaz', '*'];
-	var values5 = ['izlazne_fakture', '*'];
-
-	var all_values = [values1,values2,values3,values4,values5];
-
-	parametars = [];
-
-	parametars.push(controller,all_values);
-
-	//alert(JSON.stringify(parametars));
-	send_data();
-}
-//get and send data from server
-function send_data(){
-	
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-    	 		server_response = JSON.parse(this.responseText);
-    	 		load_to_screen();
-		}
-	};
-	//send data
-	xhttp.open("POST", "data/controller.php", true);
-	xhttp.setRequestHeader("Content-type", "application/json");
-	xhttp.send(JSON.stringify(parametars));
-}
-//load all to screen
+//load main table to screen
 function load_to_screen(){
 	var table = document.getElementById('main_table_container_child');
 
 	table.innerHTML = '';
 
 	for(var i = 0; i < server_response[0].length; i++){
-		console.log("fuck you")
+		//console.log("212")
 		table.innerHTML += `
 			<tr id='${i}' class="table_rows">
 				<td width="15%" id=id${i} class="j_id">${server_response[0][i].id}</td>
@@ -66,16 +19,19 @@ function load_to_screen(){
 
 	add_event_table();
 }
-//add data to main table
+//add click event to every row of table
 function add_event_table(){
+
 	var table = document.getElementsByClassName("table_rows")
+	
 	table[start_data].style.backgroundColor = '#dddddd';
+
 	change_content();
 
 	for(var i = 0; i < table.length; i++){
 		table[i].addEventListener("click", function(){
 			
-			//change color of clicked div
+			//change color of clicked row
 			for(var b = 0; b < table.length; b++){
 				table[b].style.backgroundColor = 'white'
 			}
@@ -86,6 +42,7 @@ function add_event_table(){
 			//restart counter;
 			current_factura.length = 0;
 
+			//current_factura[0] for ulazne fakture, currant_factura[1] for izlazne fakture
 			current_factura = [0,0];
 			//get job id
 			current_job_id = document.getElementById(`id${start_data}`).innerHTML
@@ -94,6 +51,7 @@ function add_event_table(){
 		});
 	}
 }
+//print data to end user and run function that do the same for other data
 function change_content(){
 	document.getElementById("paritet").innerHTML = server_response[0][start_data].paritet;
 	document.getElementById("bl").innerHTML = server_response[0][start_data].bl;
@@ -101,8 +59,13 @@ function change_content(){
 	document.getElementById("port_from_date").innerHTML = server_response[0][start_data].port_from_date;
 	document.getElementById("port_to").innerHTML = server_response[0][start_data].port_to;
 	document.getElementById("port_to_date").innerHTML = server_response[0][start_data].port_to_date;
+	
 	output_provajders();
+	output_containers();
+	print_ulazne_fakture();
+	print_izlazne_faktura();
 }
+//output provajders
 function output_provajders(){
 	
 	provajderi_con = document.getElementById("con_child_provajder_table_child");
@@ -120,8 +83,8 @@ function output_provajders(){
 			`
 		}
 	}
-	output_containers();
 }
+//output containers
 function output_containers(){
 
 	container_con = document.getElementById("container_table_content_child");
@@ -143,11 +106,8 @@ function output_containers(){
 	}
 
 	//document.getElementById("con_amount").innerHTML = con_counter;
-
-	print_ulazne_fakture();
-	print_izlazne_faktura();
-
 }
+//output ulazne fakture 
 function print_ulazne_fakture(){
 	//provera dali ima faktura za ovaj odredjeni posao
 	var container = document.getElementById("in_f");
@@ -209,10 +169,7 @@ function print_ulazne_fakture(){
 		`
 	}
 }
-function show_in_fakture(div_id){
-	var fakture = document.getElementsByClassName(div_id);
-	fakture[0].style.display = 'block';
-}
+//output izlazne fakture
 function print_izlazne_faktura(){
 	//provera dali ima faktura za ovaj odredjeni posao
 	var container = document.getElementById("out_f");
@@ -274,6 +231,12 @@ function print_izlazne_faktura(){
 		`
 	}
 }
+//show first faktura while others stay hidden
+function show_in_fakture(div_id){
+	var fakture = document.getElementsByClassName(div_id);
+	fakture[0].style.display = 'block';
+}
+//script to make fakture arrows working
 function arrow_in_fakture(s, div_id, b){
 	var fakture = document.getElementsByClassName(div_id);
 	if (s == false) {
@@ -289,112 +252,4 @@ function arrow_in_fakture(s, div_id, b){
 			fakture[current_factura[b]].style.display = 'block'
 		}
 	}
-}
-//---------------------forms--------------------//
-function show_form(form_id){
-	var div = document.getElementById(`${form_id}`);
-	
-	if (div.style.display != 'block') {
-		div.style.display = 'block';
-	}else{
-		div.style.display = 'none';
-	}
-
-}
-
-//forms data sender
-function send_form_data(){
-	var new_job = {
-		table_name : 'jobs',
-		qkomitent : `${document.getElementById("komitent").value}`,
-		paritet : `${document.getElementById("paritet_form").value}`,
-		bl : `${document.getElementById("bl_form").value}`,
-		port_from : `${document.getElementById("port_from_form").value}`,
-		port_to : `${document.getElementById("port_to_form").value}`,
-		port_from_date : `${document.getElementById("port_from_date_form").value}`,
-		port_to_date : `${document.getElementById("port_to_date_form").value}`,
-		price_in : `${document.getElementById("neg_price_in").value}`,
-		price_out : `${document.getElementById("neg_price_out").value}`,
-	}
-	parametars = [];
-	parametars = [1]
-	parametars[1] = [new_job];
-
-	current_form = 'add_job_form';
-	send_data3();
-
-}
-function send_data3(){
-	
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-    	 		server_response = this.responseText;
-    	 		alert(server_response);
-    	 		if (server_response == 'Sacuvano') {
-    	 			//load_data();
-    	 			current_form = 'form_provajder';
-    	 			show_form(current_form);
-    	 		}
-		}
-	};
-	//send data
-	xhttp.open("POST", "data/controller.php", true);
-	xhttp.setRequestHeader("Content-type", "application/json");
-	xhttp.send(JSON.stringify(parametars));
-}
-function ulaz_faktura(){
-	var a = {
-		table_name : 'fakture_ulaz',
-		broj_fakture : `${document.getElementById("broj_fakture_ulaz").value}`,
-		datum_fakture :	`${document.getElementById("datum_fakture_ulaz").value}`,
-		iznos_s_val : `${document.getElementById("iznos_s_fakture_ulaz").value}`,
-		valuta_placanja :`${document.getElementById("valuta_fakture_izlaz").value}`,
-		iznos : `${document.getElementById("iznos_domaca_valuta").value}`,
-		id_jobs : current_job_id
-	}
-	parametars = [];
-	parametars[0] = 1;
-	data1 = [a];
-	parametars.push(data1);
-
-	current_form = 'ulaz_fartura_forma';
-
-	send_data2();
-}
-function izlaz_fakture(){
-	var a = {
-		table_name : 'izlazne_fakture',
-		broj_fakture : `${document.getElementById("broj_fakture_izlaz1").value}`,
-		datum_fakture : `${document.getElementById("datum_fakture_izlaz").value}`,
-		iznos : `${document.getElementById("iznos_izlaz").value}`,
-		jobs_id : current_job_id,
-	}
-	
-	parametars = [];
-	parametars[0] = 1;
-	data1 = [a];
-	parametars.push(data1);
-
-	current_form = 'izlazna_fartura_forma';
-
-	send_data2()
-}
-function send_data2(){
-	
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-    	 		server_response = this.responseText;
-    	 		alert(server_response);
-    	 		if (server_response == 'Sacuvano') {
-    	 			load_data();
-    	 			show_form(current_form);
-    	 		}
-		}
-	};
-	//send data
-	xhttp.open("POST", "data/controller.php", true);
-	xhttp.setRequestHeader("Content-type", "application/json");
-	xhttp.send(JSON.stringify(parametars));
 }

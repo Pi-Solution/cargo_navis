@@ -889,6 +889,18 @@ a {
 	outline: inherit;
 
 }
+.prov_input_place2{
+	position: absolute;
+	bottom: 0px;
+	height: 50%;
+	width: 49.5%;
+	background-color: white;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+
+}
 #p_right{
 	right: 0px;
 }
