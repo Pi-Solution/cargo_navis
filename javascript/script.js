@@ -321,8 +321,27 @@ function send_form_data(){
 	parametars[1] = [new_job];
 
 	current_form = 'add_job_form';
-	send_data2();
+	send_data3();
 
+}
+function send_data3(){
+	
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+    	 		server_response = this.responseText;
+    	 		alert(server_response);
+    	 		if (server_response == 'Sacuvano') {
+    	 			//load_data();
+    	 			current_form = 'form_provajder';
+    	 			show_form(current_form);
+    	 		}
+		}
+	};
+	//send data
+	xhttp.open("POST", "data/controller.php", true);
+	xhttp.setRequestHeader("Content-type", "application/json");
+	xhttp.send(JSON.stringify(parametars));
 }
 function ulaz_faktura(){
 	var a = {

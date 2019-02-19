@@ -859,6 +859,9 @@ a {
 	background-color: #f7f7f7;
 }
 /*provajder-input*/
+#form_provajder{
+	display: none;
+}
 .prov_input{
 	position: absolute;
 	top: 2%;
@@ -907,6 +910,9 @@ a {
 	right: 0px;
 }
 /*containe form*/
+#container_form{
+	display: none;
+}
 .containers_info{
 	position: absolute;
 	top: 1%;
