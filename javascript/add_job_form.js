@@ -40,3 +40,8 @@ function get_user_input2(){
 	show_form('form_provajder');
 	show_form('container_form');
 }
+
+function get_user_input3(){
+	var con_id = document.getElementsByClassName("containers_id")
+	var con_type = document.getElementsByClassName("select_container_type")
+}

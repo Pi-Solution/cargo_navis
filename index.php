@@ -196,6 +196,5 @@
 	<script type="text/javascript" src="javascript/show_form.js"></script>
 	<script type="text/javascript" src="javascript/add_job_form.js"></script>
 	<script type="text/javascript" src="javascript/ulazne_izlazne_fakture.js"></script>
-	<!--<script type="text/javascript" src="javascript/script.js"></script>-->
 </body>
 </html>

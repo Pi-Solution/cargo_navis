@@ -12,7 +12,7 @@
 						</div>
 					</div>
 					<div class="container_type">
-						<select id="select_container_type">
+						<select id="select_container_type" class="select_container_type">
 							<option>20VD</option>
 							<option>20HC</option>
 							<option>40VD</option>
