@@ -17,7 +17,7 @@ function get_user_input(){
 
 	show_form('form_provajder');
 }
-//get provajders
+//get provajders from user input
 function get_user_input2(){
 	prov_name = document.getElementsByClassName("prov_input_place");
 	prov_price = document.getElementsByClassName("prov_input_place2")
@@ -40,7 +40,7 @@ function get_user_input2(){
 	show_form('form_provajder');
 	show_form('container_form');
 }
-
+//get containers from user input
 function get_user_input3(){
 	var con_id = document.getElementsByClassName("containers_id")
 	var con_type = document.getElementsByClassName("select_container_type")

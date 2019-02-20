@@ -1132,3 +1132,41 @@ a {
 #iz_f_3{
 	top: 25%;
 }
+/*-------------------------*/
+#prov_save_button{
+	position: absolute;
+	left: 9%;
+	height: 100%;
+	width: 82%;
+	background-color: black;
+	color: white;
+}
+#prov_back_button{
+	position: absolute;
+	height: 100%;
+	width: 8%;
+	color: white;
+}
+#con_add_new_text_a_button{
+	position: absolute;
+	height: 100%;
+	width: 40.5%;
+	left: 9%;
+	background-color: black;
+	color: white;
+}
+#con_save_button{
+	position: absolute;
+	right: 9%;
+	height: 100%;
+	width: 40.5%;
+	background-color: black;
+	color: white;
+}
+#con_back_button{
+	position: absolute;
+	height: 100%;
+	width: 8%;
+	color: white;
+	background-color: black;
+}
