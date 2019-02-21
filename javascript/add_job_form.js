@@ -45,3 +45,7 @@ function get_user_input3(){
 	var con_id = document.getElementsByClassName("containers_id")
 	var con_type = document.getElementsByClassName("select_container_type")
 }
+//this function add another textarea and container type to container form
+function add_con_textbox(){
+	
+}

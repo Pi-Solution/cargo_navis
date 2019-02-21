@@ -543,7 +543,7 @@ a {
 	left: 30%;
 	right: 30%;
 	bottom: 5%;
-	background-color: white;
+	background-color: #f7f7f7;
 }
 .form_header{
 	position: absolute;
@@ -834,7 +834,7 @@ a {
 	left: 2%;
 	width: 96%;
 	height: 6.25%;
-	bottom: 2%;
+	bottom: 2%;	
 }
 .save_button{
 	position: absolute;
@@ -1169,4 +1169,7 @@ a {
 	width: 8%;
 	color: white;
 	background-color: black;
+}
+#form_container_content{
+	height: 82%;
 }

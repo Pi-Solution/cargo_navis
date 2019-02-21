@@ -1,6 +1,6 @@
 <div class="form_in_form" id="container_form">
 	<div class="form_header"></div>
-		<div class="form_content">	
+		<div class="form_content" id="form_container_content">	
 			<div class="containers_info">
 				<div class="containers_info_child">	
 					<textarea class="containers_id"></textarea>
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 		</div>
-	<div class="form_buttons">
+		<div class="form_buttons">
 		<button type="button" id="con_back_button" onclick="show_form('container_form'); show_form('form_provajder');"><-</button>
 		<button type="button" id="con_add_new_text_a_button" onclick="">Dodaj još kontejnera</button>
 		<button type="button" id="con_save_button" onclick="send_form_data();">Sačuvaj</button>
