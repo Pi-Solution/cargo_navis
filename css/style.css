@@ -559,8 +559,8 @@ a {
 	top: 8%;
 	height: 92%;
 	width: 100%;
-	background-color: #ededed;
 	overflow: auto;
+	background-color: #d3d3d3;
 }
 .div_input{
 	position: absolute;
@@ -856,7 +856,7 @@ a {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color: #f7f7f7;
+	background-color: #e5e5e5;
 }
 /*provajder-input*/
 #form_provajder{

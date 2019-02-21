@@ -17,3 +17,6 @@ var start_data = 0;
 var current_job_id;
 //current_factura[0] for ulazne fakture, currant_factura[1] for izlazne fakture
 var current_factura = [0, 0];
+
+//position of textbox element inside container form
+var container_textbox_position = 32;
