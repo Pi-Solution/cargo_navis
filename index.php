@@ -195,6 +195,8 @@
 	<script type="text/javascript" src="javascript/output_to_screen.js"></script>
 	<script type="text/javascript" src="javascript/show_form.js"></script>
 	<script type="text/javascript" src="javascript/add_job_form.js"></script>
+	<script type="text/javascript" src="javascript/form_provajderi.js"></script>
+	<script type="text/javascript" src="javascript/form_containers.js"></script>
 	<script type="text/javascript" src="javascript/ulazne_izlazne_fakture.js"></script>
 </body>
 </html>

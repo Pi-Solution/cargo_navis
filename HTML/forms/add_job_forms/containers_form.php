@@ -25,7 +25,7 @@
 		<div class="form_buttons">
 		<button type="button" id="con_back_button" onclick="show_form('container_form'); show_form('form_provajder');"><-</button>
 		<button type="button" id="con_add_new_text_a_button" onclick="add_con_textbox();">Dodaj još kontejnera</button>
-		<button type="button" id="con_save_button" onclick="send_form_data();">Sačuvaj</button>
+		<button type="button" id="con_save_button" onclick="get_user_input3();">Sačuvaj</button>
 		<button type="button" class="form_exit" onclick="show_form('add_job_form'); show_form('container_form');">x</button>
 	</div>
 </div>

@@ -18,6 +18,8 @@
 		send_data($input);
 	}elseif ($input[0] == 2) {
 		temp_send_data($input);
+	}elseif ($input[0] == 3){
+		delete_data_db($input);
 	}
 	//-------------------------------//
 
@@ -60,4 +62,14 @@
 			$send->set_var($table_name[$i], $table_value[$i]);
 		}
 		//print_r(count($input[1]));
+	}
+
+	#update data to db
+	function temp_send_data($input){
+		echo "you want to update db";
+	}
+
+	#delete data from db
+	function delete_data_db($input){
+		echo "you want to delete data from db";
 	}

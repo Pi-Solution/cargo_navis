@@ -59,7 +59,7 @@
 				)"
 			);
 
-			echo 'Sacuvano';
+			echo 101;
 			$stmt = null;
 
 		}		
