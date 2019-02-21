@@ -61,7 +61,7 @@
 			$send = new Sender();
 			$send->set_var($table_name[$i], $table_value[$i]);
 		}
-		//print_r(count($input[1]));
+		echo $send->get_server_response();
 	}
 
 	#update data to db

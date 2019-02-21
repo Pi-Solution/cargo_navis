@@ -9,11 +9,15 @@
 		private $values_as_sting;
 		private $table_name;
 		private $input_date;
+		private $server_response;
 
 		private $g1 = "jebise";
 		private $g2 = "jebi se opet";
 
-		
+		public function get_server_response(){
+			return $this->server_response;
+		}
+
 		public function set_var($s1, $s2){
 			
 			$this->collums = $s1;
@@ -59,7 +63,7 @@
 				)"
 			);
 
-			echo 101;
+			$this->server_response = 101;
 			$stmt = null;
 
 		}		

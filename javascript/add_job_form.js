@@ -38,6 +38,8 @@ function send_data_job(){
 				if(server_response == 101){
 					alert('Sacuvano')
 					show_form('form_provajder');
+					load_data()
+					get_last_aded_job();
 				}else{
 					alert(this.responseText);
 				}
@@ -47,4 +49,8 @@ function send_data_job(){
 	xhttp.open("POST", "data/controller.php", true);
 	xhttp.setRequestHeader("Content-type", "application/json");
 	xhttp.send(JSON.stringify(parametars));
+}
+function get_last_aded_job(){
+	var a = server_response[0].length - 1;
+	last_added_job_id = server_response[0][a].id;
 }

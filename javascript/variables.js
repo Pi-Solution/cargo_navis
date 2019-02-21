@@ -19,4 +19,7 @@ var current_factura = [0, 0];
 //position of textbox element inside container form
 var container_textbox_position = 32;
 
+//we use this variable to determinate what is the last added job so we can add provajders and containers
+var last_added_job_id;
+
 var text;
