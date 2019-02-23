@@ -38,6 +38,7 @@ function send_data_provajderi(){
 					alert('Sacuvano')
 					show_form('form_provajder');
 					show_form('container_form');
+					load_data()
 				}else{
 					alert(this.responseText);
 				}

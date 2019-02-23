@@ -54,7 +54,7 @@ function add_event_table(){
 //print data to end user and run function that do the same for other data
 function change_content(){
 	document.getElementById("paritet").innerHTML = server_response[0][start_data].paritet;
-	document.getElementById("bl").innerHTML = server_response[0][start_data].bl;
+	document.getElementById("bl").innerHTML = server_response[0][start_data].bl2 + "   " + server_response[0][start_data].bl;
 	document.getElementById("port_from").innerHTML = server_response[0][start_data].port_from;
 	document.getElementById("port_from_date").innerHTML = server_response[0][start_data].port_from_date;
 	document.getElementById("port_to").innerHTML = server_response[0][start_data].port_to;

@@ -33,6 +33,7 @@
 					</div>
 					<div class="div_input_c">
 						<input type="text" name="bl" class="div_input_c_i" autocomplete="off" placeholder="B/L" id="bl_form">
+						<input type="text" name="bl2" class="div_input_c_i" autocomplete="off" placeholder="B/L" id="bl_form2">
 					</div>
 				</div>
 				<!--             -->

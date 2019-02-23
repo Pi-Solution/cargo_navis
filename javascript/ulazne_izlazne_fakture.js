@@ -41,8 +41,9 @@ function send_data2(){
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
     	 		server_response = this.responseText;
-    	 		alert(server_response2);
-    	 		if (server_response2 == 'Sacuvano') {
+    	 		if (server_response == '101') {
+    	 			alert("Sacuvano")
+    	 			screen_call = true;
     	 			load_data();
     	 			show_form(current_form);
     	 		}

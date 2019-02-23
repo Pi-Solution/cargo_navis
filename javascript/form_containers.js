@@ -3,10 +3,53 @@ function get_user_input3(){
 	var con_id = document.getElementsByClassName("containers_id")
 	var con_type = document.getElementsByClassName("select_container_type")
 
-	for(let i = 0;  i < con_id.length; i++){
+	parametars = [];
+	parametars[0] = 1;
+	var data = new Array();
+	var data2 = new Array();
+	var s = server_response[0].length - 1;
+	var last_added_job_id = server_response[0][s].id;
+
+	for(var i = 0;  i < con_id.length; i++){
 		console.log(con_id[i].value)
 		test = con_id[i].value.split(/\r?\n/);
+		for(var b = 0; b < test.length; b++){
+			a = {
+				table_name : "containers",
+				container_id : test[b],
+				container_type : con_type[i].value,
+				jobs_id : last_added_job_id
+			}
+			data.push(a);
+		}
 	}
+	parametars[1] = data;
+	console.table(parametars[1])
+
+	send_data_containers()
+}
+function send_data_containers(){
+	
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+    	 		server_response = this.responseText;
+				//console.log(this.responseText);
+				if(server_response == 101){
+					alert('Sacuvano')
+					show_form('container_form');
+					show_form('add_job_form');
+					screen_call = true;
+					load_data()
+				}else{
+					alert(this.responseText);
+				}
+		}
+	};
+	//send data
+	xhttp.open("POST", "data/controller.php", true);
+	xhttp.setRequestHeader("Content-type", "application/json");
+	xhttp.send(JSON.stringify(parametars));
 }
 //this function add another textarea and container type to container form
 function add_con_textbox(){

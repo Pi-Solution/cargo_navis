@@ -9,6 +9,7 @@ function get_user_input(){
 		qkomitent : `${document.getElementById("komitent").value}`,
 		paritet : `${document.getElementById("paritet_form").value}`,
 		bl : `${document.getElementById("bl_form").value}`,
+		bl2 : `${document.getElementById("bl_form2").value}`,
 		port_from : `${document.getElementById("port_from_form").value}`,
 		port_to : `${document.getElementById("port_to_form").value}`,
 		port_from_date : `${document.getElementById("port_from_date_form").value}`,
