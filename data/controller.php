@@ -3,6 +3,7 @@
 	include_once 'classes/database/Database.php';
 	include_once 'classes/Sender.php';
 	include_once 'classes/Receiver.php';
+	include_once 'classes/Updater.php';
 
 	header("Content-Type: application/json");
 
@@ -17,7 +18,7 @@
 	}elseif ($input[0] == 1) {
 		send_data($input);
 	}elseif ($input[0] == 2) {
-		temp_send_data($input);
+		update_data($input);
 	}elseif ($input[0] == 3){
 		delete_data_db($input);
 	}
@@ -65,8 +66,9 @@
 	}
 
 	#update data to db
-	function temp_send_data($input){
-		echo "you want to update db";
+	function update_data($input){
+		$update = new Updater();
+		$update->get_values($input[1][0], $input[1][1], $input[1][2], $input[1][3]);
 	}
 
 	#delete data from db

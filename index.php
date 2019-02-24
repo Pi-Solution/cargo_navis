@@ -177,7 +177,7 @@
 
 		<button class="tab_buttons" style="left: 59.6%">DOGOVORENI POSAO</button>
 		<button class="tab_buttons" style="left: 72.4%">DUGME2</button>
-		<button class="tab_buttons" style="left: 85.2%">DUGME3</button>
+		<button class="tab_buttons" style="left: 85.2%" onclick="se();">DUGME3</button>
 	</div>
 
 
