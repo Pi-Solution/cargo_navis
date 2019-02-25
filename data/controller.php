@@ -4,6 +4,7 @@
 	include_once 'classes/Sender.php';
 	include_once 'classes/Receiver.php';
 	include_once 'classes/Updater.php';
+	include_once 'classes/Deleter.php';
 
 	header("Content-Type: application/json");
 
@@ -12,9 +13,7 @@
 
 	//send to (recive = 0), (send = 1), (update = 2), (delete = 3)
 	if ($input[0] == 0) {
-
 		get_data($input);
-
 	}elseif ($input[0] == 1) {
 		send_data($input);
 	}elseif ($input[0] == 2) {
@@ -73,5 +72,7 @@
 
 	#delete data from db
 	function delete_data_db($input){
-		echo "you want to delete data from db";
+		$delete = new Deleter();
+		$delete->get_values($input[1][0], $input[1][1]);
+		$delete->delete_from_db();
 	}

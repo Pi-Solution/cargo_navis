@@ -27,8 +27,8 @@
 							<p>Iznos u stranoj valuti:</p>
 						</div>
 					</div>
-					<input type="number" name="broj_fakture_ulaz" class="fakture_ulaz" id="iznos_s_fakture_ulaz">
-					<select id="valuta_fakture_izlaz">
+					<input type="number" name="broj_fakture_ulaz" class="fakture_ulaz" id="iznos_s_fakture_ulaz" oninput="calculate_domaca_valuta(true)">
+					<select id="valuta_fakture_izlaz" onchange="change_valute();">
 						<option>EUR</option>
 						<option>USD</option>
 					</select>
@@ -40,7 +40,15 @@
 							<p>Iznos u domacoj valuti:</p>
 						</div>
 					</div>
-					<input type="number" name="broj_fakture_ulaz" class="fakture_ulaz" id="iznos_domaca_valuta">
+					<input type="number" name="iznos_domaca_valuta" class="fakture_ulaz" id="iznos_domaca_valuta" oninput="calculate_domaca_valuta(false)">
+				</div>
+				<div class="ul_faktura" id="ul_f_5">
+					<div class="fakture_ulaz_header">
+						<div class="fakture_ulaz_header_child">
+							<p>Kurs:</p>
+						</div>
+					</div>
+					<input type="number" name="kurs" class="fakture_ulaz" id="kurs" oninput="change_valute()">
 				</div>
 				<div id="ul_f_form_buttons" class="form_buttons">
 					<button type="button" class="save_button" id="ul_f_save_button" onclick="ulaz_faktura();"

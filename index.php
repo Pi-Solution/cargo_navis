@@ -7,17 +7,7 @@
 </head>
 <body onload="load_data();">
 	<div class="nav_bar">
-		<div id="poslovi">
-			<div class="text_holder">
-				<h3 class="nav_bar_text">POSLOVI</h3>
-			</div>
-		</div>
-		<div id="banke">
-			<div class="text_holder">
-				<h3>RAČUNI BANKE</h3>
-			</div>
-			<a href="bank.php"></a>
-		</div>
+		
 	</div>
 	<div id="main_table">
 		<table id="main_table_header">
@@ -81,6 +71,9 @@
 					<table id="con_child_provajder_table_child">
 					</table>
 				</div>
+			</div>
+			<div class="">
+				
 			</div>
 			<div id="negotiated_price_right">
 				<table class="container_table">
@@ -177,7 +170,7 @@
 
 		<button class="tab_buttons" style="left: 59.6%">DOGOVORENI POSAO</button>
 		<button class="tab_buttons" style="left: 72.4%">DUGME2</button>
-		<button class="tab_buttons" style="left: 85.2%" onclick="se();">DUGME3</button>
+		<button class="tab_buttons" style="left: 85.2%" onclick="get_delete('jobs',server_response[0][start_data].id); start_data = 0"><img src="img/icons/trash_w.svg" height="50%;"></button>
 	</div>
 
 
@@ -188,6 +181,8 @@
 	include "HTML/forms/ulaz.php";
 	//forma za dodavanje izlaznih faktura
 	include "HTML/forms/izlaz.php";
+	//obavjestenje o brisanju
+	include "HTML/warning_screen/delete_warning.php";
 	?>
 
 	<script type="text/javascript" src="javascript/variables.js"></script>
@@ -198,5 +193,6 @@
 	<script type="text/javascript" src="javascript/form_provajderi.js"></script>
 	<script type="text/javascript" src="javascript/form_containers.js"></script>
 	<script type="text/javascript" src="javascript/ulazne_izlazne_fakture.js"></script>
+	<script type="text/javascript" src="javascript/delete_database.js"></script>
 </body>
 </html>

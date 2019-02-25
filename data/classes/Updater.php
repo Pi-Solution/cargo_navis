@@ -19,7 +19,7 @@
 			$this->save_to_db();
 		}
 		
-		public function save_to_db(){
+		private function save_to_db(){
 			$stmt = $this->connect()->query("
 						UPDATE " . $this->table_name ." 
 						SET ". $this->name_of_row ." = '". $this->value ."' 

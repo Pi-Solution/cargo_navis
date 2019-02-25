@@ -155,6 +155,7 @@ function print_ulazne_fakture(){
 							<p style="float: right;">${server_response[3][i].iznos}</p>
 
 							<button class="fakture_button" onclick="show_form('ulaz_fartura_forma');">DODAJ NOVU FAKTURU</button>
+							<button class="fakture_button_delete" onclick="get_delete('fakture_ulaz',${server_response[3][i].id})"><img src="img/icons/trash_w.svg" width="60%"></button>
 						</div>
 					</div>
 			`
@@ -217,6 +218,7 @@ function print_izlazne_faktura(){
 						<p style="float: right;">n/a</p>
 
 						<button class="fakture_button" onclick="show_form('izlazna_fartura_forma');">DODAJ NOVU FAKTURU</button>
+						<button class="fakture_button_delete" onclick="get_delete('izlazne_fakture',${server_response[4][i].id})"><img src="img/icons/trash_w.svg" width="60%"></button>
 					</div>
 				</div>
 			`

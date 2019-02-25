@@ -24,26 +24,8 @@ var last_added_job_id;
 
 var text;
 
-/*
-function se(){
-	
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-    	 	alert(this.responseText);
-		}
-	};
-	var hello = new Array();
-	var hello2 = new Array();
-	hello[0] = 2;
-	hello2[0] = "provajderi"
-	hello2[1] = "note"
-	hello2[2] = "mislim druze da i ovo sad radi"
-	hello2[3] = 89
-	hello[1] = hello2;
-	//send data
-	xhttp.open("POST", "data/controller.php", true);
-	xhttp.setRequestHeader("Content-type", "application/json");
-	xhttp.send(JSON.stringify(hello));
-}
-*/
+var kurs = 1.95583;
+
+//for warning screen
+var table_name;
+var row_id;
