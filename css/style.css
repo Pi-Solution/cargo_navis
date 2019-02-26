@@ -172,6 +172,30 @@ a {
 #con_child_provajder_table_child td{
     width: 25%;
 }
+#prov_note{
+	position: absolute;
+	width: 25%;
+	height: 100%;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#prov_note_button{
+	position: absolute;
+	bottom: 0px;
+	height: 20%;
+	width: 30%;
+	background-color: gray;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#prov_note_text{
+	width: 100%;
+	height: 75%;
+}
 .provajderi_table_button{
 	background-color: red;
 	color: white;

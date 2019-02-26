@@ -47,6 +47,8 @@ function add_event_table(){
 			//get job id
 			current_job_id = document.getElementById(`id${start_data}`).innerHTML
 
+			document.getElementById("prov_note_text").value = "";
+
   			change_content();
 		});
 	}
@@ -78,7 +80,7 @@ function output_provajders(){
 				<tr>
 					<td style="width: 45%">${server_response[1][i].provajeri_name}</td>
 					<td style="width: 45%">${server_response[1][i].dogovorena_cijena}</td>
-					<td style="width: 10%" class="provajderi_table_button">?</td>
+					<td style="width: 10%" id="prov_${i}" class="provajderi_table_button" data-prov_id=${server_response[1][i].id} onclick="show_provajde(${i})">?</td>
 				</tr>
 			`
 		}

@@ -72,8 +72,9 @@
 					</table>
 				</div>
 			</div>
-			<div class="">
-				
+			<div id="prov_note">
+				<textarea id="prov_note_text"></textarea>
+				<button id="prov_note_button" onclick="add_event_to_text_area();">Sacuvaj</button>
 			</div>
 			<div id="negotiated_price_right">
 				<table class="container_table">
@@ -165,11 +166,11 @@
 	<!--/////////////////////buttons for main screen//////////////////////-->
 	<div id="button_tab">
 		<button id="tab_button1" onclick="show_form('add_job_form')">+ DODAJ NOVU PONUDU</button>
-		<button id="ulazi">ULAZI</button>
-		<button id="izlazi">IZLAZI</button>
+		<button id="ulazi"></button>
+		<button id="izlazi"></button>
 
-		<button class="tab_buttons" style="left: 59.6%">DOGOVORENI POSAO</button>
-		<button class="tab_buttons" style="left: 72.4%">DUGME2</button>
+		<button class="tab_buttons" style="left: 59.6%"></button>
+		<button class="tab_buttons" style="left: 72.4%"></button>
 		<button class="tab_buttons" style="left: 85.2%" onclick="get_delete('jobs',server_response[0][start_data].id); start_data = 0"><img src="img/icons/trash_w.svg" height="50%;"></button>
 	</div>
 
@@ -194,5 +195,6 @@
 	<script type="text/javascript" src="javascript/form_containers.js"></script>
 	<script type="text/javascript" src="javascript/ulazne_izlazne_fakture.js"></script>
 	<script type="text/javascript" src="javascript/delete_database.js"></script>
+	<script type="text/javascript" src="javascript/update.js"></script>
 </body>
 </html>

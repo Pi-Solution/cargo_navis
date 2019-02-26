@@ -29,3 +29,5 @@ var kurs = 1.95583;
 //for warning screen
 var table_name;
 var row_id;
+
+var prov_id_for_update
