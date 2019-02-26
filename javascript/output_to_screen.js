@@ -5,12 +5,15 @@ function load_to_screen(){
 	table.innerHTML = '';
 
 	for(var i = 0; i < server_response[0].length; i++){
+		var date = server_response[0][i].job_date.slice(0,-9)
+		date = date.split("-").reverse().join("-");
+		console.log(date);
 		//console.log("212")
 		table.innerHTML += `
 			<tr id='${i}' class="table_rows">
 				<td width="15%" id=id${i} class="j_id">${server_response[0][i].id}</td>
 				<td width="40%">${server_response[0][i].qkomitent}</td>
-				<td width="40%">${server_response[0][i].job_date}</td>
+				<td width="40%">${date}</td>
 			</tr>
 		`
 	}
@@ -55,12 +58,14 @@ function add_event_table(){
 }
 //print data to end user and run function that do the same for other data
 function change_content(){
+	var date = server_response[0][start_data].port_from_date.split("-").reverse().join("-");
+	var date2 = server_response[0][start_data].port_to_date.split("-").reverse().join("-");
 	document.getElementById("paritet").innerHTML = server_response[0][start_data].paritet;
 	document.getElementById("bl").innerHTML = server_response[0][start_data].bl2 + "   " + server_response[0][start_data].bl;
 	document.getElementById("port_from").innerHTML = server_response[0][start_data].port_from;
-	document.getElementById("port_from_date").innerHTML = server_response[0][start_data].port_from_date;
+	document.getElementById("port_from_date").innerHTML = date;
 	document.getElementById("port_to").innerHTML = server_response[0][start_data].port_to;
-	document.getElementById("port_to_date").innerHTML = server_response[0][start_data].port_to_date;
+	document.getElementById("port_to_date").innerHTML = date2;
 	
 	output_provajders();
 	output_containers();
@@ -125,6 +130,7 @@ function print_ulazne_fakture(){
 	container.innerHTML = "";
 
 	for(let i = 0; i < server_response[3].length; i++){
+		var date = server_response[3][i].datum_fakture.split("-").reverse().join("-");
 		if (server_response[3][i].id_jobs == server_response[0][start_data].id) {
 			counter++
 			container.innerHTML += `
@@ -142,7 +148,7 @@ function print_ulazne_fakture(){
 							<div style="clear:both;"></div>
 
 							<p style="float: left;">Datum Fakture:</p>
-							<p style="float: right;">${server_response[3][i].datum_fakture}</p>
+							<p style="float: right;">${date}</p>
 							<div style="clear:both;"></div>
 
 							<p style="float: left;">Valuta Placanja:</p>
@@ -188,6 +194,7 @@ function print_izlazne_faktura(){
 	container.innerHTML = "";
 
 	for(let i = 0; i < server_response[4].length; i++){
+		var date = server_response[4][i].datum_fakture.split("-").reverse().join("-");
 		if (server_response[4][i].jobs_id == server_response[0][start_data].id) {
 			counter++
 			container.innerHTML += `
@@ -205,7 +212,7 @@ function print_izlazne_faktura(){
 						<div style="clear:both;"></div>
 
 						<p style="float: left;">Datum Fakture:</p>
-						<p style="float: right;">${server_response[4][i].datum_fakture}</p>
+						<p style="float: right;">${date}</p>
 						<div style="clear:both;"></div>
 
 						<p style="float: left;">Iznos (KM):</p>
