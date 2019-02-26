@@ -25,7 +25,9 @@
 	</div>
 	<div id="container">
 		<div id="basic_info">
-			<h2>Osnovne informacije</h2>
+			<div id="basic_info_child">	
+				<h2>Osnovne informacije</h2>
+			</div>
 		</div>
 		<div id="container_child">
 			<div id="con_child_left">

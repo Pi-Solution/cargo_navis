@@ -13,9 +13,7 @@ function get_user_input(){
 		port_from : `${document.getElementById("port_from_form").value}`,
 		port_to : `${document.getElementById("port_to_form").value}`,
 		port_from_date : `${document.getElementById("port_from_date_form").value}`,
-		port_to_date : `${document.getElementById("port_to_date_form").value}`,
-		price_in : `${document.getElementById("neg_price_in").value}`,
-		price_out : `${document.getElementById("neg_price_out").value}`,
+		port_to_date : `${document.getElementById("port_to_date_form").value}`
 	}
 
 	var data = new Array();

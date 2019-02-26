@@ -66,7 +66,7 @@
 						<input type="date" name="port_to_date" id="port_to_date_form">
 					</div>
 				</div>
-				<!--             -->
+				<!--
 				<div class="div_input" id="neg_prices">
 					<div class="div_input_h_p">
 						<div class="div_input_h_p_child">
@@ -81,7 +81,7 @@
 						<input type="number" name="port_to" class="div_input_c_i" autocomplete="off" placeholder="Cijena Izlaz" id="neg_price_out">
 					</div>
 				</div>
-				<!--             -->
+				          -->
 				<div id="form_buttons" class="form_buttons">
 					<button type="button" class="save_button" id="save_button" onclick="get_user_input();">Dalje -></button>
 					<button type="button" class="form_exit" id="form_exit" onclick="show_form('add_job_form')">x</button>
