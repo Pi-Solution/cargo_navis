@@ -167,7 +167,7 @@
 	</div>
 	<!--/////////////////////buttons for main screen//////////////////////-->
 	<div id="button_tab">
-		<button id="tab_button1" onclick="show_form('add_job_form')">+ DODAJ NOVU PONUDU</button>
+		<button id="tab_button1" onclick="show_form('add_job_form')">+ DODAJ NOVI NALOG</button>
 		<button id="ulazi"></button>
 		<button id="izlazi"></button>
 
@@ -198,5 +198,6 @@
 	<script type="text/javascript" src="javascript/ulazne_izlazne_fakture.js"></script>
 	<script type="text/javascript" src="javascript/delete_database.js"></script>
 	<script type="text/javascript" src="javascript/update.js"></script>
+	<script type="text/javascript" src="javascript/reset_forms.js"></script>
 </body>
 </html>

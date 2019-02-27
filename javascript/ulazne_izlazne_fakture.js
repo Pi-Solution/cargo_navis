@@ -46,6 +46,8 @@ function send_data2(){
     	 			screen_call = true;
     	 			load_data();
     	 			show_form(current_form);
+    	 			reset_ulazna_faktura_form()
+    	 			reset_izlazna_faktura_form()
     	 		}
 		}
 	};
@@ -54,7 +56,7 @@ function send_data2(){
 	xhttp.setRequestHeader("Content-type", "application/json");
 	xhttp.send(JSON.stringify(parametars));
 }
-//
+//caclucal valuta in ulazna faktura
 function change_valute(){
 	var valuta = document.getElementById("valuta_fakture_izlaz").value
 	if (valuta == 'EUR') {

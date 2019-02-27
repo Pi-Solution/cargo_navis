@@ -18,9 +18,18 @@
 					<div class="div_input_c">
 						<input type="text" name="paritet" class="div_input_c_i" autocomplete="off" placeholder="Komitent" id="komitent">
 						<select class="paritet_form" id="paritet_form">
-							<option>DAB</option>
+							<option>DAP</option>
 							<option>FOB</option>
 							<option>CIF</option>
+							<option>CFR</option>
+							<option>FAS</option>
+							<option>EXW</option>
+							<option>FCA</option>
+							<option>CPI</option>
+							<option>CIP</option>
+							<option>DAT</option>
+							<option>DDP</option>
+							<option>drum</option>							
 						</select>
 					</div>
 				</div>
@@ -84,7 +93,7 @@
 				          -->
 				<div id="form_buttons" class="form_buttons">
 					<button type="button" class="save_button" id="save_button" onclick="get_user_input();">Dalje -></button>
-					<button type="button" class="form_exit" id="form_exit" onclick="show_form('add_job_form')">x</button>
+					<button type="button" class="form_exit" id="form_exit" onclick="show_form('add_job_form'); reset_jobs()">x</button>
 				</div>
 			</form>
 			<?php

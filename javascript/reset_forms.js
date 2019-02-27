@@ -1,7 +1,32 @@
-<div class="form_in_form" id="container_form">
-	<div class="form_header"></div>
-		<div class="form_content" id="form_container_content">	
-			<div class="containers_info">
+//this file contains all function uset to reset felds insed forms
+
+
+function reset_jobs(){
+	document.getElementById("komitent").value = ""
+	document.getElementById("paritet_form").value = ""
+	document.getElementById("bl_form").value = ""
+	document.getElementById("bl_form2").value = ""
+	document.getElementById("port_from_form").value = ""
+	document.getElementById("port_to_form").value = ""
+	document.getElementById("port_from_date_form").value = ""
+	document.getElementById("port_to_date_form").value = ""
+}
+function reset_provajders(){
+	prov_name = document.getElementsByClassName("prov_input_place");
+	prov_price = document.getElementsByClassName("prov_input_place2");
+
+	for(let i = 0; i < prov_name.length; i++){
+		prov_name[i].value = "";
+		prov_price[i].value = "";
+	}
+}
+function reset_containers(){
+	//we add textbox to this div
+	var main_div = document.getElementById("form_container_content")
+	
+
+	main_div.innerHTML =`
+	<div class="containers_info" style="top:0px">
 				<div class="containers_info_child">	
 					<textarea class="containers_id"></textarea>
 				</div>
@@ -63,11 +88,24 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="form_buttons">
-		<button type="button" id="con_back_button" onclick="show_form('container_form'); show_form('form_provajder');"><-</button>
-		<button type="button" id="con_add_new_text_a_button" onclick="add_con_textbox();">Dodaj još kontejnera</button>
-		<button type="button" id="con_save_button" onclick="get_user_input3();">Sačuvaj</button>
-		<button type="button" class="form_exit" onclick="show_form('add_job_form'); show_form('container_form'); reset_all_forms();">x</button>
-	</div>
-</div>
+	`
+}
+//reset all forms inside job form 
+function reset_all_forms(){
+	reset_jobs()
+	reset_provajders()
+	reset_containers()
+}
+
+function reset_ulazna_faktura_form(){
+	document.getElementById("broj_fakture_ulaz").value = "";
+	document.getElementById("datum_fakture_ulaz").value = "";
+	document.getElementById("iznos_s_fakture_ulaz").value = "";
+	document.getElementById("valuta_fakture_izlaz").value = "";
+	document.getElementById("iznos_domaca_valuta").value = "";
+}
+function reset_izlazna_faktura_form(){
+	document.getElementById("broj_fakture_izlaz1").value = "";
+	document.getElementById("datum_fakture_izlaz").value = "";
+	document.getElementById("iznos_izlaz").value = "";
+}

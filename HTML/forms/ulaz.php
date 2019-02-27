@@ -53,7 +53,7 @@
 				<div id="ul_f_form_buttons" class="form_buttons">
 					<button type="button" class="save_button" id="ul_f_save_button" onclick="ulaz_faktura();"
 					.>Sacuvaj</button>
-					<button type="button" class="form_exit" id="ul_f_form_exit" onclick="show_form('ulaz_fartura_forma');">x</button>
+					<button type="button" class="form_exit" id="ul_f_form_exit" onclick="show_form('ulaz_fartura_forma'); reset_ulazna_faktura_form();">x</button>
 				</div>
 			</div>
 		</div>
