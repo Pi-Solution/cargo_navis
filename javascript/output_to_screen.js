@@ -11,7 +11,7 @@ function load_to_screen(){
 		//console.log("212")
 		table.innerHTML += `
 			<tr id='${i}' class="table_rows">
-				<td width="15%" id=id${i} class="j_id">${server_response[0][i].id}</td>
+				<td width="15%" id=id${i} class="j_id">${i+1}</td>
 				<td width="40%">${server_response[0][i].qkomitent}</td>
 				<td width="40%">${date}</td>
 			</tr>
