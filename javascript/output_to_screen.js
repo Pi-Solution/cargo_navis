@@ -84,8 +84,11 @@ function output_provajders(){
 			provajderi_con.innerHTML += `
 				<tr>
 					<td style="width: 45%">${server_response[1][i].provajeri_name}</td>
-					<td style="width: 45%">${server_response[1][i].dogovorena_cijena}</td>
-					<td style="width: 10%" id="prov_${i}" class="provajderi_table_button" data-prov_id=${server_response[1][i].id} onclick="show_provajde(${i})">?</td>
+					<td style="width: 20%">${server_response[1][i].dogovorena_cijena}</td>
+					<td style="width: 20%">KM</td>
+					<td style="width: 5%" id="prov_${i}" class="provajderi_table_button" data-prov_id=${server_response[1][i].id} onclick="show_provajde(${i})"><img src="img/icons/question.svg" height="10%;"></td>
+					<td style="width: 5%" class="provajderi_table_button" data-prov_id=${server_response[1][i].id}><img src="img/icons/file.svg" height="10%;"></td>
+					<td style="width: 5%" class="provajderi_table_button" data-prov_id=${server_response[1][i].id}><img src="img/icons/delete.svg" height="10%;"></td>
 				</tr>
 			`
 		}
@@ -104,8 +107,11 @@ function output_containers(){
 		if (server_response[2][i].jobs_id == server_response[0][start_data].id) {
 			container_con.innerHTML +=`
 				<tr>
-					<td>${server_response[2][i].container_id}</td>
-					<td>${server_response[2][i].container_type}</td>
+					<td style="width: 40%">${server_response[2][i].container_id}</td>
+					<td style="width: 45%">${server_response[2][i].container_type}</td>
+					<td style="width: 5%" id="prov_${i}" class="provajderi_table_button"><img src="img/icons/question.svg" height="10%;"></td>
+					<td style="width: 5%" class="provajderi_table_button"><img src="img/icons/file.svg" height="10%;"></td>
+					<td style="width: 5%" class="provajderi_table_button"><img src="img/icons/delete.svg" height="10%;"></td>
 				</tr>
 			`
 			con_counter++;

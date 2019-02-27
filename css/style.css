@@ -184,7 +184,7 @@ a {
 }
 #prov_note{
 	position: absolute;
-	width: 25%;
+	width: 100%;
 	height: 100%;
 	left: 0px;
 	right: 0px;
@@ -193,9 +193,9 @@ a {
 }
 #prov_note_button{
 	position: absolute;
-	bottom: 0px;
+	bottom: 5%;
 	height: 20%;
-	width: 30%;
+	width: 100%;
 	background-color: black;
 	color: white;
 	left: 0px;
@@ -212,18 +212,21 @@ a {
 #prov_note_text{
 	width: 100%;
 	height: 75%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid black;
+	resize: none;
 }
 .provajderi_table_button{
-	background-color: #204470;
 	color: white;
-	border-radius: 10px;
 	cursor: pointer;
 }
 .provajderi_table_button:hover{
-	opacity: 0.8;
+	background-color: #d1d2d3
 }
 .provajderi_table_button:active{
-	opacity: 0.7;
+	background-color: #b7b7b7;
 }
 #con_child_provajder p{
 	margin-top: 0px !important;
@@ -311,11 +314,11 @@ a {
 }
 #negotiated_price_left{
 	position: absolute;
-	top: 0px;
+	top: 5%;
 	bottom: 0px;
 	left: 1%;
-	width: 30%;
-	height: 85%;
+	width: 42%;
+	height: 90%;
 	padding-left: 2%;
 	padding-right: 2%;
 	margin-top: auto;
@@ -326,7 +329,7 @@ a {
 	top: 5%;
 	bottom: 0px;
 	right: 1%;
-	width: 30%;
+	width: 42%;
 	height: 90%;
 	padding-left: 2%;
 	padding-right: 2%;
@@ -358,6 +361,22 @@ a {
 }
 #container_table_content_child td{
 	width: 50%;
+}
+.add_prov_id{
+	background-color: #204470;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.add_prov_id:hover{
+	opacity: 0.8;
+}
+.add_prov_id:active{
+	opacity: 0.7;
 }
 .in_out_header{
 	position: absolute;

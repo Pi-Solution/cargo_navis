@@ -39,7 +39,10 @@
 			</div>
 			<div id="con_child_right">
 				<div id="con_child_provajder_table">
-					
+					<div id="prov_note">
+						<textarea id="prov_note_text"></textarea>
+					<button id="prov_note_button" onclick="add_event_to_text_area();">Sacuvaj</button>
+			</div>
 				</div>
 			</div>
 		</div>
@@ -65,8 +68,10 @@
 				<table class="container_table">
 					<tr>
 						<th style="width: 45%">Provajder</th>
-						<th style="width: 45%">Dogovorena cijena</th>
-						<th style="width: 10%"></th> 
+						<th style="width: 20%">Cijena</th>
+						<th style="width: 20%">Valuta</th>
+						<th style="width: 10%"></th>
+						<th style="width: 5%" class="add_prov_id">+</th> 
 					</tr>
 				</table>
 				<div class="container_table_content">
@@ -74,15 +79,19 @@
 					</table>
 				</div>
 			</div>
+			<!--
 			<div id="prov_note">
 				<textarea id="prov_note_text"></textarea>
 				<button id="prov_note_button" onclick="add_event_to_text_area();">Sacuvaj</button>
 			</div>
+			-->
 			<div id="negotiated_price_right">
 				<table class="container_table">
 					<tr>
-						<th>Broj Kontejnera</th>
-						<th>Vrsta Kontejnera</th>
+						<th style="width: 40%">Broj Kontejnera</th>
+						<th style="width: 45%">Vrsta Kontejnera</th>
+						<th style="width: 10%"></th>
+						<th style="width: 5%" class="add_prov_id">+</th> 
 					</tr>
 				</table>
 				<div class="container_table_content">
