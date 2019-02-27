@@ -139,7 +139,7 @@ function print_ulazne_fakture(){
 							<button class="in_f_left" onclick="arrow_in_fakture(false, 'in_f1', 0);"><</button>
 							<button class="in_f_right" onclick="arrow_in_fakture(true, 'in_f1', 0)">></button>
 							<div class="in_out_header_child">
-								<h3 style="text-align: center;">Ulaz Faktura ${counter}/${numb_of_fak}</h3>
+								<h3 style="text-align: center;">Ulazne Fakture ${counter}/${numb_of_fak}</h3>
 							</div>
 						</div>
 						<div class="in_out_content_child">
@@ -203,7 +203,7 @@ function print_izlazne_faktura(){
 						<button class="in_f_left" onclick="arrow_in_fakture(false, 'out_f1', 1);"><</button>
 						<button class="in_f_right" onclick="arrow_in_fakture(true, 'out_f1', 1)">></button>
 						<div class="in_out_header_child">
-							<h3 style="text-align: center;">Izlaz Fakture ${counter}/${numb_of_fak}</h3>
+							<h3 style="text-align: center;">Izlazne Fakture ${counter}/${numb_of_fak}</h3>
 						</div>
 					</div>
 					<div class="in_out_content_child">
