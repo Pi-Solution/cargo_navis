@@ -36,6 +36,7 @@ function send_data_job(){
 				//console.log(this.responseText);
 				if(server_response == 101){
 					alert('Sacuvano')
+					call_from_form = true;
 					show_form('form_provajder');
 					load_data()
 					get_last_aded_job();

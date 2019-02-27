@@ -31,3 +31,7 @@ var table_name;
 var row_id;
 
 var prov_id_for_update
+
+//determenate is provajders and containers called from job form or directly
+//(false = directly), (true = from job form)
+var call_from_form = false
