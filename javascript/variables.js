@@ -6,7 +6,6 @@ var parametars = new Array();
 
 //this variable determinate will function get_data() call for function load_to_screen() after call
 // (false = no call), (true = call function)
-var screen_call = true;
 
 //this variable is uset te determinate what row we main table row we currently working on
 var start_data = 0;
@@ -34,4 +33,5 @@ var prov_id_for_update
 
 //determenate is provajders and containers called from job form or directly
 //(false = directly), (true = from job form)
-var call_from_form = false
+var call_from_form = false;
+var call_from_form2 = false;

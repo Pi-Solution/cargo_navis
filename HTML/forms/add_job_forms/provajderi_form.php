@@ -24,8 +24,8 @@
 		?>
 	</div>
 	<div class="form_buttons">
-		<button type="button" id="prov_back_button" class="save_button" onclick="show_form('form_provajder')"><-</button>
-		<button type="button" id="prov_save_button" class="save_button" onclick="get_user_input2();">Dalje -></button>
-		<button type="button" class="form_exit" onclick="show_form('add_job_form'); show_form('form_provajder'); reset_provajders(); reset_jobs();">x</button>
+		<button type="button" id="prov_back_button" class="save_button" onclick="show_form('form_provajder'); call_from_form = false"><-</button>
+		<button type="button" id="prov_save_button" class="save_button" onclick="get_user_input2(); call_from_form2 = true;">Dalje -></button>
+		<button type="button" class="form_exit" onclick="show_form('add_job_form'); show_form('form_provajder'); reset_provajders(); reset_jobs(); what_to_run(0); call_from_form = false">x</button>
 	</div>
 </div>

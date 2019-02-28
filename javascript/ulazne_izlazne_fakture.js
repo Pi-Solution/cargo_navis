@@ -6,7 +6,7 @@ function ulaz_faktura(){
 		iznos_s_val : `${document.getElementById("iznos_s_fakture_ulaz").value}`,
 		valuta_placanja :`${document.getElementById("valuta_fakture_izlaz").value}`,
 		iznos : `${document.getElementById("iznos_domaca_valuta").value}`,
-		id_jobs : current_job_id
+		id_jobs : server_response[0][start_data].id
 	}
 	parametars = [];
 	parametars[0] = 1;
@@ -23,7 +23,7 @@ function izlaz_fakture(){
 		broj_fakture : `${document.getElementById("broj_fakture_izlaz1").value}`,
 		datum_fakture : `${document.getElementById("datum_fakture_izlaz").value}`,
 		iznos : `${document.getElementById("iznos_izlaz").value}`,
-		jobs_id : current_job_id,
+		jobs_id : server_response[0][start_data].id
 	}
 	
 	parametars = [];
@@ -43,8 +43,7 @@ function send_data2(){
     	 		server_response = this.responseText;
     	 		if (server_response == '101') {
     	 			alert("Sacuvano")
-    	 			screen_call = true;
-    	 			load_data();
+    	 			load_data(0);
     	 			show_form(current_form);
     	 			reset_ulazna_faktura_form()
     	 			reset_izlazna_faktura_form()

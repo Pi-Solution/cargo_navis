@@ -218,14 +218,34 @@ a {
 	border: 1px solid black;
 	resize: none;
 }
-.provajderi_table_button{
+.provajderi_table_button1{
 	color: white;
 	cursor: pointer;
 }
-.provajderi_table_button:hover{
+.provajderi_table_button1:hover{
 	background-color: #d1d2d3
 }
-.provajderi_table_button:active{
+.provajderi_table_button1:active{
+	background-color: #b7b7b7;
+}
+.provajderi_table_button2{
+	color: white;
+	cursor: pointer;
+}
+.provajderi_table_button2:hover{
+	background-color: #d1d2d3
+}
+.provajderi_table_button2:active{
+	background-color: #b7b7b7;
+}
+.provajderi_table_button3{
+	color: white;
+	cursor: pointer;
+}
+.provajderi_table_button3:hover{
+	background-color: #d1d2d3
+}
+.provajderi_table_button3:active{
 	background-color: #b7b7b7;
 }
 #con_child_provajder p{

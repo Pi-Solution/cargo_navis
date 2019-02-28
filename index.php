@@ -5,7 +5,7 @@
 	<title>Cargo Navis</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body onload="load_data();">
+<body onload="load_data(0);">
 	<div class="nav_bar">
 		
 	</div>
@@ -88,10 +88,10 @@
 			<div id="negotiated_price_right">
 				<table class="container_table">
 					<tr>
-						<th style="width: 40%">Broj Kontejnera</th>
+						<th style="width: 45%">Broj Kontejnera</th>
 						<th style="width: 45%">Vrsta Kontejnera</th>
-						<th style="width: 10%"></th>
-						<th style="width: 5%" class="add_prov_id">+</th> 
+						<th style="width: 5%"></th>
+						<th style="width: 10%" class="add_prov_id">+</th> 
 					</tr>
 				</table>
 				<div class="container_table_content">
@@ -208,5 +208,6 @@
 	<script type="text/javascript" src="javascript/delete_database.js"></script>
 	<script type="text/javascript" src="javascript/update.js"></script>
 	<script type="text/javascript" src="javascript/reset_forms.js"></script>
+	<script type="text/javascript" src="javascript/modify_data/delete_data.js"></script>
 </body>
 </html>

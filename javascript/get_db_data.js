@@ -1,5 +1,5 @@
 //get databse data
-function load_data(){
+function load_data(s1){
 	var controller = 0;
 	var values1 = ['jobs','*'];
 	var values2 = ['provajderi','*'];
@@ -15,19 +15,18 @@ function load_data(){
 	parametars.push(controller,all_values);
 
 	//alert(JSON.stringify(parametars));
-	get_data();
+	console.log("now_load")
+	get_data(s1);
 }
-function get_data(){
+function get_data(s1){
 	
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
     	 		server_response = JSON.parse(this.responseText);
 				//console.log(this.responseText);
-				if (screen_call == true) {
-    	 			load_to_screen();
-    	 			screen_call = false;
-				}
+				//console.log("get_data")
+    	 		what_to_run(s1)
 		}
 	};
 	//send data

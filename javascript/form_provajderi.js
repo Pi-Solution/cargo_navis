@@ -11,7 +11,7 @@ function get_user_input2(){
 		var last_added_job_id = server_response[0][s].id;
 		console.log(last_added_job_id)
 	}else{
-		var last_added_job_id = server_response[0][start_data].id
+		var last_added_job_id = server_response[0][start_data].id;
 	}
 
 	for(let i = 0;  i < prov_name.length; i++){
@@ -44,7 +44,7 @@ function send_data_provajderi(){
 					alert('Sacuvano')
 					show_form('form_provajder');
 					show_form('container_form');
-					load_data()
+					load_data(false)
 				}else{
 					alert(this.responseText);
 				}

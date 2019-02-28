@@ -1,3 +1,23 @@
+function what_to_run(s1){
+	switch (s1) {
+		case 0:
+			load_to_screen();
+			break;
+		case 1:
+			change_content();
+			break;
+		case 2:
+			//console.log("switch")
+			output_provajders();
+			break;
+		case 3:
+			output_containers();
+			break;
+		default:
+			console.log("data recived")
+			break;
+	}
+}
 //load main table to screen
 function load_to_screen(){
 	var table = document.getElementById('main_table_container_child');
@@ -7,7 +27,7 @@ function load_to_screen(){
 	for(var i = 0; i < server_response[0].length; i++){
 		var date = server_response[0][i].job_date.slice(0,-9)
 		date = date.split("-").reverse().join("-");
-		console.log(date);
+		//console.log(date);
 		//console.log("212")
 		table.innerHTML += `
 			<tr id='${i}' class="table_rows">
@@ -74,7 +94,9 @@ function change_content(){
 }
 //output provajders
 function output_provajders(){
-	
+
+	console.log("provajderi")
+
 	provajderi_con = document.getElementById("con_child_provajder_table_child");
 
 	provajderi_con.innerHTML = '';
@@ -86,13 +108,15 @@ function output_provajders(){
 					<td style="width: 45%">${server_response[1][i].provajeri_name}</td>
 					<td style="width: 20%">${server_response[1][i].dogovorena_cijena}</td>
 					<td style="width: 20%">KM</td>
-					<td style="width: 5%" id="prov_${i}" class="provajderi_table_button" data-prov_id=${server_response[1][i].id} onclick="show_provajde(${i})"><img src="img/icons/question.svg" height="10%;"></td>
-					<td style="width: 5%" class="provajderi_table_button" data-prov_id=${server_response[1][i].id}><img src="img/icons/file.svg" height="10%;"></td>
-					<td style="width: 5%" class="provajderi_table_button" data-prov_id=${server_response[1][i].id}><img src="img/icons/delete.svg" height="10%;"></td>
+					<td style="width: 5%" id="prov_${i}" class="provajderi_table_button1" data-prov_id=${server_response[1][i].id} onclick="show_provajde(${i})"><img src="img/icons/question.svg" height="10%;"></td>
+					<td style="width: 5%" class="provajderi_table_button2" data-prov_id=${server_response[1][i].id}><img src="img/icons/file.svg" height="10%;"></td>
+					<td style="width: 5%" class="provajderi_table_button3" data-prov_id=${server_response[1][i].id}><img src="img/icons/delete.svg" height="10%;"></td>
 				</tr>
 			`
 		}
 	}
+	//add click event to table elements
+	delete_provaiders()
 }
 //output containers
 function output_containers(){
@@ -107,9 +131,8 @@ function output_containers(){
 		if (server_response[2][i].jobs_id == server_response[0][start_data].id) {
 			container_con.innerHTML +=`
 				<tr>
-					<td style="width: 40%">${server_response[2][i].container_id}</td>
+					<td style="width: 45%">${server_response[2][i].container_id}</td>
 					<td style="width: 45%">${server_response[2][i].container_type}</td>
-					<td style="width: 5%" id="prov_${i}" class="provajderi_table_button"><img src="img/icons/question.svg" height="10%;"></td>
 					<td style="width: 5%" class="provajderi_table_button"><img src="img/icons/file.svg" height="10%;"></td>
 					<td style="width: 5%" class="provajderi_table_button"><img src="img/icons/delete.svg" height="10%;"></td>
 				</tr>

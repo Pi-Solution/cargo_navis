@@ -27,8 +27,7 @@ function delete_data(){
     	 	console.log(this.responseText);
     	 	if(this.responseText == 102){	
 				get_delete(null, null);
-				screen_call = true;	
-				load_data();
+				load_data(0);
     	 	}
 		}
 	};

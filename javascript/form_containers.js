@@ -7,8 +7,13 @@ function get_user_input3(){
 	parametars[0] = 1;
 	var data = new Array();
 	var data2 = new Array();
-	var s = server_response[0].length - 1;
-	var last_added_job_id = server_response[0][s].id;
+	if(call_from_form2 == true){
+		var s = server_response[0].length - 1;
+		var last_added_job_id = server_response[0][s].id;
+		console.log(last_added_job_id)
+	}else{
+		var last_added_job_id = server_response[0][start_data].id;
+	}
 
 	for(var i = 0;  i < con_id.length; i++){
 		console.log(con_id[i].value)
@@ -26,6 +31,8 @@ function get_user_input3(){
 	parametars[1] = data;
 	console.table(parametars[1])
 
+	call_from_form2 = false;
+
 	send_data_containers()
 }
 function send_data_containers(){
@@ -39,8 +46,7 @@ function send_data_containers(){
 					alert('Sacuvano')
 					show_form('container_form');
 					show_form('add_job_form');
-					screen_call = true;
-					load_data()
+					load_data(0)
 					reset_all_forms()
 				}else{
 					alert(this.responseText);
