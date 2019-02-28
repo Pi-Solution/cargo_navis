@@ -35,3 +35,5 @@ var prov_id_for_update
 //(false = directly), (true = from job form)
 var call_from_form = false;
 var call_from_form2 = false;
+
+var test123 = false;

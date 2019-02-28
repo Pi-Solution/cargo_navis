@@ -26,7 +26,6 @@ function get_user_input2(){
 		}
 	}
 
-	call_from_form = false;
 
 	parametars[0] = 1;
 	parametars[1] = data;
@@ -46,6 +45,7 @@ function send_data_provajderi(){
 					show_form('form_provajder');
 					show_form('container_form');
 					load_data(false)
+					call_from_form = false;
 				}else{
 					alert(this.responseText);
 				}

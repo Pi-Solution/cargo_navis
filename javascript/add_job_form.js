@@ -38,6 +38,7 @@ function send_data_job(){
 					alert('Sacuvano')
 					call_from_form = true;
 					show_form('form_provajder');
+					reset_jobs();
 					load_data(false)
 				}else{
 					alert(this.responseText);

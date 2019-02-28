@@ -92,7 +92,7 @@
 				</div>
 				          -->
 				<div id="form_buttons" class="form_buttons">
-					<button type="button" class="save_button" id="save_button" onclick="get_user_input();">Dalje -></button>
+					<button type="button" class="save_button" id="save_button" onclick="get_user_input()">Dalje -></button>
 					<button type="button" class="form_exit" id="form_exit" onclick="show_form('add_job_form'); reset_jobs()">x</button>
 				</div>
 			</form>
