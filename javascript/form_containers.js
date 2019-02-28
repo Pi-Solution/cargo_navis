@@ -31,8 +31,6 @@ function get_user_input3(){
 	parametars[1] = data;
 	console.table(parametars[1])
 
-	call_from_form2 = false;
-
 	send_data_containers()
 }
 function send_data_containers(){
@@ -44,9 +42,8 @@ function send_data_containers(){
 				//console.log(this.responseText);
 				if(server_response == 101){
 					alert('Sacuvano')
-					show_form('container_form');
-					show_form('add_job_form');
-					load_data(0)
+					load_data(3)
+					show_form('add_containers_form')
 					reset_all_forms()
 				}else{
 					alert(this.responseText);

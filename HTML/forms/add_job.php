@@ -1,5 +1,5 @@
-<div id="add_job_form">
-		<div id="job_background">	
+<div id="add_job_form" class="add_job_form">
+		<div id="job_background" class="job_background">	
 		</div>
 		<div id="job_form">
 			<div class="form_header">
@@ -98,8 +98,8 @@
 			</form>
 			<?php
 			//include forms for provajder and container
-			include "add_job_forms/provajderi_form.php";
-			include "add_job_forms/containers_form.php";
+			#include "add_job_forms/provajderi_form.php";
+			#include "add_job_forms/containers_form.php";
 			?>
 		</div>
 	</div>

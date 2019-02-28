@@ -586,7 +586,7 @@ a {
 	border-left: 1px solid white;
 }
 /*--------------------*/
-#add_job_form{
+.add_job_form{
 	position: absolute;
 	top: 0px;
 	height: 100%;
@@ -594,7 +594,7 @@ a {
 	display: none;
 	z-index: 10;
 }
-#job_background{
+.job_background{
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -925,14 +925,13 @@ a {
 }
 .form_in_form {
 	position: absolute;
-	height: 100%;
-	width: 100%;
+	top: 5%;
+	bottom: 5%;
+	left: 30%;
+	right: 30%;
 	background-color: #e5e5e5;
 }
 /*provajder-input*/
-#form_provajder{
-	display: none;
-}
 .prov_input{
 	position: absolute;
 	top: 2%;
@@ -993,9 +992,6 @@ a {
 	right: 0px;
 }
 /*containe form*/
-#container_form{
-	display: none;
-}
 .containers_info{
 	position: absolute;
 	top: 1%;

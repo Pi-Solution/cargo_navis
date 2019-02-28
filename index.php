@@ -71,7 +71,7 @@
 						<th style="width: 20%">Cijena</th>
 						<th style="width: 20%">Valuta</th>
 						<th style="width: 10%"></th>
-						<th style="width: 5%" class="add_prov_id" onclick="show_form('add_job_form'); show_form('form_provajder')">+</th> 
+						<th style="width: 5%" class="add_prov_id" onclick="show_form('add_provajders_form')">+</th> 
 					</tr>
 				</table>
 				<div class="container_table_content">
@@ -91,7 +91,7 @@
 						<th style="width: 45%">Broj Kontejnera</th>
 						<th style="width: 45%">Vrsta Kontejnera</th>
 						<th style="width: 5%"></th>
-						<th style="width: 10%" class="add_prov_id">+</th> 
+						<th style="width: 10%" class="add_prov_id" onclick="show_form('add_containers_form')">+</th> 
 					</tr>
 				</table>
 				<div class="container_table_content">
@@ -189,6 +189,9 @@
 	<?php
 	//forma za dodavanje novih poslova
 	include "HTML/forms/add_job.php";
+	//include forms for provajder and container
+	include "HTML/forms/add_job_forms/provajderi_form.php";
+	include "HTML/forms/add_job_forms/containers_form.php";
 	//forma za dodavanje ulaznih faktura
 	include "HTML/forms/ulaz.php";
 	//forma za dodavanje izlaznih faktura

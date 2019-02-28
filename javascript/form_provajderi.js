@@ -42,10 +42,9 @@ function send_data_provajderi(){
 				//console.log(this.responseText);
 				if(server_response == 101){
 					alert('Sacuvano')
-					show_form('form_provajder');
-					show_form('container_form');
-					load_data(false)
-					call_from_form = false;
+					reset_provajders()
+					show_form('add_provajders_form')
+					load_data(2)
 				}else{
 					alert(this.responseText);
 				}
