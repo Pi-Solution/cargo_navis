@@ -30,6 +30,7 @@ function get_user_input2(){
 
 	parametars[0] = 1;
 	parametars[1] = data;
+	console.log(data)
 
 	send_data_provajderi();
 }

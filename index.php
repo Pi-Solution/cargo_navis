@@ -71,7 +71,7 @@
 						<th style="width: 20%">Cijena</th>
 						<th style="width: 20%">Valuta</th>
 						<th style="width: 10%"></th>
-						<th style="width: 5%" class="add_prov_id">+</th> 
+						<th style="width: 5%" class="add_prov_id" onclick="show_form('add_job_form'); show_form('form_provajder')">+</th> 
 					</tr>
 				</table>
 				<div class="container_table_content">
