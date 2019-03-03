@@ -68,7 +68,6 @@
 				</div>
 			</div>
 			<div class="form_buttons">
-			<button type="button" id="con_back_button"><-</button>
 			<button type="button" id="con_add_new_text_a_button" onclick="add_con_textbox();">Dodaj još kontejnera</button>
 			<button type="button" id="con_save_button" onclick="get_user_input3()">Sačuvaj</button>
 			<button type="button" class="form_exit" onclick="show_form('add_containers_form')">x</button>

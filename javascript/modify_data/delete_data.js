@@ -1,5 +1,5 @@
 function delete_provaiders(){
-	prov_table = document.getElementsByClassName("provajderi_table_button3")
+	var prov_table = document.getElementsByClassName("provajderi_table_button3")
 
 	for(var i = 0; i < prov_table.length; i++){
 		prov_table[i].addEventListener("click", function(){
@@ -13,6 +13,24 @@ function delete_provaiders(){
 			parametars[1] = data;
 
 			delete_data_db(2);
+		});
+	}
+}
+function delete_containers(){
+	var con_table = document.getElementsByClassName("provajderi_table_button2")
+
+	for(var i = 0; i < con_table.length; i++){
+		con_table[i].addEventListener("click", function(){
+			var con_db_id = this.getAttribute('data-con_id');
+			//console.log(prov_db_id);
+
+			parametars = [];
+
+			var data = ["containers", con_db_id];
+			parametars[0] = 3;
+			parametars[1] = data;
+
+			delete_data_db(3);
 		});
 	}
 }

@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Cargo Navis</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/auto-complete.css">
 </head>
 <body onload="load_data(0);">
 	<div class="nav_bar">
@@ -212,5 +213,6 @@
 	<script type="text/javascript" src="javascript/update.js"></script>
 	<script type="text/javascript" src="javascript/reset_forms.js"></script>
 	<script type="text/javascript" src="javascript/modify_data/delete_data.js"></script>
+	<script type="text/javascript" src="javascript/autoComplete/auto-complete.js"></script>
 </body>
 </html>

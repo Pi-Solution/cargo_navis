@@ -440,7 +440,7 @@ a {
 	margin-bottom: 5px;
 	padding-left: 4%;
 	padding-right: 5%;
-	font-size: 2vh;
+	font-size: 1.5vh;
 }
 #in_f{
 	position: absolute;
@@ -963,7 +963,7 @@ a {
 	position: absolute;
 	bottom: 0px;
 	height: 50%;
-	width: 49.5%;
+	width: 34.5%;
 	background-color: white;
 	border: none;
 	padding: 0;
@@ -972,13 +972,13 @@ a {
 
 }
 #p_right{
-	right: 0px;
+	right: 15%;
 }
 .prov_header_child{
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
-	width: 49.5%;
+	width: 34.5%;
 	height: 50%;
 	margin-top: auto;
 	margin-bottom: auto;
@@ -989,7 +989,17 @@ a {
 	font-size: 2vh;
 }
 #pr2_right{
+	right: 15%;
+}
+#pr3_right{
+	right: 0%;
+	width: 13%;
+}.prov_valuta_select{
+	position: absolute;
+	width: 14%;
+	height: 50%;
 	right: 0px;
+	bottom: 0px;
 }
 /*containe form*/
 .containers_info{
@@ -1135,7 +1145,7 @@ a {
 }
 .ul_faktura{
 	position: absolute;
-	top: 0.5%;
+	top: 12.5%;
 	left: 2%;
 	height: 12.5%;
 	width: 96%;
@@ -1171,10 +1181,10 @@ a {
 	padding-left: 2%;
 }
 #ul_f_2{
-	top: 12.5%;
+	top: 25%;
 }
 #ul_f_3{
-	top: 25%;
+	top: 37.5%;
 	width: 96%;
 }
 #ul_f_3 input[type="number"]{
@@ -1191,13 +1201,16 @@ a {
 }
 #ul_f_5{
 	left: 51%;
-	top: 37.5%;
+	top: 50%;
 	width: 47%;
 	display: none;
 }
 #ul_f_4{
-	top: 37.5%;
+	top: 50%;
 	width: 47%;
+}
+#ulaz_prov{
+	top: 0.5%;
 }
 #iz_f_2{
 	top: 12.5%;
@@ -1211,23 +1224,17 @@ a {
 /*-------------------------*/
 #prov_save_button{
 	position: absolute;
-	left: 9%;
+	left: 0%;
 	height: 100%;
-	width: 82%;
+	width: 90%;
 	background-color: black;
-	color: white;
-}
-#prov_back_button{
-	position: absolute;
-	height: 100%;
-	width: 8%;
 	color: white;
 }
 #con_add_new_text_a_button{
 	position: absolute;
 	height: 100%;
-	width: 40.5%;
-	left: 9%;
+	width: 44.5%;
+	left: 0%;
 	background-color: black;
 	color: white;
 }
@@ -1235,16 +1242,9 @@ a {
 	position: absolute;
 	right: 9%;
 	height: 100%;
-	width: 40.5%;
+	width: 44.5%;
 	background-color: black;
 	color: white;
-}
-#con_back_button{
-	position: absolute;
-	height: 100%;
-	width: 8%;
-	color: white;
-	background-color: black;
 }
 #form_container_content{
 	height: 82%;

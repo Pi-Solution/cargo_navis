@@ -16,7 +16,7 @@
 						</div>
 					</div>
 					<div class="div_input_c">
-						<input type="text" name="paritet" class="div_input_c_i" autocomplete="off" placeholder="Komitent" id="komitent">
+						<input type="text" name="Komitent" class="div_input_c_i" autocomplete="on" placeholder="Komitent" id="komitent">
 						<select class="paritet_form" id="paritet_form">
 							<option>DAP</option>
 							<option>FOB</option>
@@ -41,7 +41,7 @@
 						</div>
 					</div>
 					<div class="div_input_c">
-						<input type="number" name="bl" class="div_input_c_i" autocomplete="off" placeholder="B/L" id="bl_form">
+						<input type="number" name="bl" class="div_input_c_i" autocomplete="on" placeholder="B/L" id="bl_form">
 						<input type="text" name="bl2" class="div_input_c_i" autocomplete="off" placeholder="B/L" id="bl_form2">
 					</div>
 				</div>
@@ -56,7 +56,7 @@
 						</div>
 					</div>
 					<div class="div_input_c">
-						<input type="text" name="port_from" class="div_input_c_i" autocomplete="off" placeholder="Luka Polazak" id="port_from_form">
+						<input type="text" name="port_from" class="div_input_c_i" autocomplete="on" placeholder="Luka Polazak" id="port_from_form">
 						<input type="date" name="port_from_date" id="port_from_date_form">
 					</div>
 				</div>
@@ -71,7 +71,7 @@
 						</div>
 					</div>
 					<div class="div_input_c">
-						<input type="text" name="port_to" class="div_input_c_i" autocomplete="off" placeholder="Luka Polazak" id="port_to_form">
+						<input type="text" name="port_to" class="div_input_c_i" autocomplete="on" placeholder="Luka Polazak" id="port_to_form">
 						<input type="date" name="port_to_date" id="port_to_date_form">
 					</div>
 				</div>
@@ -92,7 +92,7 @@
 				</div>
 				          -->
 				<div id="form_buttons" class="form_buttons">
-					<button type="button" class="save_button" id="save_button" onclick="get_user_input()">Dalje -></button>
+					<button type="button" class="save_button" id="save_button" onclick="get_user_input();">Sačuvaj</button>
 					<button type="button" class="form_exit" id="form_exit" onclick="show_form('add_job_form'); reset_jobs()">x</button>
 				</div>
 			</form>

@@ -107,9 +107,9 @@ function output_provajders(){
 				<tr>
 					<td style="width: 45%">${server_response[1][i].provajeri_name}</td>
 					<td style="width: 20%">${server_response[1][i].dogovorena_cijena}</td>
-					<td style="width: 20%">KM</td>
+					<td style="width: 20%">${server_response[1][i].valuta_placanja}</td>
 					<td style="width: 5%" id="prov_${i}" class="provajderi_table_button1" data-prov_id=${server_response[1][i].id} onclick="show_provajde(${i})"><img src="img/icons/question.svg" height="10%;"></td>
-					<td style="width: 5%" class="provajderi_table_button2" data-prov_id=${server_response[1][i].id}><img src="img/icons/file.svg" height="10%;"></td>
+					<td style="width: 5%" class="provajderi_table_button1" data-prov_id=${server_response[1][i].id}><img src="img/icons/file.svg" height="10%;"></td>
 					<td style="width: 5%" class="provajderi_table_button3" data-prov_id=${server_response[1][i].id}><img src="img/icons/delete.svg" height="10%;"></td>
 				</tr>
 			`
@@ -132,15 +132,14 @@ function output_containers(){
 			container_con.innerHTML +=`
 				<tr>
 					<td style="width: 45%">${server_response[2][i].container_id}</td>
-					<td style="width: 45%">${server_response[2][i].container_type}</td>
-					<td style="width: 5%" class="provajderi_table_button"><img src="img/icons/file.svg" height="10%;"></td>
-					<td style="width: 5%" class="provajderi_table_button"><img src="img/icons/delete.svg" height="10%;"></td>
+					<td style="width: 50%">${server_response[2][i].container_type}</td>
+					<td style="width: 5%" class="provajderi_table_button2" data-con_id=${server_response[2][i].id}><img src="img/icons/delete.svg" height="10%;"></td>
 				</tr>
 			`
 			con_counter++;
 		}
 	}
-
+	delete_containers();
 	//document.getElementById("con_amount").innerHTML = con_counter;
 }
 //output ulazne fakture 
@@ -172,6 +171,10 @@ function print_ulazne_fakture(){
 							</div>
 						</div>
 						<div class="in_out_content_child">
+							<p style="float: left;">Provajder:</p>
+							<p style="float: right;">${server_response[3][i].ulaz_provajder}</p>
+							<div style="clear:both;"></div>
+
 							<p style="float: left;">Broj Fakture:</p>
 							<p style="float: right;">${server_response[3][i].broj_fakture}</p>
 							<div style="clear:both;"></div>

@@ -37,3 +37,5 @@ var call_from_form = false;
 var call_from_form2 = false;
 
 var test123 = false;
+
+var valuta_global;

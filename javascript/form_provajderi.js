@@ -2,6 +2,7 @@
 function get_user_input2(){
 	prov_name = document.getElementsByClassName("prov_input_place");
 	prov_price = document.getElementsByClassName("prov_input_place2")
+	prov_valuta = document.getElementsByClassName("prov_valuta_select")
 
 	parametars = [];
 	var data = new Array();
@@ -20,6 +21,7 @@ function get_user_input2(){
 				table_name : "provajderi",
 				provajeri_name : `${prov_name[i].value}`,
 				dogovorena_cijena : `${prov_price[i].value}`,
+				valuta_placanja : `${prov_valuta[i].value}`,
 				jobs_id : last_added_job_id
 			}
 			data.push(a);

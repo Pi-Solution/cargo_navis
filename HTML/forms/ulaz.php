@@ -3,6 +3,14 @@
 		<div class="ul_f_container">
 			<div class="ul_f_header"></div>
 			<div class="ul_f_content">
+				<div class="ul_faktura" id="ulaz_prov">
+					<div class="fakture_ulaz_header">
+						<div class="fakture_ulaz_header_child">
+							<p>Provajder:</p>
+						</div>
+					</div>
+					<input type="text" name="Provajder" class="fakture_ulaz" id="ulaz_provajder" placeholder="Provajder">
+				</div>
 				<div class="ul_faktura">
 					<div class="fakture_ulaz_header">
 						<div class="fakture_ulaz_header_child">
@@ -31,6 +39,7 @@
 					<select id="valuta_fakture_izlaz" onchange="change_valute();">
 						<option>EUR</option>
 						<option>USD</option>
+						<option>KM</option>
 					</select>
 				</div>
 				<!--------------->
