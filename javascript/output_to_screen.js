@@ -17,6 +17,22 @@ function what_to_run(s1){
 			console.log("data recived")
 			break;
 	}
+	glob_var()
+}
+function glob_var(){
+	//set variables for auto complete
+	var cur_data = new Array();
+	ser_val = [];
+	for(let i = 0; i < server_response[0].length; i++){
+		cur_data.push(server_response[0][i].qkomitent);
+	}
+	ser_val[0] = cur_data;
+	cur_data = []
+	for(let i = 0; i < server_response[1].length; i++){
+		cur_data.push(server_response[1][i].provajeri_name);
+	}
+	ser_val[1] = cur_data;
+	console.log(ser_val)
 }
 //load main table to screen
 function load_to_screen(){

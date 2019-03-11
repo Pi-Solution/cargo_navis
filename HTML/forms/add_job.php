@@ -16,7 +16,15 @@
 						</div>
 					</div>
 					<div class="div_input_c">
+						<!--
 						<input type="text" name="Komitent" class="div_input_c_i" autocomplete="on" placeholder="Komitent" id="komitent">
+						-->
+						<div class="div_input_c_i" id="input">
+							<input type="text" name="username" id="komitent" class="input_place" autocomplete="off" onfocus="load_autoComplete('komitent', 0, 'autocomplete_container')" oninput="load_autoComplete('komitent', 0, 'autocomplete_container')" onblur="hide_autoComplete('autocomplete_container')" oninput="marked_element = 0">
+							<div id="autocomplete_container">
+							</div>
+						</div>
+
 						<select class="paritet_form" id="paritet_form">
 							<option>DAP</option>
 							<option>FOB</option>

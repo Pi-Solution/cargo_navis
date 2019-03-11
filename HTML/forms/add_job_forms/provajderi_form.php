@@ -21,7 +21,17 @@
 									<p>Valuta</p>
 								</div>
 							</div>
+							<!--
 							<input type="text" name="ime_provajdera" class="prov_input_place" placeholder="Ime Provajdera">
+							-->
+							
+							<div class="prov_input_place_position">
+								<input type="text" name="ime_provajdera" id="provajder_forma" class="input_place prov_input_place" autocomplete="off" onfocus="load_autoComplete(`provajder_forma`, 1, `autocomplete_container_prov`)" oninput="load_autoComplete(`provajder_forma`, 1, `autocomplete_container_prov`)" onblur="hide_autoComplete(`autocomplete_container_prov`)" oninput="marked_element = 0" placeholder="Ime Provajdera">
+								<div id="autocomplete_container_prov">
+								</div>
+							</div>
+							
+
 							<input type="number" name="dogovorena_cijena" class="prov_input_place2" id="p_right" placeholder="Dogovorena cijena">
 							<select id="prov_valuta_select" class="prov_valuta_select">
 								<option>KM</option>

@@ -712,14 +712,33 @@ a {
 /*===================*/
 #inp_par{
 	width: 49%;
+	height: 100%;
 	right: 0px;
 }
+#input{
+	position: absolute;
+	width: 49.5%;
+	margin: 0px;
+}
 #komitent{
-	width: 50%;
+	border: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 97%;
+}
+#provajder_forma{
+	border: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 97%;
 }
 .paritet_form{
 	position: absolute;
-	width: 49%;
+	width: 49.5%;
 	height: 100%;
 	right: 0px;
 	border: none;
@@ -947,7 +966,7 @@ a {
 	width: 100%;
 	height: 50%;
 }
-.prov_input_place{
+.prov_input_place_position{
 	position: absolute;
 	bottom: 0px;
 	height: 50%;
@@ -1150,6 +1169,13 @@ a {
 	height: 12.5%;
 	width: 96%;
 }
+#il_faktura{
+	position: absolute;
+	top: 0.5% !important;
+	left: 2%;
+	height: 12.5%;
+	width: 96%;
+}
 .fakture_ulaz_header{
 	position: absolute;
 	top: 0px;
@@ -1317,4 +1343,84 @@ a {
 }
 .warning_delete_button:active{
 	opacity: 0.5
+}
+#change_data{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	display: none;
+}
+#change_data_bg{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.5;
+}
+#change_data_form{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	width: 40%;
+	height: 10%;
+	background-color: white;
+}
+#change_data_select{
+	position: absolute;
+	top: 0px;
+	width: 50%;
+	height: 50%;
+	border: none;
+	background-color: #efefef;
+}
+#change_data_form_window{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 50%;
+	height: 50%;
+}
+#change_data_buttons{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+}
+#change_data_save_button{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background-color: red;
+	right: 0px;
+}
+#change_data_back_button{
+	position: absolute;
+	left: 0px;
+	width: 50%;
+	height: 100%;
+	background-color: black;
+}
+.change_data_buttons_child:hover{
+	opacity: 0.9;
+}
+.change_data_buttons_child:active{
+	opacity: 0.8;
+}
+.cd_input_text{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 98%;
+	height: 100%;
+	border: none;
+	padding-left: 2%;
 }

@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Cargo Navis</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/auto-complete.css">
+	<link rel="stylesheet" type="text/css" href="css/auto_complete_style.css">
 </head>
-<body onload="load_data(0);">
+<body onload="load_data(0); add_event_autoComplete()">
 	<div class="nav_bar">
 		
 	</div>
@@ -80,12 +80,6 @@
 					</table>
 				</div>
 			</div>
-			<!--
-			<div id="prov_note">
-				<textarea id="prov_note_text"></textarea>
-				<button id="prov_note_button" onclick="add_event_to_text_area();">Sacuvaj</button>
-			</div>
-			-->
 			<div id="negotiated_price_right">
 				<table class="container_table">
 					<tr>
@@ -182,7 +176,7 @@
 		<button id="izlazi"></button>
 
 		<button class="tab_buttons" style="left: 59.6%"></button>
-		<button class="tab_buttons" style="left: 72.4%"></button>
+		<button class="tab_buttons" style="left: 72.4%" onclick="show_form('change_data'); table_name = 'paritet'">IZMJENI</button>
 		<button class="tab_buttons" style="left: 85.2%" onclick="get_delete('jobs',server_response[0][start_data].id); start_data = 0"><img src="img/icons/trash_w.svg" height="50%;"></button>
 	</div>
 
@@ -199,6 +193,8 @@
 	include "HTML/forms/izlaz.php";
 	//obavjestenje o brisanju
 	include "HTML/warning_screen/delete_warning.php";
+	//forma sa promjenu podataka unutar jednog posla
+	include "HTML/forms/change_data.php";
 	?>
 
 	<script type="text/javascript" src="javascript/variables.js"></script>
@@ -212,7 +208,8 @@
 	<script type="text/javascript" src="javascript/delete_database.js"></script>
 	<script type="text/javascript" src="javascript/update.js"></script>
 	<script type="text/javascript" src="javascript/reset_forms.js"></script>
+	<script type="text/javascript" src="javascript/change_job_data.js"></script>
 	<script type="text/javascript" src="javascript/modify_data/delete_data.js"></script>
-	<script type="text/javascript" src="javascript/autoComplete/auto-complete.js"></script>
+	<script type="text/javascript" src="javascript/auto_complete.js"></script>
 </body>
 </html>

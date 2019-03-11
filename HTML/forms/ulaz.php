@@ -9,7 +9,13 @@
 							<p>Provajder:</p>
 						</div>
 					</div>
+					<!--
 					<input type="text" name="Provajder" class="fakture_ulaz" id="ulaz_provajder" placeholder="Provajder">
+					-->
+					<input type="text" name="Provajder" id="ulaz_provajder" class="input_place fakture_ulaz" autocomplete="off" onfocus="load_autoComplete(`ulaz_provajder`, 1, `autocomplete_container_prov2`)" oninput="load_autoComplete(`ulaz_provajder`, 1, `autocomplete_container_prov2`)" onblur="hide_autoComplete(`autocomplete_container_prov2`)" oninput="marked_element = 0" placeholder="Ime Provajdera">
+					
+					<div id="autocomplete_container_prov2">
+					</div>
 				</div>
 				<div class="ul_faktura">
 					<div class="fakture_ulaz_header">
