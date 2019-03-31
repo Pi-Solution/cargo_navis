@@ -1,0 +1,102 @@
+#form_provajder{
+	display: none;
+}
+.provajder_buttons{
+	position: absolute;
+	height: 100%;
+	width: 49.5%;
+	background-color: black;
+	color: white;
+	font-size: 1vw;
+}
+.p_b_right{
+	right: 0px;
+}
+.provajder_buttons:hover{
+	opacity: 0.9;
+}
+.provajder_buttons:active{
+	opacity: 0.8;
+}
+.form_content_lines{
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	right: 1%;
+	height: 15%;
+}
+.form_con_l_header{
+	position: absolute;
+	height: 50%;
+	width: 100%;
+}
+.form_con_l_header_al{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 50%;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 1vw;
+}
+.form_con_l_header_al p{
+	margin: 0px;
+	padding-left: 0px;
+}
+.form_con_l_header_al p:nth-child(1){
+	position: absolute;
+	left: 3%;
+}
+.form_con_l_header_al p:nth-child(2){
+	position: absolute;
+	left: 53%;
+}
+.form_con_l_header_al p:nth-child(3){
+	position: absolute;
+	left: 83%;
+}
+.fom_prov_name{
+	position: absolute;
+	height: 50%;
+	bottom: 0px;
+	width: 47.5%;
+	border: 1px solid black;
+	border-radius: 2px;
+	padding-left: 2%;
+
+}
+.fom_prov_price{
+	position: absolute !important;
+	left: 51% !important;
+	height: 50% !important;
+	bottom: 0px !important;
+	width: 27.5% !important;
+	border: 1px solid black !important;
+	border-radius: 2px !important;
+	padding-left: 2% !important;
+}
+.form_select{
+	position: absolute;
+	height: 50%;
+	bottom: 0px;
+	width: 17.5%;
+	right: 0%;
+	border: 1px solid black;
+}
+.form_prov_valuta{
+	position: absolute;
+	height: 100%;
+	bottom: 0px;
+	width: 100%;
+	right: 0%;
+	border: none;
+	border-radius: 2px;
+	padding-left: 2%;
+
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}

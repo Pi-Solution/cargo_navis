@@ -1,215 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
 	<title>Cargo Navis</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/auto_complete_style.css">
+	<meta charset="utf-8">
+	<link rel="icon" href="images/logo/logo.png">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/navigation_bar.css">
+	<link rel="stylesheet" type="text/css" href="css/table_nalozi.css">
+	<link rel="stylesheet" type="text/css" href="css/content_main_info.css">
+	<link rel="stylesheet" type="text/css" href="css/content1.css">
+	<link rel="stylesheet" type="text/css" href="css/content2.css">
+	<link rel="stylesheet" type="text/css" href="css/content3.css">
+	<link rel="stylesheet" type="text/css" href="css/content4.css">
+	<link rel="stylesheet" type="text/css" href="css/content_buttons.css">
+	<link rel="stylesheet" type="text/css" href="css/forms/universal_form_div.css">
+	<link rel="stylesheet" type="text/css" href="css/forms/form_nalozi.css">
+	<link rel="stylesheet" type="text/css" href="css/forms/form_provajders.css">
+	<link rel="stylesheet" type="text/css" href="css/forms/form_kontejneri.css">
+	<link rel="stylesheet" type="text/css" href="css/forms/ulazne_izlazne_fakture.css">
+	<link rel="stylesheet" type="text/css" href="css/forms/change_nalozi_data.css">
+	<link rel="stylesheet" type="text/css" href="css/warning_screens/warning_delete.css">
+	<link rel="stylesheet" type="text/css" href="css/forms/provajder_notes.css">
+	<link rel="stylesheet" type="text/css" href="css/flying_div.css">
 </head>
-<body onload="load_data(0); add_event_autoComplete()">
-	<div class="nav_bar">
-		
-	</div>
-	<div id="main_table">
-		<table id="main_table_header">
-			<tr>
-				<th width="15%">ID</th>
-				<th width="40%">Komitent</th>
-				<th width="40%">Datum ponude</th>
-			</tr>
-		</table>
-		<div id="main_table_container">
-			<table id="main_table_container_child">
-				
-			</table>
-		</div>
-	</div>
-	<div id="container">
-		<div id="basic_info">
-			<div id="basic_info_child">	
-				<h2>Osnovne informacije</h2>
-			</div>
-		</div>
-		<div id="container_child">
-			<div id="con_child_left">
-				<p style="float: left;">Paritet:</p>
-				<p style="float: right;" id="paritet">n/a</p>
-				<div style="clear:both;"></div>
-				<p style="float: left;">B/L:</p>
-				<p style="float: right;" id="bl">n/a</p>
-			</div>
-			<div id="con_child_right">
-				<div id="con_child_provajder_table">
-					<div id="prov_note">
-						<textarea id="prov_note_text"></textarea>
-					<button id="prov_note_button" onclick="add_event_to_text_area();">Sacuvaj</button>
-			</div>
-				</div>
-			</div>
-		</div>
-		<div id="bay">
-			<div id="from_bay">
-				<p style="float: left;">Luka Polazak:</p>
-				<p style="float: right;" id="port_from">n/a</p>
-				<div style="clear:both;"></div>
-				<p style="float: left;">Datum Isplovljavanja:</p>
-				<p style="float: right;" id="port_from_date">n/a</p>
-			</div>
-			<img id="arrow" src="img/icons/long-arrow-pointing-to-the-right.png">
-			<div id="to_bay">
-				<p style="float: left;">Luka Dolaska:</p>
-				<p style="float: right;" id="port_to">n/a</p>
-				<div style="clear:both;"></div>
-				<p style="float: left;">Datum Uplovljavanja:</p>
-				<p style="float: right;" id="port_to_date">n/a</p>
-			</div>	
-		</div>
-		<div id="negotiated_price">
-			<div id="negotiated_price_left">
-				<table class="container_table">
-					<tr>
-						<th style="width: 45%">Provajder</th>
-						<th style="width: 20%">Cijena</th>
-						<th style="width: 20%">Valuta</th>
-						<th style="width: 10%"></th>
-						<th style="width: 5%" class="add_prov_id" onclick="show_form('add_provajders_form')">+</th> 
-					</tr>
-				</table>
-				<div class="container_table_content">
-					<table id="con_child_provajder_table_child">
+<body onload="get_data_controller(0); on_start();">
+	<div class="navigation_bar"></div>
+	<div id="main">
+		<div id="table_nalozi">
+			<div id="table_nalozi_child">
+				<div id="nalozi_header">
+					<table class="nalozi_table_header">
+						<tr>
+							<th width="10%">ID</th>
+							<th width="45%">Komitent</th>
+							<th width="45%">Datum Ponude</th>
+						</tr>
 					</table>
 				</div>
-			</div>
-			<div id="negotiated_price_right">
-				<table class="container_table">
-					<tr>
-						<th style="width: 45%">Broj Kontejnera</th>
-						<th style="width: 45%">Vrsta Kontejnera</th>
-						<th style="width: 5%"></th>
-						<th style="width: 10%" class="add_prov_id" onclick="show_form('add_containers_form')">+</th> 
-					</tr>
-				</table>
-				<div class="container_table_content">
-					<table id="container_table_content_child">
-
+				<div class="nalozi_content">
+					<table class="nalozi_table_content" id="nalozi_table">
+						<tr>
+							<td width="10%">ID</td>
+							<td width="45%">Komitent</td>
+							<td width="45%">Datum Ponude</td>
+						</tr>
 					</table>
 				</div>
+				<button id="nalozi_button" onclick="show_form(0)"><strong>+ DODAJ NOVI NALOG</strong></button>
 			</div>
 		</div>
-		<div id="in_out_content">
-			<div id="in_f">
-				<button id="in_f_button" onclick="show_form('ulaz_fartura_forma');"><strong>DODAJ ULAZNU FAKTURU</strong></button>
-				<!--
-				<div class="in_f1">
-					<div class="in_out_header">
-						<div class="in_out_header_child">
-							<h3 style="text-align: center;">Ulaz Fakture</h3>
-						</div>
-					</div>
-					<div class="in_out_content_child">
-						<p style="float: left;">Broj Fakture:</p>
-						<p style="float: right;">n/a</p>
-						<div style="clear:both;"></div>
 
-						<p style="float: left;">Datum Fakture:</p>
-						<p style="float: right;">n/a</p>
-						<div style="clear:both;"></div>
 
-						<p style="float: left;">Valuta Placanja:</p>
-						<p style="float: right;">n/a</p>
-						<div style="clear:both;"></div>
-
-						<p style="float: left;">Iznos (EUR/USD):</p>
-						<p style="float: right;">n/a</p>
-						<div style="clear:both;"></div>
-
-						<p style="float: left;">Iznos (KM):</p>
-						<p style="float: right;">n/a</p>
-
-						<button class="fakture_button">DODAJ FAKTURU</button>
+		<div id="content">
+			<div id="content_child">
+				<div id="content_main_info_header">
+					<div class="content_main_info_header_text_al">
+						<p><strong>Osnovne Informacije</strong></p>
 					</div>
 				</div>
-				-->
-			</div>
-			<div id="out_f">
-				<button id="out_f_button" onclick="show_form('izlazna_fartura_forma');"><strong>DODAJ IZLAZNU FAKTURU</strong></button>
-				<!--
-				<div class="out_f1">
-					<div class="in_out_header">
-						<button class="in_f_left" onclick="arrow_in_fakture(false, 'out_f1');"><</button>
-						<button class="in_f_right" onclick="arrow_in_fakture(true, 'out_f1')">></button>
-						<div class="in_out_header_child">
-							<h3 style="text-align: center;">Izlaz Fakture</h3>
-						</div>
-					</div>
-					<div class="in_out_content_child">
-						<p style="float: left;">Broj Fakture:</p>
-						<p style="float: right;">n/a</p>
-						<div style="clear:both;"></div>
-
-						<p style="float: left;">Datum Fakture:</p>
-						<p style="float: right;">n/a</p>
-						<div style="clear:both;"></div>
-
-						<p style="float: left;">Iznos (KM):</p>
-						<p style="float: right;">n/a</p>
-						<div style="clear:both;"></div>
-
-						<p style="float: left;">RUC(KM):</p>
-						<p style="float: right;">n/a</p>
-						<div style="clear:both;"></div>
-
-						<p style="float: left;">RUC(%):</p>
-						<p style="float: right;">n/a</p>
-
-						<button class="fakture_button">DODAJ FAKTURU</button>
-					</div>
+				<?php
+				//include main info
+				include "HTML/content_main_info.php";
+				//include "provajderi" i "kontejneri"
+				include "HTML/provajderi_i_kontejneri.php";
+				//include "ulazne i izlane fakture"
+				include "HTML/ulazne_i_izlazne_fakture.php";
+				?>	
+				<div id="content_main_info_footer">
+					<button class="content_buttons content_provajders" onclick="show_form(1)">DODAJ PROVAJDERE</button>
+					<button class="content_buttons content_containers" onclick="show_form(2);">DODAJ KONTEJNERE</button>
+					<button class="content_buttons content_change" onclick="show_change_nalozi_data();">IZMJENI</button>
+					<button class="content_buttons content_delete" onclick="show_delete_waning('jobs', current_nalog_id, 0);"><img src="images/icons/trash_w.svg" width="8%;"></button>
 				</div>
-				-->
 			</div>
 		</div>
 	</div>
-	<!--/////////////////////buttons for main screen//////////////////////-->
-	<div id="button_tab">
-		<button id="tab_button1" onclick="show_form('add_job_form')">+ DODAJ NOVI NALOG</button>
-		<button id="ulazi"></button>
-		<button id="izlazi"></button>
-
-		<button class="tab_buttons" style="left: 59.6%"></button>
-		<button class="tab_buttons" style="left: 72.4%" onclick="show_form('change_data'); table_name = 'paritet'">IZMJENI</button>
-		<button class="tab_buttons" style="left: 85.2%" onclick="get_delete('jobs',server_response[0][start_data].id); start_data = 0"><img src="img/icons/trash_w.svg" height="50%;"></button>
-	</div>
-
-
 	<?php
-	//forma za dodavanje novih poslova
-	include "HTML/forms/add_job.php";
-	//include forms for provajder and container
-	include "HTML/forms/add_job_forms/provajderi_form.php";
-	include "HTML/forms/add_job_forms/containers_form.php";
-	//forma za dodavanje ulaznih faktura
-	include "HTML/forms/ulaz.php";
-	//forma za dodavanje izlaznih faktura
-	include "HTML/forms/izlaz.php";
-	//obavjestenje o brisanju
-	include "HTML/warning_screen/delete_warning.php";
-	//forma sa promjenu podataka unutar jednog posla
-	include "HTML/forms/change_data.php";
+		include "HTML/forms/nalozi.php";
+		include "HTML/forms/provajderi.php";
+		include "HTML/forms/kontejneri.php";
+		include "HTML/forms/ulazne_fakture.php";
+		include "HTML/forms/izlazne_fakture.php";
+		include "HTML/warning_screens/warning_delete.php";
+		include "HTML/forms/change_nalozi_data.php";
+		include "HTML/forms/provajder_notes.php";
+		include "HTML/flying_div.php";
 	?>
-
-	<script type="text/javascript" src="javascript/variables.js"></script>
-	<script type="text/javascript" src="javascript/get_db_data.js"></script>
-	<script type="text/javascript" src="javascript/output_to_screen.js"></script>
-	<script type="text/javascript" src="javascript/show_form.js"></script>
-	<script type="text/javascript" src="javascript/add_job_form.js"></script>
-	<script type="text/javascript" src="javascript/form_provajderi.js"></script>
-	<script type="text/javascript" src="javascript/form_containers.js"></script>
-	<script type="text/javascript" src="javascript/ulazne_izlazne_fakture.js"></script>
-	<script type="text/javascript" src="javascript/delete_database.js"></script>
-	<script type="text/javascript" src="javascript/update.js"></script>
-	<script type="text/javascript" src="javascript/reset_forms.js"></script>
-	<script type="text/javascript" src="javascript/change_job_data.js"></script>
-	<script type="text/javascript" src="javascript/modify_data/delete_data.js"></script>
-	<script type="text/javascript" src="javascript/auto_complete.js"></script>
+	<script type="text/javascript" src="js/forms.js"></script>	
+	<script type="text/javascript" src="js/main_variables.js"></script>
+	<script type="text/javascript" src="js/get_data.js"></script>	
+	<script type="text/javascript" src="js/print_to_screen.js"></script>
+	<script type="text/javascript" src="js/warning_delete.js"></script>
+	<script type="text/javascript" src="js/change_nalozi_data.js"></script>
+	<script type="text/javascript" src="js/provajderi_notes.js"></script>
+	<script type="text/javascript" src="js/show_notes_div.js"></script>
 </body>
 </html>

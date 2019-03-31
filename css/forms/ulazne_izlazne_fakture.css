@@ -1,0 +1,66 @@
+#form_ulazne_fakture{
+	display: none;
+}
+#form_izlazne_fakture{
+	display: none;
+}
+.form_fakture_lines{
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	right: 1%;
+	height: 15%;
+}
+.form_fakture_l_header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+}
+.form_f_l_h_al{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 60%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.form_f_l_h_al p{
+	margin: 0px;
+	padding: 0px;
+}
+.fakture_lines_input{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 50%;
+	background-color: black;
+	border-radius: 3px;
+}
+.fakture_l_i_middle{
+	position: absolute;
+	left: 1px;
+	right: 1px;
+	top: 1px;
+	bottom: 1px;
+	background-color: white;
+}
+.fakture_l_i_child{
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	background-color: white;
+	border: none;
+	border-radius: 3px;
+}
+.faktura_valuta{
+	width: 49.5%;
+}
+.fakture_select{
+	height: 100%;
+}
+.faktura_right{
+	right: 0px;
+}

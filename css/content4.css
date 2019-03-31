@@ -1,0 +1,228 @@
+#content4{
+	position: absolute;
+	top: 54%;
+	width: 100%;
+	height: 40.3%;
+}
+.content4_child{
+	position: absolute;
+	top: 0px;
+	width: 49.6%;
+	height: 100%;
+}
+.con4_child_f{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	display: none
+}
+.ulaz_fakture{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #D3333F;
+	display: none;
+}
+.izlaz_fakture{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #3CABB6;
+	display: none
+}
+.con4_left{
+	left: 0px;
+}
+.con4_right{
+	right: 0px;
+}
+/*--------------------------*/
+.fakture_main_button_child{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+.fatkure{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+.con4_header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 11%;
+	background-color: black;
+}
+.fakture_left_arrow{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 10%;
+	color: white;
+	border-right: 1px solid white;
+	cursor: pointer;
+	-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}
+.fakture_left_arrow:hover{
+	background-color: #1c1c1c;
+}
+.fakture_left_arrow:active{
+	background-color: #262626;
+}
+.fakture_rigth_arrow{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 10%;
+	color: white;
+	border-left: 1px solid white;
+	cursor: pointer;
+	-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}
+.fakture_rigth_arrow:hover{
+	background-color: #1c1c1c;
+}
+.fakture_rigth_arrow:active{
+	background-color: #262626;
+}
+.fakture_header_al{
+	position: absolute;
+	top: 0px;
+	border: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 30%;
+	height: 60%;
+	margin: auto;
+	font-size: 1vw;
+	text-align: center;
+}
+.fakture_header_al2{
+	position: absolute;
+	top: 0px;
+	border: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 50%;
+	height: 60%;
+	margin: auto;
+	font-size: 1vw;
+	color: white;
+	text-align: center;
+}
+.con4_con{
+	position: absolute;
+	top: 11%;
+	width: 100%;
+	height: 77%;
+}
+.con4_con_left{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	width: 50%;
+	height: 100%;
+}
+.con4_con_left p{
+	padding-left: 5%;
+}
+.con4_con_right{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 50%;
+	text-align: right;
+}
+.con4_con_right p{
+	padding-right: 5%;
+}
+.con4_con_child{
+	height: 16.66%;
+	width: 100%;
+}
+.con4_div_al{
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	top: 0px;
+	bottom: 0px;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 1vw;
+}
+.con4_con_child{
+	position: absolute;
+
+}
+.con4_buttons_div{
+	position: absolute;
+	bottom: 0px;
+	height: 10%;
+	width: 100%;
+}
+.con4_add_f_but{
+	position: absolute;
+	top: 0px;
+	left: 1%;
+	height: 85%;
+	width: 90%;
+	background-color: black;
+	color: white;
+	font-size: 0.8vw;
+}
+.con4_add_delete_but{
+	position: absolute;
+	right: 1%;
+	height: 85%;
+	width: 7.5%;
+	background-color: black;
+	color: white;
+}
+.con4_but_hover:hover{
+	background-color: #0c0c0c;
+}
+.con4_but_hover:active{
+	background-color: #191919;
+}
+.fakture_main_button_div{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.fakture_main_button_div:hover{
+	opacity: 0.9;
+}
+.fakture_main_button_div:active{
+	opacity: 0.8;
+}
+.fakture_main_button_div_left{
+	background-color: #D3333F;
+}
+.fakture_main_button_div_rigth{
+	background-color: #3CABB6;
+}
+.fakture_main_button{
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	right: 20px;
+	left: 20px;
+	border: 5px solid white;
+}

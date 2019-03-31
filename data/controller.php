@@ -10,7 +10,6 @@
 
 	$input = json_decode(stripslashes(file_get_contents("php://input")),true);
 
-
 	//send to (recive = 0), (send = 1), (update = 2), (delete = 3)
 	if ($input[0] == 0) {
 		get_data($input);
@@ -27,7 +26,7 @@
 	function get_data($input){
 		for ($i=0; $i < count($input[1]) ; $i++) { 
 			$get_data = new Receiver();
-			$get_data->set_collums($input[1][$i]);
+			$get_data->set_collums($input[1][$i], $input[2]);
 			$data_from_db[] = $get_data->get_db_data();
 		}
 		echo json_encode($data_from_db);

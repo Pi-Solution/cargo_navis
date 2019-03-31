@@ -1,0 +1,89 @@
+#table_nalozi{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 30%;
+	background-color: black;
+	font-size: 1vw;
+	cursor: pointer;
+}
+#table_nalozi_child{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: white;
+}
+#nalozi_header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 5%;
+	width: 100%;
+	background-color: black;
+}
+.nalozi_table_header{
+	border-collapse: collapse;
+	width: 100%;
+	color: white;
+	height: 100%;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.nalozi_content{
+	position: absolute;
+	top: 5%;
+	width: 100%;
+	height: 90%;
+	overflow-y: auto;
+}
+.nalozi_table_content{
+	border-collapse: collapse;
+	width: 100%;
+}
+.nalozi_table_content tr{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.nalozi_table_content tr:hover{
+	background-color: #f2f2f2;
+}
+.nalozi_table_content tr:active{
+	background-color: #e5e5e5;
+}
+.nalozi_table_content td{
+	border: 1px solid #dddddd;
+	text-align: center;
+	padding: 8px;
+}
+.nalozi_table_content_active{
+	background-color: #dddddd;
+}
+.nalozi_table_content_active:hover{
+	background-color: #dddddd !important;
+}
+#nalozi_button{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 5%;
+	background-color: black;
+	color: white;
+}
+#nalozi_button:hover{
+	opacity: 0.9;
+}
+#nalozi_button:active{
+	opacity: 0.8;
+}

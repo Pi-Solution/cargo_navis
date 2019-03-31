@@ -1,0 +1,28 @@
+.content_buttons{
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 25%;
+	border-left: 1px solid white;
+	color: white;
+	font-size: 1vw;
+}
+.content_buttons:hover{
+	background-color: #1c1c1c;
+}
+.content_buttons:active{
+	background-color: #232323;
+}
+.content_provajders{
+	left: 0%;
+	border-left: none;
+}
+.content_containers{
+	right: 50%;
+}
+.content_change{
+	right: 25%;
+}
+.content_delete{
+	right: 0px;
+}

@@ -1,0 +1,82 @@
+#content3{
+	position: absolute;
+	top: 23%;
+	width: 100%;
+	height: 30%;
+	font-size: 1vw;
+}
+.content3_child{
+	position: absolute;
+	height: 100%;
+	width: 49.6%;
+	top: 0px;
+}
+.con3_left{
+	left: 0px;
+}
+.con3_right{
+	right: 0px;
+}
+.con3_child_header{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 15%;
+	background-color: black;
+}
+.con3_table_header{
+	border-collapse: collapse;
+	width: 100%;
+	color: white;
+	height: 100%;
+}
+.con3_child_con{
+	position: absolute;
+	top: 15%;
+	width: 100%;
+	height: 85%;
+	background-color: black;
+	font-size: 1vw;
+}
+.con3_child_con_child{
+	position: absolute;
+	top: 0px;
+	left: 1px;
+	right: 1px;
+	bottom: 1px;
+	background-color: white;
+	overflow-y: auto;
+}
+.con3_table_content{
+	border-collapse: collapse;
+	width: 100%;
+}
+.con3_table_content td{
+	border: 1px solid #dddddd;
+	text-align: center;
+	padding: 3px;
+	height: 10px;
+}
+.con3_table_hover{
+	cursor: pointer;
+	  -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+.con3_table_hover:hover{
+	background-color: lightgray;
+}
+.con3_table_hover:active{
+	background-color: gray;
+
+}
+.provajderi_collums{
+	cursor: pointer;
+}

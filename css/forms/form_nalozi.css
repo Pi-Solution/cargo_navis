@@ -1,0 +1,117 @@
+#form_nalozi{
+	display: none;	
+}	
+.form_nalozi_buttons{
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 49.5%;
+	background-color: black;
+	color: white;
+	font-size: 0.8vw;
+	border-radius: 2px;
+}
+.form_nalozi_buttons:hover{
+	opacity: 0.9;
+}
+.form_nalozi_buttons:active{
+	opacity: 0.8;
+}
+.f_n_b_r{
+	right: 0px;
+}
+.form_lines{
+	position: absolute;
+	left: 1%;
+	right: 1%;
+	height: 15%;
+	font-size: 1vw;
+}
+.form_lines_header{
+	position: absolute;
+	top: 0px;
+	left: 0px;height: 50%;
+	width: 100%;
+}
+.f_l_h_left{
+	position: absolute;
+	height: 100%;
+	width: 49.5%;
+}
+.f_l_h_right{
+	position: absolute;
+	height: 100%;
+	width: 49.5%;
+	right: 0px;
+}
+.lines_h_al{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 50%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.lines_h_al p {
+	padding-left: 3%;
+}
+.form_lines_content{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+}
+.f_l_left{
+	position: absolute;
+	width: 49.5%;
+	height: 100%;
+	background-color: gray;
+	border-radius: 2px;
+}
+.f_l_rigth{
+	position: absolute;
+	width: 49.5%;
+	height: 100%;
+	right: 0px;
+	background-color: gray;
+	border-radius: 2px;
+}
+.f_l_left_child{
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+	background-color: white;
+	border-radius: 2px;
+}
+.f_l_left_child input[type="text"], input[type="number"], input[type="date"]{
+	position: absolute;
+	width: 95%;
+	height: 100%;
+	border-radius: 2px;
+	padding-left: 5%;
+
+	border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.f_l_left_child select{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 2px;
+	padding-left: 2%;
+
+	border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}

@@ -1,0 +1,77 @@
+.universal_form_div{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+
+}
+.form_back_ground{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.5;
+}
+.form{
+	position: absolute;
+	top: 15%;
+	bottom: 15%;
+	left: 35%;
+	right: 35%;
+	background-color: white;
+	border-radius: 2px;
+}
+.form_header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 7%;
+	width: 100%;
+	background-color: black;
+}
+.form_header_al{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 40%;
+	margin-top: auto;
+	margin-bottom: auto;
+	text-align: center;
+}
+.form_header_al h3{
+	padding: 0px;
+	margin: 0px;
+	color: white;
+	font-size: 1vw;
+}
+.form_content{
+	position: absolute;
+	top: 7%;
+	bottom: 7%;
+	width: 100%;
+}
+.form_buttons{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 7%;
+	width: 100%;
+	-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+.form_buttons_child{
+	position: absolute;
+	left: 1%;
+	right: 1%;
+	top: 10%;
+	bottom: 10%;
+}
