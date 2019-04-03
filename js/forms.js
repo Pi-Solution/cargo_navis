@@ -9,7 +9,6 @@ function show_form(i){
 }
 function nalozi_form(){
 	var nalozi_form = {
-		table_name : 'jobs',
 		qkomitent : `${document.getElementById("nalozi_komitent").value}`,
 		paritet : `${document.getElementById("nalozi_paritet").value}`,
 		bl : `${document.getElementById("nalozi_bl").value}`,
@@ -24,17 +23,18 @@ function nalozi_form(){
 
 	var to_server = new Array();
 	to_server[0] = 1;
-	to_server[1] = data;
+	to_server[1] = "jobs";
+	to_server[2] = data;
 
 	console.log(to_server);
 
 	send_data_nalozi(to_server);
 }
 function send_data_nalozi(to_server){
-	
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
+			console.log(this.responseText)
 			if(this.responseText == 101){
 				alert("sacuvano")
 				show_form(0);
@@ -69,7 +69,6 @@ function save_provajders(){
 	for(let i = 0; i < name.length; i++){
 		if (name[i].value != "") {
 			a = {
-				table_name : "provajderi",
 				provajeri_name : `${name[i].value}`,
 				dogovorena_cijena : `${price[i].value}`,
 				valuta_placanja : `${valuta[i].value}`,
@@ -79,7 +78,8 @@ function save_provajders(){
 		}
 	}
 	ser_val[0] = 1;
-	ser_val[1] = data;
+	ser_val[1] = "provajderi";
+	ser_val[2] = data;
 	console.log(ser_val);
 
 	send_provajders_data(ser_val);
@@ -183,7 +183,6 @@ function save_container(){
 		if (text_b[i].value != "") {
 			for(let b = 0; b < con_ar.length; b++){
 				var a = {
-					table_name : "containers",
 					container_id : `${con_ar[b]}`,
 					container_type : `${div_type[i].value}`,
 					jobs_id : current_nalog_id
@@ -196,7 +195,8 @@ function save_container(){
 	var ser_val = new Array();
 
 	ser_val[0] = 1;
-	ser_val[1] = data;
+	ser_val[1] = "containers";
+	ser_val[2] = data;
 
 	//console.log(ser_val);
 
@@ -334,7 +334,6 @@ function save_ul_faktura(){
 	var ser_val = new Array();
 
 	var a = {
-		table_name : "fakture_ulaz",
 		ulaz_provajder : `${document.getElementById("form_ul_provajder").value}`,
 		broj_fakture : `${document.getElementById("ul_f_broj_fakture").value}`,
 		datum_fakture : `${document.getElementById("ul_f_f_datum").value}`,
@@ -346,7 +345,8 @@ function save_ul_faktura(){
 
 	data.push(a)
 	ser_val[0] = 1;
-	ser_val[1] = data
+	ser_val[1] = "fakture_ulaz";
+	ser_val[2] = data
 	//console.log(ser_val);
 	send_ulazne_f_data(ser_val);
 }
@@ -376,7 +376,6 @@ function save_iz_faktura(){
 	var ser_val = new Array();
 
 	var a = {
-		table_name : "izlazne_fakture",
 		broj_fakture : `${document.getElementById("broj_iz_fakture_form").value}`,
 		datum_fakture : `${document.getElementById("datum_iz_f").value}`,
 		iznos : `${document.getElementById("iznos_iz_f_form").value}`,
@@ -385,7 +384,8 @@ function save_iz_faktura(){
 
 	data.push(a)
 	ser_val[0] = 1;
-	ser_val[1] = data
+	ser_val[1] = "izlazne_fakture";
+	ser_val[2] = data
 	console.log(ser_val);
 	send_izlazne_f_data(ser_val);
 }

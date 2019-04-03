@@ -10,7 +10,7 @@
 			$this->hostname = 'localhost';
 			$this->username = 'root';
 			$this->password = '';
-			$this->dbname = 'test2';
+			$this->dbname = 'cargo_navis';
 			$this->charset = 'utf8mb4';
 		}
 		protected function connect(){
