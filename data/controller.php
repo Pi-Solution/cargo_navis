@@ -36,31 +36,35 @@
 	function send_data($input){
 		
 		//validate values and 
-		for ($i=0; $i < count($input[1]); $i++) { 
-			//sorting table names and values to two difrent arrays
-			foreach ($input[1][$i] as $key => $value) {
-				//validate data
-				if (!is_array($input[1][$i])){
-					die("Nepravilno uneseni podatci");
+		for ($i=0; $i < count($input[2]) ; $i++) { 
+			
+			$collum_name = array();
+			$collum_value = array();
+			
+			foreach ($input[2][$i] as $key => $value) {
+				if (!isset($key)) {
+					die("Error");
 				}
-				if (!isset($input[1][$i])) {
-					die("don't do it");
+				if (empty($key)) {
+					die('Error');
 				}
-				if (empty($input[1][$i])) {
-					die("Molimo unesite podatke");
+				if(preg_match('/[^a-z_\-0-9]/i', $key)){
+					die('Error');
 				}
-				if ($key[0] == 'q') {
-					if (empty($value)) {
-						die('Molimo vas unesite polje:' . $key);
-					}
-				}
-				$table_name[$i][] = $key;
-				$table_value[$i][] = $value;
+
+				array_push($collum_name, $key);
+				array_push($collum_value, $value);
 			}
-			$send = new Sender();
-			$send->set_var($table_name[$i], $table_value[$i]);
+			//push time collum and value
+			array_push($collum_name, 'job_date');
+			array_push($collum_value, date("Y-m-d h:i:sa"));
+
+			$save_to_db = new Sender();
+			$save_to_db->set_data($input[1], $collum_name, $collum_value);
+			$save_to_db->prepare_connection();
+			$save_to_db->opet_connection();
+			$save_to_db->save_to_db();
 		}
-		echo $send->get_server_response();
 	}
 
 	#update data to db
