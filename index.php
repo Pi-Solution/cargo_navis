@@ -94,5 +94,6 @@
 	<script type="text/javascript" src="js/change_nalozi_data.js"></script>
 	<script type="text/javascript" src="js/provajderi_notes.js"></script>
 	<script type="text/javascript" src="js/show_notes_div.js"></script>
+	<script type="text/javascript" src="js/provajders/provajders-event_listeners.js"></script>
 </body>
 </html>
