@@ -4,47 +4,28 @@
 	 */
 	class Receiver extends Database{
 		
-		private $collums;
+		private $stmt;
 		private $table_name;
-		private $where_fun;
-
-		function set_collums($s1, $s2){
-			$this->collums = $s1;
-			$this->table_name = $s1[0];
-
-			if ($s2 != false) {
-				$this->where_fun = "WHERE " . $s2;
-			}else{
-				$this->where_fun = '';
+		private $collum_name;
+		private $id;
+		
+		public function set_data($table_name, $collum_name, $id){
+			$this->table_name = $table_name;
+			if ($collum_name != false) {
+				$this->collum_name = "WHERE " . $collum_name . "?";
+				$this->id = $id;
 			}
-			
-			$this->prepare_var();
 		}
-		function prepare_var(){
 
-			array_shift($this->collums);
+		public function select_from_db(){
+			$this->set_db_parametars();
+			$this->stmt = $this->connect()->prepare("SELECT * FROM $this->table_name $this->collum_name");
+			$this->stmt->execute([$this->id]);
+			$arr = $this->stmt->fetchAll(PDO::FETCH_ASSOC);
 
-			$this->collums = implode(',', $this->collums);
-
+			return $arr;
 		}
-		function get_db_data(){
-			$stmt = $this->connect()->query("
-					SELECT
-						".$this->collums."
-					FROM 
-						".$this->table_name."
-						".$this->where_fun."
-					ORDER BY 
-						id
-					");
-
-			while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-				$result[] = $row;
-			}
-			if (isset($result)) {
-				return $result;
-			}else{
-				return '110'; #no data
-			}
-		}		
+		function __destruct(){
+        	$this->stmt = null;
+    	}		
 	}

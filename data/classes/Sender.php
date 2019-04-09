@@ -24,6 +24,7 @@
 		public function save_to_db(){
 
 			$this->stmt->execute($this->collum_values);
+			
 		}
 		function __destruct(){
         	$this->stmt = null;

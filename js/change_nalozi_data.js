@@ -98,7 +98,7 @@ function se2(s1){
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-    	 	//alert(this.responseText)
+    	 	//console.log(this.responseText)
     	 	if(this.responseText == 101){
     	 		get_data_controller(0);
     	 		show_change_nalozi_data();
@@ -135,6 +135,7 @@ function reset_change_nalozi_data(){
 			<option>DDP</option>
 			<option>drum</option>
 		</select>
-				`
+		`
+		x.value = 'paritet';
 
 }

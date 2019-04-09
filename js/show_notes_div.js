@@ -1,17 +1,20 @@
-function show_notes_div(control, note){
-	x = document.getElementById("flying_div")
-	var note_div = document.getElementById("fd-content_child2")
+function show_notes_div(control, prov_id){
+
+	x = document.getElementById("flying_div");
+	var note_div = document.getElementById("fd-content_child2");
 	//x = document.getElementById("form_nalozi")
 	if(control == true){
-		if (note === null || note.match(/^ *$/) !== null) {
+		if (provajders[prov_id].note === null || provajders[prov_id].note.match(/^ *$/) !== null) {
 			x.style.display = "none";
 		}else {
 			x.style.display = "block";
-			note_div.innerHTML = `<p>${note}</p>`;
+			//console.log(provajders[prov_id].note);
+
+			note_div.innerHTML = provajders[prov_id].note.replace(new RegExp('\r?\n','g'), '<br />');
 		}
 	}else if(control == false){
 		x.style.display = "none";
-		console.log('no')
+		//console.log('no')
 	}
 }
 function notes_div_position(event){
@@ -22,4 +25,15 @@ function notes_div_position(event){
   //console.log(div_width)
   //console.log(x + "  " + y)
   document.getElementById("flying_div").style.top = y - div_width + 4 + 'px';
+}
+//add scroll event listener to flying div
+function add_event_fd(){
+	
+	console.log("scrolled")
+	/*
+	var elmnt = document.getElementById("content");
+	var elmnt2 = document.getElementById("ruler");
+
+	elmnt2.scrollLeft = elmnt.scrollTop;
+	*/
 }

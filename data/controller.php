@@ -8,9 +8,11 @@
 
 	header("Content-Type: application/json");
 
-	$input = json_decode(stripslashes(file_get_contents("php://input")),true);
+	//$input = json_decode(stripslashes(file_get_contents("php://input")),true);
 
-	//send to (recive = 0), (send = 1), (update = 2), (delete = 3)
+	$input = json_decode(file_get_contents("php://input"),true);
+
+	//send to (select = 0), (send = 1), (update = 2), (delete = 3)
 	if ($input[0] == 0) {
 		get_data($input);
 	}elseif ($input[0] == 1) {
@@ -24,12 +26,15 @@
 
 	#get data from db -------------------------------------> to reciver
 	function get_data($input){
-		for ($i=0; $i < count($input[1]) ; $i++) { 
-			$get_data = new Receiver();
-			$get_data->set_collums($input[1][$i], $input[2]);
-			$data_from_db[] = $get_data->get_db_data();
+		if(preg_match('/[^a-z_\-0-9]/i', $input[1]) && preg_match('/[^a-z_\-0-9]/i', $input[3]) ){
+			echo "$input[2]";
+			die('Error');
 		}
-		echo json_encode($data_from_db);
+		$get_from_db = new Receiver();
+		$get_from_db->set_data($input[1], $input[3], $input[4]);
+		$result = $get_from_db->select_from_db();
+
+		echo json_encode($result);
 	}
 	
 	#save data to db --------------------------------------> to sender
@@ -65,6 +70,7 @@
 			$save_to_db->opet_connection();
 			$save_to_db->save_to_db();
 		}
+		echo "101";
 	}
 
 	#update data to db

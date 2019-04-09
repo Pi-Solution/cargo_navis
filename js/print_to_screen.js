@@ -84,10 +84,10 @@ function ts_provajderi(){
 	for(let i = 0; i < provajders.length; i++){
 		div.innerHTML += `
 			<tr>
-				<td width="35%" class="provajderi_collums" onmousemove="notes_div_position(event, '${provajders[i].note}');" onmouseenter="show_notes_div(true, '${provajders[i].note}')" onmouseleave="show_notes_div(false)">${provajders[i].provajeri_name}</td>
+				<td width="35%" class="provajderi_collums" onmousemove="notes_div_position(event, '${i}');" onmouseenter="show_notes_div(true, '${i}')" onmouseleave="show_notes_div(false)">${provajders[i].provajeri_name}</td>
 				<td width="25%">${provajders[i].dogovorena_cijena}</td>
 				<td width="20%">${provajders[i].valuta_placanja}</td>
-				<td width="10%" class="con3_table_hover" onclick="show_provajderi_notes(${provajders[i].id}, '${provajders[i].note}')"><img src="images/icons/pen.svg" height="200%;"></td>
+				<td width="10%" class="con3_table_hover" onclick="show_provajderi_notes(${provajders[i].id}, '${i}')"><img src="images/icons/pen.svg" height="200%;"></td>
 				<td width="10%" class="con3_table_hover" onclick="show_delete_waning('provajderi', ${provajders[i].id}, 1)"><img src="images/icons/delete.svg" height="200%;"></td>
 			</tr>
 		`

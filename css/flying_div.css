@@ -32,6 +32,8 @@
 	font-size: 1vw;
 	color: gray;
 	font-weight: bold;
+	overflow: auto;
+	word-wrap: break-word
 }
 .fd-arrow{
 	position: absolute;

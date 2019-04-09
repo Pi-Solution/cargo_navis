@@ -36,3 +36,4 @@ var g_table_name = "paritet";
 
 //for provajderi notes function
 var prov_note_id;
+
