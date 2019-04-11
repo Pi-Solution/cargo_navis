@@ -1,3 +1,4 @@
+//show provajderi notes div
 function show_notes_div(control, prov_id){
 
 	x = document.getElementById("flying_div");
@@ -9,8 +10,11 @@ function show_notes_div(control, prov_id){
 		}else {
 			x.style.display = "block";
 			//console.log(provajders[prov_id].note);
+			console.log(note_div.style.width);
 
-			note_div.innerHTML = provajders[prov_id].note.replace(new RegExp('\r?\n','g'), '<br />');
+			note_div.innerHTML = "<label id='fucking_label'>" + provajders[prov_id].note.replace(new RegExp('\r?\n','g'), '<br />'); + "</label>"
+			var kurac = document.getElementById("fucking_label").style.height;
+			console.log(kurac);
 		}
 	}else if(control == false){
 		x.style.display = "none";
@@ -24,7 +28,7 @@ function notes_div_position(event){
 
   //console.log(div_width)
   //console.log(x + "  " + y)
-  document.getElementById("flying_div").style.top = y - div_width + 4 + 'px';
+  document.getElementById("flying_div").style.top = y - div_width + 25 + 'px';
 }
 //add scroll event listener to flying div
 function add_event_fd(){
