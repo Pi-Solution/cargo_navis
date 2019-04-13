@@ -16,7 +16,7 @@
 		#input[0]: (0 = select), (1 = send), (2 = update), (3 = delete)
 	//input[1] setup for table names and controll for way data will be stored to database
 		#input[1][0]: (0 = single table(for standard queries) 1 = (for many to many));
-		#input[1][1]: (array of table names);
+		#input[1][1]: (table name);
 	//input[2]: array of data that we send to db
 
 	if ($input[0] == 0) {
@@ -70,11 +70,16 @@
 			array_push($collum_name, 'job_date');
 			array_push($collum_value, date("Y-m-d h:i:sa"));
 
-			$save_to_db = new Sender();
-			$save_to_db->set_data($input[1], $collum_name, $collum_value);
-			$save_to_db->prepare_connection();
-			$save_to_db->opet_connection();
-			$save_to_db->save_to_db();
+			if ($input[1][0] == 0) {	
+				$save_to_db = new Sender();
+				$save_to_db->set_data($input[1][1], $collum_name, $collum_value);
+				$save_to_db->prepare_connection();
+				$save_to_db->opet_connection();
+				$save_to_db->save_to_db();
+			}elseif ($input[1][0] == 1) {
+				echo "many to many";
+			}
+
 		}
 		echo "101";
 	}

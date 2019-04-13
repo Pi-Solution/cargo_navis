@@ -20,10 +20,13 @@ function nalozi_form(){
 	}
 	var data = new Array();
 	data.push(nalozi_form);
+	var table_control = new Array();
+	table_control[0] = 0;
+	table_control[1] = "jobs"
 
 	var to_server = new Array();
 	to_server[0] = 1;
-	to_server[1] = "jobs";
+	to_server[1] = table_control;
 	to_server[2] = data;
 
 	console.log(to_server);
@@ -77,8 +80,12 @@ function save_provajders(){
 			data.push(a);
 		}
 	}
+	var table_control = new Array();
+	table_control[0] = 0;
+	table_control[1] = "provajderi"
+
 	ser_val[0] = 1;
-	ser_val[1] = "provajderi";
+	ser_val[1] = table_control;
 	ser_val[2] = data;
 	console.log(ser_val);
 
@@ -193,9 +200,12 @@ function save_container(){
 	}
 
 	var ser_val = new Array();
+	var table_control = new Array();
+	table_control[0] = 0;
+	table_control[1] = "containers";
 
 	ser_val[0] = 1;
-	ser_val[1] = "containers";
+	ser_val[1] = table_control;
 	ser_val[2] = data;
 
 	//console.log(ser_val);
@@ -343,9 +353,13 @@ function save_ul_faktura(){
 		id_jobs : current_nalog_id
 	}
 
+	var table_control = new Array();
+	table_control[0] = 0;
+	table_control[1] = "fakture_ulaz";
+
 	data.push(a)
 	ser_val[0] = 1;
-	ser_val[1] = "fakture_ulaz";
+	ser_val[1] = table_control;
 	ser_val[2] = data
 	//console.log(ser_val);
 	send_ulazne_f_data(ser_val);
@@ -383,8 +397,13 @@ function save_iz_faktura(){
 	}
 
 	data.push(a)
+
+	var table_control = new Array();
+	table_control[0] = 0;
+	table_control[1] = "izlazne_fakture"
+
 	ser_val[0] = 1;
-	ser_val[1] = "izlazne_fakture";
+	ser_val[1] = table_control;
 	ser_val[2] = data
 	console.log(ser_val);
 	send_izlazne_f_data(ser_val);
