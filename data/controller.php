@@ -12,7 +12,13 @@
 
 	$input = json_decode(file_get_contents("php://input"),true);
 
-	//send to (select = 0), (send = 1), (update = 2), (delete = 3)
+	//input[0] controll what database should do
+		#input[0]: (0 = select), (1 = send), (2 = update), (3 = delete)
+	//input[1] setup for table names and controll for way data will be stored to database
+		#input[1][0]: (0 = single table(for standard queries) 1 = (for many to many));
+		#input[1][1]: (array of table names);
+	//input[2]: array of data that we send to db
+
 	if ($input[0] == 0) {
 		get_data($input);
 	}elseif ($input[0] == 1) {
