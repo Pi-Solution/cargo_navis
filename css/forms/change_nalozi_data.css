@@ -111,6 +111,7 @@
 	background-color: darkgray;
 	color: white;
 	border-radius: 2px;
+	font-size: 1vw;
 }
 .cnd-back_b:hover{
 	opacity: 0.8;
@@ -126,7 +127,8 @@
 	right: 20%;
 	background-color: #CF5D4C;
 	color: white;
-	border-radius: 2px
+	border-radius: 2px;
+	font-size: 1vw;
 }
 .cnd-save_b:hover{
 	opacity: 0.8;

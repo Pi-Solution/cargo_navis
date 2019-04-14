@@ -76,12 +76,19 @@
 				$save_to_db->prepare_connection();
 				$save_to_db->opet_connection();
 				$save_to_db->save_to_db();
+
 			}elseif ($input[1][0] == 1) {
-				echo "many to many";
+				
+				$save_to_db = new Sender();
+				$save_to_db->set_data($input[1][1], $collum_name, $collum_value);
+				$save_to_db->prepare_connection();
+				$save_to_db->opet_connection();
+				$save_to_db->save_to_db();
+
 			}
 
 		}
-		echo "101";
+		//echo "101";
 	}
 
 	#update data to db

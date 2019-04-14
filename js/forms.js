@@ -63,33 +63,39 @@ function reset_naloz_form(){
 	document.getElementById("nalozi_luka_d_d").value = ""
 }
 function save_provajders(){
-	var name = document.getElementsByClassName("form_provajder_name");
-	var price = document.getElementsByClassName("form_provajder_price");
-	var valuta = document.getElementsByClassName("form_provajder_valuta");
+	var name = document.getElementById("form_provajder_name");
+	var price = document.getElementById("form_provajder_price");
+	var valuta = document.getElementById("form_provajder_valuta");
 	var data = new Array();
+	var data2 = new Array();
 	var ser_val = new Array();
 
-	for(let i = 0; i < name.length; i++){
-		if (name[i].value != "") {
-			a = {
-				provajeri_name : `${name[i].value}`,
-				dogovorena_cijena : `${price[i].value}`,
-				valuta_placanja : `${valuta[i].value}`,
-				jobs_id : current_nalog_id
-			}
-			data.push(a);
+	if (name.value != "") {
+		a = {
+			provajder_name : `${name.value}`
 		}
-	}
+		b = {
+			provajder_id : "",
+			dogovorena_cijena : `${price.value}`,
+			valuta_placanja : `${valuta.value}`,
+			jobs_id : current_nalog_id
+		}
+		data.push(a);
+		data2.push(b);
+
 	var table_control = new Array();
-	table_control[0] = 0;
+	table_control[0] = 1;
 	table_control[1] = "provajderi"
+	table_control[2] = "provajderi_po_poslu"
 
 	ser_val[0] = 1;
 	ser_val[1] = table_control;
 	ser_val[2] = data;
+	ser_val[3] = data2
 	console.log(ser_val);
 
 	send_provajders_data(ser_val);
+	}
 }
 function send_provajders_data(to_server){
 
@@ -111,14 +117,13 @@ function send_provajders_data(to_server){
 	xhttp.send(JSON.stringify(to_server));
 }
 function reset_provajder_form(){
-	var name = document.getElementsByClassName("form_provajder_name");
-	var price = document.getElementsByClassName("form_provajder_price");
-	var valuta = document.getElementsByClassName("form_provajder_valuta");
-	for(let i = 0; i < name.length; i++){
-		name[i].value = ""
-		price[i].value = ""
-		valuta[i].value = ""
-	}
+	var name = document.getElementById("form_provajder_name");
+	var price = document.getElementById("form_provajder_price");
+	var valuta = document.getElementById("form_provajder_valuta");
+
+	name.value = ""
+	price.value = ""
+	valuta.value = ""
 }
 function add_container_div(){
 	var div = document.getElementById("lines_parent")

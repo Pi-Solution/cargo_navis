@@ -15,6 +15,7 @@
 		public function prepare_connection(){
 			$this->place_holders = implode(',', array_fill(0, count($this->collum_names), '?'));
 			$this->collum_names = implode(',', $this->collum_names);
+			//print_r($this->collum_names);
 		}
 		public function opet_connection(){
 
@@ -23,7 +24,14 @@
 		}
 		public function save_to_db(){
 
-			$this->stmt->execute($this->collum_values);
+			try{
+
+				$this->stmt->execute($this->collum_values);
+
+			}catch(Exception $e) {
+
+			  	if($e->errorInfo[1] === 1062) return 1062;
+			}
 			
 		}
 		function __destruct(){

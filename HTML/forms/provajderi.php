@@ -1,45 +1,32 @@
 <div class="universal_form_div" id="form_provajder">
 	<div class="form_back_ground"></div>
-	<div class="form">
-		<div class="form_header">
-			<div class="form_header_al">
-				<h3>Dodaj Provajdere</h3>
+	<div class="form" id="form_provajder_con">
+		<div class="prv-header">
+				<h3>Dodaj Provajdera</h3>
+		</div>
+		<div class="prv-text">
+			<p>Ovdje možete dodati novog provajdera <br/> za odabrani nalog.</p>
+		</div>
+		<div class="prv-input_name">
+			<div class="prv-option_child">
+				<input type="text" name="prv-text_name" class="prv-text_name" id="form_provajder_name" placeholder="Ime Provajdera">
 			</div>
 		</div>
-			<div class="form_content">
-				<?php
-				$top = 1;
-				for ($i=0; $i < 6 ; $i++) { 
-					echo '
-					<div class="form_content_lines" style="top:'.$top.'%">
-						<div class="form_con_l_header">
-							<div class="form_con_l_header_al">
-								<p><strong>Ime provajdera:</strong></p>
-								<p><strong>Cijena:</strong></p>
-								<p><strong>Valuta:</strong></p>
-							</div>
-						</div>
-						<input type="text" name="Ime provajdera" class="fom_prov_name form_provajder_name">
-						<input type="number" name="Dogovorena Cijena" class="fom_prov_price form_provajder_price">
-						<div class="form_select">
-							<select class="form_prov_valuta form_provajder_valuta">
-								<option>KM</option>
-								<option>EUR</option>
-								<option>USD</option>
-							</select>
-						</div>
-					</div>
-					';
-					$top = $top + 16;
-				}
-				?>
-				
+		<div class="prv-input_other">
+			<div class="prv-option_child_other1">
+				<input type="number" name="prv-text_price" class="prv-text_name" id="form_provajder_price" placeholder="Cijena">
 			</div>
-		<div class="form_buttons">
-			<div class="form_buttons_child">
-				<button class="provajder_buttons" onclick="show_form(1); reset_provajder_form()">Otkazi</button>
-				<button class="provajder_buttons p_b_right" onclick="save_provajders();">Sačuvaj</button>
+			<div class="prv-fake_background"></div>
+			<div class="prv-option_child_other2">
+				<select class="prv-input_option" id="form_provajder_valuta">
+					<option>KM</option>
+					<option>EUR</option>
+					<option>USD</option>
+				</select>
 			</div>
 		</div>
+
+		<button class="prv-back_b" onclick="show_form(1);">Otkaži</button>
+		<button class="prv-save_b" onclick="save_provajders();">Sačuvaj</button>
 	</div>
 </div>

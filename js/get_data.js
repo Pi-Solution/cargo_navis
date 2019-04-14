@@ -5,7 +5,7 @@ function get_data_controller(controller){
 			break;
 		case 1:
 			var db_var = "jobs_id = "
-			get_data('provajderi', db_var)
+			//get_data('provajderi', db_var)
 			break;
 		case 2:
 			var db_var = "jobs_id = "

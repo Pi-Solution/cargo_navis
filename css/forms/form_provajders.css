@@ -1,102 +1,153 @@
 #form_provajder{
 	display: none;
 }
-.provajder_buttons{
-	position: absolute;
-	height: 100%;
-	width: 49.5%;
-	background-color: black;
-	color: white;
-	font-size: 1vw;
-}
-.p_b_right{
-	right: 0px;
-}
-.provajder_buttons:hover{
-	opacity: 0.9;
-}
-.provajder_buttons:active{
-	opacity: 0.8;
-}
-.form_content_lines{
-	position: absolute;
-	top: 1%;
-	left: 1%;
-	right: 1%;
-	height: 15%;
-}
-.form_con_l_header{
-	position: absolute;
-	height: 50%;
-	width: 100%;
-}
-.form_con_l_header_al{
+#form_provajder_con{
 	position: absolute;
 	top: 0px;
+	left: 0px;
 	bottom: 0px;
+	right: 0px;
+	width: 25%;
+	height: 45%;
+	margin: auto;
+	background-color: white;
+	border-radius: 5px;
+}
+.prv-header{
+	position: absolute;
+	height: 10%;
 	width: 100%;
-	height: 50%;
-	margin-top: auto;
-	margin-bottom: auto;
+	top: 10%;
+	text-align: center;
+	font-size: 1vw;
+	color: gray;
+}
+.prv-text{
+	position: absolute;
+	height: 10%;
+	width: 100%;
+	top: 27%;
+	text-align: center;
+	font-size: 1vw;
+	color: darkgray;
+}
+.prv-input_name{
+	position: absolute;
+	bottom: 45%;
+	left: 0px;
+	right: 0px;
+	height: 10%;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: lightblue;
 	font-size: 1vw;
 }
-.form_con_l_header_al p{
-	margin: 0px;
-	padding-left: 0px;
-}
-.form_con_l_header_al p:nth-child(1){
+.prv-option_child{
 	position: absolute;
-	left: 3%;
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	background-color: white;
+	font-size: 1vw;
 }
-.form_con_l_header_al p:nth-child(2){
+.prv-text_name{
 	position: absolute;
-	left: 53%;
-}
-.form_con_l_header_al p:nth-child(3){
-	position: absolute;
-	left: 83%;
-}
-.fom_prov_name{
-	position: absolute;
-	height: 50%;
-	bottom: 0px;
-	width: 47.5%;
-	border: 1px solid black;
-	border-radius: 2px;
+	height: 90%;
+	width: 98%;
 	padding-left: 2%;
-
+    border:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-appearance: none;
+    background-color: white;
+    outline: none;
 }
-.fom_prov_price{
-	position: absolute !important;
-	left: 51% !important;
-	height: 50% !important;
-	bottom: 0px !important;
-	width: 27.5% !important;
-	border: 1px solid black !important;
-	border-radius: 2px !important;
-	padding-left: 2% !important;
-}
-.form_select{
+.prv-input_other{
 	position: absolute;
-	height: 50%;
-	bottom: 0px;
-	width: 17.5%;
-	right: 0%;
-	border: 1px solid black;
+	bottom: 30%;
+	left: 0px;
+	right: 0px;
+	height: 10%;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: lightblue;
 }
-.form_prov_valuta{
+.prv-option_child_other1{
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 46.5%;
+	bottom: 2px;
+	background-color: white;
+	font-size: 1vw;
+}
+.prv-option_child_other2{
+	position: absolute;
+	top: 2px;
+	width: 46.5%;
+	right: 2px;
+	bottom: 2px;
+	background-color: white;
+	font-size: 1vw;
+}
+.prv-fake_background{
 	position: absolute;
 	height: 100%;
-	bottom: 0px;
+	width: 3%;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+}
+.prv-input_option{
+	position: absolute;
+	height: 100%;
 	width: 100%;
-	right: 0%;
-	border: none;
-	border-radius: 2px;
 	padding-left: 2%;
-
-    background-image:none;
-    background-color:transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+    border:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-appearance: none;
+    background-color: white;
+    outline: none;
+}
+.prv-back_b{
+	position: absolute;
+	bottom: 15%;
+	width: 29%;
+	height: 10%;
+	left: 20%;
+	background-color: darkgray;
+	color: white;
+	border-radius: 2px;
+	font-size: 1vw;
+}
+.prv-back_b:hover{
+	opacity: 0.8;
+}
+.prv-back_b:active{
+	opacity: 0.7;
+}
+.prv-save_b{
+	position: absolute;
+	bottom: 15%;
+	width: 29%;
+	height: 10%;
+	right: 20%;
+	background-color: #CF5D4C;
+	color: white;
+	border-radius: 2px;
+	font-size: 1vw;
+}
+.prv-save_b:hover{
+	opacity: 0.8;
+}
+.prv-save_b:active{
+	opacity: 0.7;
 }
