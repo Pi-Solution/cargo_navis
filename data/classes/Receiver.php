@@ -16,6 +16,13 @@
 				$this->id = $id;
 			}
 		}
+		public function set_data2($table_name, $collum_name, $id){
+			$this->table_name = $table_name;
+			if ($collum_name != false) {
+				$this->collum_name = "WHERE " . $collum_name . "= ?";
+				$this->id = $id;
+			}
+		}
 
 		public function select_from_db(){
 			$this->set_db_parametars();

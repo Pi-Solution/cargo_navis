@@ -6,7 +6,7 @@ function show_provajderi_notes(id, provajder_id){
 		x.style.display = "block";
 		console.log(id);
 		prov_note_id = id;
-		document.getElementById("provajdera_notes_textarea").value = provajders[provajder_id].note;
+		document.getElementById("provajdera_notes_textarea").value = provajderi_po_poslu[provajder_id].note;
 	}else {
 		x.style.display = "none";
 	}
@@ -16,7 +16,7 @@ function update_provajder_notes(){
 	var data = new Array();
 	var ser_val = new Array();
 	ser_val[0] = 2;
-	data[0] = 'provajderi'
+	data[0] = 'provajderi_po_poslu'
 	data[1] = 'note';
 	data[2] = document.getElementById('provajdera_notes_textarea').value;
 	data[3] = prov_note_id;

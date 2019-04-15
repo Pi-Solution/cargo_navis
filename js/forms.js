@@ -18,16 +18,21 @@ function nalozi_form(){
 		port_to : `${document.getElementById("nalozi_luka_d").value}`,
 		port_to_date : `${document.getElementById("nalozi_luka_d_d").value}`
 	}
-	var data = new Array();
-	data.push(nalozi_form);
-	var table_control = new Array();
-	table_control[0] = 0;
-	table_control[1] = "jobs"
+	var db_table_content = new Array();
+	db_table_content.push(nalozi_form);
+	
+	var db_content2 = new Array();
+	db_content2[0] = 'jobs';
+	db_content2[1] = db_table_content;
+
+	var db_content = new Array();
+	db_content.push(db_content2);
 
 	var to_server = new Array();
 	to_server[0] = 1;
-	to_server[1] = table_control;
-	to_server[2] = data;
+	to_server[1] = 0;
+	to_server[2] = db_content;
+
 
 	console.log(to_server);
 
@@ -80,21 +85,37 @@ function save_provajders(){
 			valuta_placanja : `${valuta.value}`,
 			jobs_id : current_nalog_id
 		}
-		data.push(a);
-		data2.push(b);
 
-	var table_control = new Array();
-	table_control[0] = 1;
-	table_control[1] = "provajderi"
-	table_control[2] = "provajderi_po_poslu"
+		var db_table_content = new Array();
+		db_table_content.push(a);
+		
+		var db_content2 = new Array();
+		db_content2[0] = 'provajderi';
+		db_content2[1] = db_table_content;
 
-	ser_val[0] = 1;
-	ser_val[1] = table_control;
-	ser_val[2] = data;
-	ser_val[3] = data2
-	console.log(ser_val);
+		//____________________________________
 
-	send_provajders_data(ser_val);
+		var db_table_content_2 = new Array();
+		db_table_content_2.push(b);
+		
+		var db_content2_2 = new Array();
+		db_content2_2[0] = 'provajderi_po_poslu';
+		db_content2_2[1] = db_table_content_2;
+
+		//______________________________
+
+		var db_content = new Array();
+		db_content.push(db_content2);
+		db_content.push(db_content2_2)
+
+		var to_server = new Array();
+		to_server[0] = 1;
+		to_server[1] = 1;
+		to_server[2] = db_content;
+
+		//console.log(to_server);
+
+		send_provajders_data(to_server);
 	}
 }
 function send_provajders_data(to_server){
@@ -107,7 +128,7 @@ function send_provajders_data(to_server){
 				alert("sacuvano")
 				show_form(1);
 				get_data_controller(1);
-
+				reset_provajder_form()
 			}
 		}
 	};
@@ -123,7 +144,7 @@ function reset_provajder_form(){
 
 	name.value = ""
 	price.value = ""
-	valuta.value = ""
+	valuta.value = "KM"
 }
 function add_container_div(){
 	var div = document.getElementById("lines_parent")
@@ -204,18 +225,24 @@ function save_container(){
 		}	
 	}
 
-	var ser_val = new Array();
-	var table_control = new Array();
-	table_control[0] = 0;
-	table_control[1] = "containers";
+	var db_table_content = new Array();
+	db_table_content = data;
+	
+	var db_content2 = new Array();
+	db_content2[0] = 'containers';
+	db_content2[1] = db_table_content;
 
-	ser_val[0] = 1;
-	ser_val[1] = table_control;
-	ser_val[2] = data;
+	var db_content = new Array();
+	db_content.push(db_content2);
 
-	//console.log(ser_val);
+	var to_server = new Array();
+	to_server[0] = 1;
+	to_server[1] = 0;
+	to_server[2] = db_content;
 
-	send_containers_data(ser_val);
+	//console.log(to_server);
+
+	send_containers_data(to_server);
 }
 function send_containers_data(to_server){
 
@@ -358,16 +385,22 @@ function save_ul_faktura(){
 		id_jobs : current_nalog_id
 	}
 
-	var table_control = new Array();
-	table_control[0] = 0;
-	table_control[1] = "fakture_ulaz";
+	var db_table_content = new Array();
+	db_table_content.push(a);
+	
+	var db_content2 = new Array();
+	db_content2[0] = 'fakture_ulaz';
+	db_content2[1] = db_table_content;
 
-	data.push(a)
-	ser_val[0] = 1;
-	ser_val[1] = table_control;
-	ser_val[2] = data
-	//console.log(ser_val);
-	send_ulazne_f_data(ser_val);
+	var db_content = new Array();
+	db_content.push(db_content2);
+
+	var to_server = new Array();
+	to_server[0] = 1;
+	to_server[1] = 0;
+	to_server[2] = db_content;
+	//console.log(to_server);
+	send_ulazne_f_data(to_server);
 }
 function send_ulazne_f_data(to_server){
 
@@ -401,17 +434,23 @@ function save_iz_faktura(){
 		jobs_id : current_nalog_id
 	}
 
-	data.push(a)
+	var db_table_content = new Array();
+	db_table_content.push(a);
+	
+	var db_content2 = new Array();
+	db_content2[0] = 'izlazne_fakture';
+	db_content2[1] = db_table_content;
 
-	var table_control = new Array();
-	table_control[0] = 0;
-	table_control[1] = "izlazne_fakture"
+	var db_content = new Array();
+	db_content.push(db_content2);
 
-	ser_val[0] = 1;
-	ser_val[1] = table_control;
-	ser_val[2] = data
-	console.log(ser_val);
-	send_izlazne_f_data(ser_val);
+	var to_server = new Array();
+	to_server[0] = 1;
+	to_server[1] = 0;
+	to_server[2] = db_content;
+
+	console.log(to_server);
+	send_izlazne_f_data(to_server);
 }
 function send_izlazne_f_data(to_server){
 

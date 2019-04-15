@@ -3,9 +3,12 @@ function get_data_controller(controller){
 		case 0:
 			get_data('jobs', false)
 			break;
+        case 5:
+            get_data('provajderi', false)
+            break;
 		case 1:
 			var db_var = "jobs_id = "
-			//get_data('provajderi', db_var)
+			get_data('provajderi_po_poslu', db_var)
 			break;
 		case 2:
 			var db_var = "jobs_id = "
@@ -50,15 +53,24 @@ function run_ajax(parametars, table_name){
     	 					ts_nalozi();
     	 				}
     	 				break;
-    	 			case 'provajderi':
+    	 			case 'provajderi_po_poslu':
     	 				if (JSON.parse(this.responseText) != "110") {
     	 					var prep_var = JSON.parse(this.responseText);
-	    	 				provajders = prep_var;
-	    	 				ts_provajderi();
+	    	 				provajderi_po_poslu = prep_var;
+                            get_data_controller(5);
     	 				}else{
-    	 					provajders.length = 0;
-    	 					ts_provajderi();
+    	 					provajderi_po_poslu.length = 0;
+                            get_data_controller(5);
     	 				}
+                        case 'provajderi':
+                        if (JSON.parse(this.responseText) != "110") {
+                            var prep_var = JSON.parse(this.responseText);
+                            provajders = prep_var;
+                            ts_provajderi();
+                        }else{
+                            provajders.length = 0;
+                            ts_provajderi();
+                        }
     	 				break;
     	 			case 'containers':
     	 				if (JSON.parse(this.responseText) != "110") {

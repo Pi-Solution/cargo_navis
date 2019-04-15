@@ -8,6 +8,7 @@ var current_nalog_id;
 	var nalozi = new Array();
 	//provajder
 	var provajders = new Array();
+	var provajderi_po_poslu = new Array();
 	//containers
 	var containers = new Array();
 	//ulazne fakture

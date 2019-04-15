@@ -4,6 +4,7 @@ function on_start(){
 		current_nalog_id = nalozi[current_nalog].id
 		change_active_nalog();
 		get_data_controller(1);
+		get_data_controller(5);
 		get_data_controller(2);
 		get_data_controller(3);
 		get_data_controller(4);	
@@ -81,14 +82,22 @@ function ts_provajderi(){
 
 	div.innerHTML = " ";
 
-	for(let i = 0; i < provajders.length; i++){
+	for(let i = 0; i < provajderi_po_poslu.length; i++){
+		var this_provajder_name;
+		
+		for(let b = 0; b < provajders.length; b++){
+			if(provajderi_po_poslu[i].provajder_id == provajders[b].id){
+				this_provajder_name = provajders[b].provajder_name
+			}
+		}
+
 		div.innerHTML += `
 			<tr>
-				<td width="35%" id="prov_name${i}" class="provajderi_collums" onmousemove="notes_div_position(event);">${provajders[i].provajeri_name}</td>
-				<td width="25%">${provajders[i].dogovorena_cijena}</td>
-				<td width="20%">${provajders[i].valuta_placanja}</td>
-				<td width="10%" class="con3_table_hover" onclick="show_provajderi_notes(${provajders[i].id}, '${i}')"><img src="images/icons/pen.svg" height="200%;"></td>
-				<td width="10%" class="con3_table_hover" onclick="show_delete_waning('provajderi', ${provajders[i].id}, 1)"><img src="images/icons/delete.svg" height="200%;"></td>
+				<td width="35%" id="prov_name${i}" class="provajderi_collums" onmousemove="notes_div_position(event);">${this_provajder_name}</td>
+				<td width="25%">${provajderi_po_poslu[i].dogovorena_cijena}</td>
+				<td width="20%">${provajderi_po_poslu[i].valuta_placanja}</td>
+				<td width="10%" class="con3_table_hover" onclick="show_provajderi_notes(${provajderi_po_poslu[i].id}, '${i}')"><img src="images/icons/pen.svg" height="200%;"></td>
+				<td width="10%" class="con3_table_hover" onclick="show_delete_waning('provajderi_po_poslu', ${provajderi_po_poslu[i].id}, 1)"><img src="images/icons/delete.svg" height="200%;"></td>
 			</tr>
 		`
 	}

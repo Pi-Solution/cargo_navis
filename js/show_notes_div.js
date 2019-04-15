@@ -5,14 +5,14 @@ function show_notes_div(control, prov_id){
 	var note_div = document.getElementById("fd-content_child2");
 	//x = document.getElementById("form_nalozi")
 	if(control == true){
-		if (provajders[prov_id].note === null || provajders[prov_id].note.match(/^ *$/) !== null) {
+		if (provajderi_po_poslu[prov_id].note === null || provajderi_po_poslu[prov_id].note.match(/^ *$/) !== null) {
 			x.style.display = "none";
 		}else {
 			x.style.display = "block";
-			//console.log(provajders[prov_id].note);
+			//console.log(provajderi_po_poslu[prov_id].note);
 			console.log(note_div.style.width);
 
-			note_div.innerHTML = "<label id='fucking_label'>" + provajders[prov_id].note.replace(new RegExp('\r?\n','g'), '<br />'); + "</label>"
+			note_div.innerHTML = "<label id='fucking_label'>" + provajderi_po_poslu[prov_id].note.replace(new RegExp('\r?\n','g'), '<br />'); + "</label>"
 			var kurac = document.getElementById("fucking_label").style.height;
 			console.log(kurac);
 		}

@@ -20,7 +20,6 @@
 	right: 0px;
 	z-index: 2;
 	min-height: 90%;
-	background-color: white;
 }
 .fd-content_child2{
 	position: absolute;
@@ -33,7 +32,8 @@
 	color: gray;
 	font-weight: bold;
 	word-wrap: break-word;
-	border: 5px solid gray
+	border: 5px solid gray;
+	background-color: white;
 }
 .fd-arrow{
 	position: absolute;

@@ -22,6 +22,7 @@
 	if ($input[0] == 0) {
 		get_data($input);
 	}elseif ($input[0] == 1) {
+		//print_r($input);
 		send_data($input);
 	}elseif ($input[0] == 2) {
 		update_data($input);
@@ -45,50 +46,75 @@
 	
 	#save data to db --------------------------------------> to sender
 	function send_data($input){
-		
-		//validate values and 
-		for ($i=0; $i < count($input[2]) ; $i++) { 
-			
-			$collum_name = array();
-			$collum_value = array();
-			
-			foreach ($input[2][$i] as $key => $value) {
-				if (!isset($key)) {
-					die("Error");
-				}
-				if (empty($key)) {
-					die('Error');
-				}
-				if(preg_match('/[^a-z_\-0-9]/i', $key)){
-					die('Error');
-				}
 
-				array_push($collum_name, $key);
-				array_push($collum_value, $value);
+		$get_id;
+
+		for ($i=0; $i < count($input[2]); $i++) { 
+
+			$db_table = $input[2][$i][0];
+
+			for ($b=0; $b < count($input[2][$i][1]) ; $b++) { 
+
+				$collum_name = array();
+				$collum_value = array();
+
+				foreach ($input[2][$i][1][$b] as $key => $value) {
+					if (!isset($key)) {
+						die("Error");
+					}
+					if (empty($key)) {
+						die('Error');
+					}
+					if(preg_match('/[^a-z_\-0-9]/i', $key)){
+						die('Error');
+					}
+
+					array_push($collum_name, $key);
+					array_push($collum_value, $value);
+				}
+				//push time collum and value
+				array_push($collum_name, 'job_date');
+				array_push($collum_value, date("Y-m-d h:i:sa"));
+
+				if ($input[1] == 0) {				
+
+					$save_to_db = new Sender();
+					$save_to_db->set_data($input[2][$i][0], $collum_name, $collum_value);
+					$save_to_db->prepare_connection();
+					$save_to_db->opet_connection();
+					$save_to_db->save_to_db();
+
+				}elseif ($input[1] == 1) {
+					if ($i == 0) {
+						$save_to_db = new Sender();
+						$save_to_db->set_data($input[2][$i][0], $collum_name, $collum_value);
+						$save_to_db->prepare_connection();
+						$save_to_db->opet_connection();
+						$save_to_db->save_to_db();
+
+
+						$get_data = new Receiver();
+						$get_data->set_data2($input[2][$i][0], $collum_name[0], $collum_value[0]);
+						$get_db_data = $get_data->select_from_db();
+
+						$prepare_id = $get_db_data[0];
+						$get_id = $prepare_id['id'];
+						//print_r($input);
+
+					}else{
+
+						$collum_value[0] = $get_id;					
+
+						$save_to_db = new Sender();
+						$save_to_db->set_data($input[2][$i][0], $collum_name, $collum_value);
+						$save_to_db->prepare_connection();
+						$save_to_db->opet_connection();
+						$save_to_db->save_to_db();
+					}
+				}
 			}
-			//push time collum and value
-			array_push($collum_name, 'job_date');
-			array_push($collum_value, date("Y-m-d h:i:sa"));
-
-			if ($input[1][0] == 0) {	
-				$save_to_db = new Sender();
-				$save_to_db->set_data($input[1][1], $collum_name, $collum_value);
-				$save_to_db->prepare_connection();
-				$save_to_db->opet_connection();
-				$save_to_db->save_to_db();
-
-			}elseif ($input[1][0] == 1) {
-				
-				$save_to_db = new Sender();
-				$save_to_db->set_data($input[1][1], $collum_name, $collum_value);
-				$save_to_db->prepare_connection();
-				$save_to_db->opet_connection();
-				$save_to_db->save_to_db();
-
-			}
-
 		}
-		//echo "101";
+		echo "101";
 	}
 
 	#update data to db

@@ -26,7 +26,7 @@
 			</div>
 		</div>
 
-		<button class="prv-back_b" onclick="show_form(1);">Otkaži</button>
+		<button class="prv-back_b" onclick="show_form(1); reset_provajder_form();">Otkaži</button>
 		<button class="prv-save_b" onclick="save_provajders();">Sačuvaj</button>
 	</div>
 </div>

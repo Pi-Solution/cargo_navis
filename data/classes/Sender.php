@@ -11,6 +11,7 @@
 			$this->table_name = $table_name;
 			$this->collum_names = $collum_names;
 			$this->collum_values = $collum_values;
+
 		}
 		public function prepare_connection(){
 			$this->place_holders = implode(',', array_fill(0, count($this->collum_names), '?'));
