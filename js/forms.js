@@ -83,8 +83,9 @@ function save_provajders(){
 			provajder_id : "",
 			dogovorena_cijena : `${price.value}`,
 			valuta_placanja : `${valuta.value}`,
-			jobs_id : current_nalog_id
+			jobs_id : nalozi[current_nalog].id
 		}
+		console.log(nalozi[current_nalog].id)
 
 		var db_table_content = new Array();
 		db_table_content.push(a);
@@ -218,7 +219,7 @@ function save_container(){
 				var a = {
 					container_id : `${con_ar[b]}`,
 					container_type : `${div_type[i].value}`,
-					jobs_id : current_nalog_id
+					jobs_id : nalozi[current_nalog].id
 				}
 				data.push(a);
 			}
@@ -382,7 +383,7 @@ function save_ul_faktura(){
 		valuta_placanja : `${document.getElementById("form_ulf_valuta").value}`,
 		iznos_s_val : `${document.getElementById("uf_s_val").value}`,
 		iznos : `${document.getElementById("uf_domaca_valuta").value}`,
-		id_jobs : current_nalog_id
+		id_jobs : nalozi[current_nalog].id
 	}
 
 	var db_table_content = new Array();
@@ -431,7 +432,7 @@ function save_iz_faktura(){
 		broj_fakture : `${document.getElementById("broj_iz_fakture_form").value}`,
 		datum_fakture : `${document.getElementById("datum_iz_f").value}`,
 		iznos : `${document.getElementById("iznos_iz_f_form").value}`,
-		jobs_id : current_nalog_id
+		jobs_id : nalozi[current_nalog].id
 	}
 
 	var db_table_content = new Array();
