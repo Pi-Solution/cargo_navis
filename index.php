@@ -46,9 +46,20 @@
 						</tr>
 					</table>
 				</div>
-				<button id="nalozi_button" onclick="show_form(0)"><strong>+ DODAJ NOVI NALOG</strong></button>
 			</div>
 		</div>
+		<div class="nalozi_note">
+			<div class="nalozi_note_parent">
+				<div class="nalozi_note_header">
+					<div class="nalozi_note_header_text">
+						<p>Napomena:</p>
+					</div>
+					<button class="nalozi_note_button" onclick="save_job_note();">SAČUVAJ IZMJENU</button>
+				</div>
+				<textarea class="nalozi_note_text" id="job_note_text"></textarea>	
+			</div>
+		</div>
+		<button id="nalozi_button" onclick="show_form(0)"><strong>+ DODAJ NOVI NALOG</strong></button>
 
 
 		<div id="content">
@@ -95,5 +106,6 @@
 	<script type="text/javascript" src="js/provajderi_notes.js"></script>
 	<script type="text/javascript" src="js/show_notes_div.js"></script>
 	<script type="text/javascript" src="js/provajders/provajders-event_listeners.js"></script>
+	<script type="text/javascript" src="js/add_job_note.js"></script>
 </body>
 </html>
