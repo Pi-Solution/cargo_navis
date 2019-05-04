@@ -18,7 +18,7 @@
 			$this->stmt = $this->connect()->prepare("DELETE FROM $this->table_name WHERE id = ?");
 			$this->stmt->execute([$this->id]);
 			
-			echo "102";
+			return "102";
 		}
 		function __destruct(){
         	$this->stmt = null;

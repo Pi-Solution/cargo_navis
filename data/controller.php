@@ -125,7 +125,9 @@
 
 	#delete data from db
 	function delete_data_db($input){
-		$delete = new Deleter();
-		$delete->get_values($input[1][0], $input[1][1]);
-		$delete->delete_from_db();
+			
+			$delete = new Deleter();
+			$delete->get_values($input[1][0], $input[1][1]);
+			$res = $delete->delete_from_db();
+			echo $res;
 	}
