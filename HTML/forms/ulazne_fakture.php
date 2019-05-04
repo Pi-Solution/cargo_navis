@@ -17,7 +17,7 @@
 				</div>
 				<div class="fakture_lines_input">
 					<div class="fakture_l_i_middle">
-						<input type="text" name="form_provajder" class="fakture_l_i_child" id="form_ul_provajder">
+						<input type="text" name="form_provajder" class="fakture_l_i_child" id="form_ul_provajder" data-ac_index="1">
 					</div>
 				</div>
 			</div>

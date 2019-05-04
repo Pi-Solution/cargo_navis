@@ -62,6 +62,7 @@ function change_active_nalog(){
 	document.getElementById("port_from_date").innerHTML = date_from
 	document.getElementById("port_to").innerHTML = nalozi[current_nalog].port_to
 	document.getElementById("port_to_date").innerHTML = date_to
+	document.getElementById("job_note_text").value = nalozi[current_nalog].job_note;
 }
 //chane color of active element in nalozi
 function change_style_active_nalog(){

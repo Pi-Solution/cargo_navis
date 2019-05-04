@@ -1,0 +1,33 @@
+.autocomplete_child{
+	position: absolute;
+	top: 100%;
+	height: 100%;
+	width: 100%;
+	border: 1px solid black;
+	background-color: white;
+	display: none;
+	word-wrap: break-word;
+	box-sizing:border-box;
+	cursor: pointer;
+	z-index: 1;
+}
+.ac_list{
+	position: absolute;
+	width: 98%;
+	text-transform: none;
+	list-style-type: none;
+	padding-left: 2%;
+	font-size: 0.9vw;
+}
+.ac_list_al{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 96%;
+	height: 60%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.ac_list:hover{
+	background-color: lightgray;
+}

@@ -26,7 +26,7 @@
 				<div class="form_lines_content">
 					<div class="f_l_left">
 						<div class="f_l_left_child">
-							<input type="text" name="komitent" id="nalozi_komitent">
+							<input type="text" name="komitent" id="nalozi_komitent" data-ac_index="0">
 						</div>
 					</div>
 					<div class="f_l_rigth">

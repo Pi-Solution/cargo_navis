@@ -22,8 +22,9 @@
 	<link rel="stylesheet" type="text/css" href="css/warning_screens/warning_delete.css">
 	<link rel="stylesheet" type="text/css" href="css/forms/provajder_notes.css">
 	<link rel="stylesheet" type="text/css" href="css/flying_div.css">
+	<link rel="stylesheet" type="text/css" href="css/autocomplete/autocomplete.css">
 </head>
-<body onload="get_data_controller(0); on_start();">
+<body onload="get_data_controller(0); on_start(); add_class_to_input_field();">
 	<div class="navigation_bar"></div>
 	<div id="main">
 		<div id="table_nalozi">
@@ -107,5 +108,8 @@
 	<script type="text/javascript" src="js/show_notes_div.js"></script>
 	<script type="text/javascript" src="js/provajders/provajders-event_listeners.js"></script>
 	<script type="text/javascript" src="js/add_job_note.js"></script>
+	<script type="text/javascript" src="js/autocomplete/auto_complete.js"></script>
+	<script type="text/javascript" src="js/autocomplete/auto_complete_parametars.js"></script>
+	<script type="text/javascript" src="js/autocomplete/auto_complete_arrays.js"></script>
 </body>
 </html>
