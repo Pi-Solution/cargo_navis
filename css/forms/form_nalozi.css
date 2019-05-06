@@ -115,3 +115,45 @@
     -moz-box-shadow: none;
     box-shadow: none;
 }
+.datum_ponude{
+	position: absolute;
+	top: 65%;
+	left: 1%;
+	width: 98%;
+	height: 15%;
+}
+.datum_ponude_child{
+	position: absolute;
+	top: 0px;
+	height: 50%;
+	width: 100%;
+}
+.all_datum_ponude{
+	position: absolute;
+	top: 0px;
+	left: 1%;
+	bottom: 0px;
+	width: 98%;
+	height: 55%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.all_datum_ponude p{
+	font-size: 1vw;
+}
+.input_datum_ponude_p{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 50%;
+	width: 100%;
+	background-color: white;
+	border: 1px solid gray;
+	border-radius: 2px;
+
+}
+.input_datum_ponude{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}

@@ -127,6 +127,16 @@
 					</div>
 				</div>
 			</div>
+			<div class="datum_ponude">
+				<div class="datum_ponude_child">
+					<div class="all_datum_ponude">
+						<p><strong>Datum ponude</strong></p>
+					</div>
+				</div>
+				<div class="input_datum_ponude_p">
+					<input type="date" name="datum_ponude" class="input_datum_ponude" id="datum_ponude">
+				</div>
+			</div>
 		</div>
 
 

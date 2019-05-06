@@ -16,8 +16,9 @@ function ts_nalozi(){
 	div.innerHTML = "";
 
 	for(let i = 0; i < nalozi.length; i++){
-		var date = nalozi[i].job_date.slice(0,-9)
-		date = date.split("-").reverse().join(".");
+		//var date = nalozi[i].job_date.slice(0,-9)
+		//date = date.split("-").reverse().join(".");
+		var date = nalozi[i].datum_ponude_uneseni.split("-").reverse().join(".");
 		div.innerHTML += `
 			<tr class="tr_nalozi" id="${i}" data-nalog_id="${nalozi[i].id}">
 				<td width="10%">${i+1}</td>

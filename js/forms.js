@@ -16,7 +16,8 @@ function nalozi_form(){
 		port_from : `${document.getElementById("nalozi_luka_p").value}`,
 		port_from_date : `${document.getElementById("nalozi_luka_p_d").value}`,
 		port_to : `${document.getElementById("nalozi_luka_d").value}`,
-		port_to_date : `${document.getElementById("nalozi_luka_d_d").value}`
+		port_to_date : `${document.getElementById("nalozi_luka_d_d").value}`,
+		datum_ponude_uneseni : `${document.getElementById("datum_ponude").value}`
 	}
 	var db_table_content = new Array();
 	db_table_content.push(nalozi_form);
