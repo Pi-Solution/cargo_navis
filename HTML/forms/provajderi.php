@@ -8,7 +8,7 @@
 			<p>Ovdje možete dodati novog provajdera <br/> za odabrani nalog.</p>
 		</div>
 		<div class="prv-input_name">
-			<div class="prv-option_child">
+			<div class="prv-option_child" id="prv-option_child">
 				<input type="text" name="prv-text_name" class="prv-text_name" id="form_provajder_name" placeholder="Ime Provajdera" data-ac_index="1">
 			</div>
 		</div>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 
-		<button class="prv-back_b" onclick="show_form(1); reset_provajder_form();">Otkaži</button>
+		<button class="prv-back_b" onclick="reset_provajder_form(); show_form(1);">Otkaži</button>
 		<button class="prv-save_b" onclick="save_provajders();">Sačuvaj</button>
 	</div>
 </div>

@@ -12,3 +12,10 @@ function set_second_array(){
 	}
 	ser_val[1] = prepare_data;
 }
+function set_3_array(){
+	var prepare_data = new Array();
+	for(let i = 0; i < provajders.length; i++){
+		prepare_data.push(provajders[i].provajder_name);
+	}
+	ser_val[2] = prepare_data;
+}

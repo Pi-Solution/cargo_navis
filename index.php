@@ -24,7 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="css/flying_div.css">
 	<link rel="stylesheet" type="text/css" href="css/autocomplete/autocomplete.css">
 </head>
-<body onload="get_data_controller(0); on_start(); add_class_to_input_field();">
+<body onload="get_data_controller(0); on_start(); setTimeout(add_class_to_input_field(), 2000);">
 	<div class="navigation_bar"></div>
 	<div id="main">
 		<div id="table_nalozi">

@@ -60,9 +60,12 @@ function run_ajax(parametars, table_name){
 	    	 				provajderi_po_poslu = prep_var;
                             get_data_controller(5);
                             set_second_array();
+                            set_3_array()
     	 				}else{
     	 					provajderi_po_poslu.length = 0;
                             get_data_controller(5);
+                            set_second_array();
+                            set_3_array()
     	 				}
                         case 'provajderi':
                         if (JSON.parse(this.responseText) != "110") {

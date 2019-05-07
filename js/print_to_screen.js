@@ -113,6 +113,7 @@ function ts_provajderi(){
 //print containers to screen
 function ts_containers(){
 	div = document.getElementById("containers")
+	var some_div = document.getElementById('kolicina_con').innerHTML = containers.length;
 
 	div.innerHTML = " ";
 
@@ -179,7 +180,7 @@ function ts_ulazne_fakture(){
 							</div>
 							<div class="con4_con_child" style="top: 66.66%">
 								<div class="con4_div_al">
-									<p>Iznos (USD/EUR):</p>
+									<p>Iznos (Ino Valuta):</p>
 								</div>
 							</div>
 							<div class="con4_con_child" style="top: 83.32%">
@@ -211,12 +212,12 @@ function ts_ulazne_fakture(){
 							</div>
 							<div class="con4_con_child" style="top: 66.66%">
 								<div class="con4_div_al">
-									<p>${ulazne_fakture[i].iznos_s_val}</p>
+									<p>${ulazne_fakture[i].iznos_s_val} ${ulazne_fakture[i].valuta_placanja}</p>
 								</div>
 							</div>
 							<div class="con4_con_child" style="top: 83.32%">
 								<div class="con4_div_al">
-									<p>${ulazne_fakture[i].iznos}</p>
+									<p>${ulazne_fakture[i].iznos} KM</p>
 								</div>
 							</div>
 						</div>
@@ -303,7 +304,7 @@ function ts_izlazne_fakture(){
 							</div>
 							<div class="con4_con_child" style="top: 50%">
 								<div class="con4_div_al">
-									<p>${izlanze_fakture[i].iznos}</p>
+									<p>${izlanze_fakture[i].iznos} KM</p>
 								</div>
 							</div>
 						</div>

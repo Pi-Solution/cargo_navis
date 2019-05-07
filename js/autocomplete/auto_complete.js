@@ -79,7 +79,7 @@ function print_to_ac_div(input, input_field, input_ac_div){
 		//print list items to autocomplete div
 		//console.log(input_field)
 		input_ac_div.innerHTML += `
-			<li class='ac_list' style='height:${list_h}%; top:${list_h * i}%' id='input_field_${input[i]}' onclick='select_by_click(input_field_${input[i]});'>
+			<li class='ac_list' style='height:${list_h}%; top:${list_h * i}%' id='${i}input_field_${input[i]}' onclick='select_by_click("${i}input_field_${input[i]}");'>
 				<div class='ac_list_al'>${input[i]}</div>
 			</li>
 		`
@@ -117,6 +117,5 @@ function select_marked_element(input_fields, input_ac_div){
 	}
 }
 function select_by_click(div_id){
-	//console.log(div_id.children[0].innerHTML);
-	div_id.parentElement.parentElement.children[0].value = div_id.children[0].innerHTML;
+	document.getElementById(div_id).parentElement.parentElement.children[0].value = document.getElementById(div_id).children[0].innerHTML;
 }
