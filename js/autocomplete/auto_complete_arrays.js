@@ -1,7 +1,18 @@
 function set_first_array(){
 	var prepare_data = new Array();
 	for(let i = 0; i < nalozi.length; i++){
-		prepare_data.push(nalozi[i].qkomitent);
+		for(let b = 0; b < prepare_data.length; b++){
+			var existence = false;
+			if (prepare_data[b] == nalozi[i].qkomitent) {
+				existence = true;
+				break;
+			}
+		}
+		if (existence == false) {
+			prepare_data.push(nalozi[i].qkomitent);
+		}else{
+			existence = false;
+		}
 	}
 	ser_val[0] = prepare_data;
 }

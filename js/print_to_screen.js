@@ -8,6 +8,9 @@ function on_start(){
 		get_data_controller(2);
 		get_data_controller(3);
 		get_data_controller(4);	
+		setTimeout(add_class_to_input_field(), 200);
+		setTimeout(set_second_array(), 200);
+        setTimeout(set_3_array(), 200);
 	}, 80)
 }
 function ts_nalozi(){
