@@ -20,7 +20,7 @@ function auto_complete_add_events(){
 	for(let i = 0; i < input_fields.length; i++){
 
 		input_fields[i].addEventListener("focus", function(){
-			check_for_mach(input_fields[i], input_ac_div[i]);
+			check_for_mach(input_fields[i], input_ac_div[i], i);
 		});
 		input_fields[i].addEventListener("blur", function(){
 			setTimeout(function(){
@@ -28,7 +28,7 @@ function auto_complete_add_events(){
 			}, 200);
 		});
 		input_fields[i].addEventListener("input", function(){
-			check_for_mach(input_fields[i], input_ac_div[i]);
+			check_for_mach(input_fields[i], input_ac_div[i], i);
 		});
 		input_fields[i].addEventListener('keydown', function(e){
 			//console.log(e.keyCode);
@@ -45,7 +45,7 @@ function auto_complete_add_events(){
 		});
 	}
 }
-function check_for_mach(input_field, input_ac_div){
+function check_for_mach(input_field, input_ac_div, for_click){
 	input = [];
 
 	if (input_field.value.length != 0) {
@@ -60,17 +60,17 @@ function check_for_mach(input_field, input_ac_div){
 		input = [];
 	}
 	//console.log(input);
-	show_ac_div(input, input_field, input_ac_div);
+	show_ac_div(input, input_field, input_ac_div, for_click);
 }
-function show_ac_div(input, input_field, input_ac_div){
+function show_ac_div(input, input_field, input_ac_div, for_click){
 	if (input != 0) {
 		input_ac_div.style.display = 'block';
-		print_to_ac_div(input, input_field, input_ac_div);
+		print_to_ac_div(input, input_field, input_ac_div, for_click);
 	}else{
 		input_ac_div.style.display = 'none';
 	}
 };
-function print_to_ac_div(input, input_field, input_ac_div){
+function print_to_ac_div(input, input_field, input_ac_div, for_click){
 	input_ac_div.innerHTML = ""
 	//set autocomplete div heigth
 	input_ac_div.style.height = set_ac_height * input.length + "%";
@@ -79,7 +79,7 @@ function print_to_ac_div(input, input_field, input_ac_div){
 		//print list items to autocomplete div
 		//console.log(input_field)
 		input_ac_div.innerHTML += `
-			<li class='ac_list' style='height:${list_h}%; top:${list_h * i}%' id='input_field_${input[i]}' onclick='select_by_click("input_field_${input[i]}");'>
+			<li class='ac_list' style='height:${list_h}%; top:${list_h * i}%' id='${for_click}input_field_${input[i]}' onclick='select_by_click("${for_click}input_field_${input[i]}");'>
 				<div class='ac_list_al'>${input[i]}</div>
 			</li>
 		`
