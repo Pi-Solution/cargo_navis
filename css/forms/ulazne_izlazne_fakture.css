@@ -18,6 +18,13 @@
 	width: 100%;
 	height: 50%;
 }
+.form_fakture_l_header2{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 49%;
+	height: 50%;
+}
 .form_f_l_h_al{
 	position: absolute;
 	top: 0px;
@@ -38,6 +45,17 @@
 	height: 50%;
 	background-color: black;
 	border-radius: 3px;
+}
+.fakture_lines_input2{
+	position: absolute;
+	bottom: 0px;
+	width: 49.5%;
+	height: 50%;
+	background-color: black;
+	border-radius: 3px;
+}
+.iz_d_rigth{
+	right: 0px;
 }
 .fakture_l_i_middle{
 	position: absolute;

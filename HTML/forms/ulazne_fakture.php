@@ -36,12 +36,22 @@
 			<div class="form_fakture_lines" style="top: 33%;">
 				<div class="form_fakture_l_header">
 					<div class="form_f_l_h_al">
-						<p>Datum Fakture:</p>
+						<p class="dsa">Datum Fakture:</p>
 					</div>
 				</div>
-				<div class="fakture_lines_input">
+				<div class="form_fakture_l_header2">
+					<div class="form_f_l_h_al">
+						<p class="dsa">Valuta Fakture:</p>
+					</div>
+				</div>
+				<div class="fakture_lines_input2">
 					<div class="fakture_l_i_middle">
-						<input type="date" name="ul_f_datum" class="fakture_l_i_child" id="ul_f_f_datum">
+						<input type="date" name="ul_f_datum" class="fakture_l_i_child2" id="ul_f_f_datum">
+					</div>
+				</div>
+				<div class="fakture_lines_input2 iz_d_rigth">
+					<div class="fakture_l_i_middle">
+						<input type="date" name="ul_valuta_fakture" class="fakture_l_i_child2" id="ul_valuta_fakture">
 					</div>
 				</div>
 			</div>

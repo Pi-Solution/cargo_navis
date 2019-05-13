@@ -370,6 +370,7 @@ function reset_ul_faktura(){
 	document.getElementById("ul_f_f_datum").value = "";
 	document.getElementById("uf_s_val").value = "";
 	document.getElementById("uf_domaca_valuta").value = ""
+	document.getElementById("ul_valuta_fakture").value = ""
 }
 //sacuvaj ulazne fakture u bazu
 function save_ul_faktura(){
@@ -381,6 +382,7 @@ function save_ul_faktura(){
 		ulaz_provajder : `${document.getElementById("form_ul_provajder").value}`,
 		broj_fakture : `${document.getElementById("ul_f_broj_fakture").value}`,
 		datum_fakture : `${document.getElementById("ul_f_f_datum").value}`,
+		valuta_fakture : `${document.getElementById("ul_valuta_fakture").value}`,
 		valuta_placanja : `${document.getElementById("form_ulf_valuta").value}`,
 		iznos_s_val : `${document.getElementById("uf_s_val").value}`,
 		iznos : `${document.getElementById("uf_domaca_valuta").value}`,
@@ -431,7 +433,8 @@ function save_iz_faktura(){
 
 	var a = {
 		broj_fakture : `${document.getElementById("broj_iz_fakture_form").value}`,
-		datum_fakture : `${document.getElementById("datum_iz_f").value}`,
+		datum_fakture : `${document.getElementById("datum_iz_f").value}`,	
+		valuta_fakture : `${document.getElementById("iz_valuta_fakture").value}`,
 		iznos : `${document.getElementById("iznos_iz_f_form").value}`,
 		jobs_id : nalozi[current_nalog].id
 	}
@@ -477,4 +480,5 @@ function reset_izlazne_fakture(){
 	document.getElementById("broj_iz_fakture_form").value = ""
 	document.getElementById("datum_iz_f").value = ""
 	document.getElementById("iznos_iz_f_form").value = ""
+	document.getElementById("iz_valuta_fakture").value = ""
 }

@@ -152,7 +152,7 @@ function ts_ulazne_fakture(){
 						</div>
 
 						<div class="fakture_header_al2">
-							<strong>Izlazne Fakture ${i+1}/${ulazne_fakture.length}</strong>
+							<strong>Ulazne Fakture ${i+1}/${ulazne_fakture.length}</strong>
 						</div>
 
 						<div class="fakture_rigth_arrow" onclick="fakture_arrows(0, true, 0, 'ulaz_fakture')">
@@ -178,7 +178,7 @@ function ts_ulazne_fakture(){
 							</div>
 							<div class="con4_con_child" style="top: 50%">
 								<div class="con4_div_al">
-									<p>Valuta Placanja:</p>
+									<p>Valuta Fakture:</p>
 								</div>
 							</div>
 							<div class="con4_con_child" style="top: 66.66%">
@@ -210,7 +210,7 @@ function ts_ulazne_fakture(){
 							</div>
 							<div class="con4_con_child" style="top: 50%">
 								<div class="con4_div_al">
-									<p>${ulazne_fakture[i].valuta_placanja}</p>
+									<p>${ulazne_fakture[i].valuta_fakture.split("-").reverse().join(".")}</p>
 								</div>
 							</div>
 							<div class="con4_con_child" style="top: 66.66%">
@@ -284,6 +284,11 @@ function ts_izlazne_fakture(){
 							</div>
 							<div class="con4_con_child" style="top: 50%">
 								<div class="con4_div_al">
+									<p>Valuta Fakture:</p>
+								</div>
+							</div>
+							<div class="con4_con_child" style="top: 66.66%">
+								<div class="con4_div_al">
 									<p>Iznos:</p>
 								</div>
 							</div>
@@ -306,6 +311,11 @@ function ts_izlazne_fakture(){
 								</div>
 							</div>
 							<div class="con4_con_child" style="top: 50%">
+								<div class="con4_div_al">
+									<p>${izlanze_fakture[i].valuta_fakture.split("-").reverse().join(".")}</p>
+								</div>
+							</div>
+							<div class="con4_con_child" style="top: 66.66%">
 								<div class="con4_div_al">
 									<p>${izlanze_fakture[i].iznos} KM</p>
 								</div>

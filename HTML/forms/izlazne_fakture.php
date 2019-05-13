@@ -26,9 +26,19 @@
 						<p>Datum Fakture:</p>
 					</div>
 				</div>
-				<div class="fakture_lines_input">
+				<div class="form_fakture_l_header2">
+					<div class="form_f_l_h_al">
+						<p>Valuta Fakture:</p>
+					</div>
+				</div>
+				<div class="fakture_lines_input2">
 					<div class="fakture_l_i_middle">
 						<input type="date" name="form_provajder" class="fakture_l_i_child" id="datum_iz_f">
+					</div>
+				</div>
+				<div class="fakture_lines_input2 iz_d_rigth">
+					<div class="fakture_l_i_middle">
+						<input type="date" name="form_provajder" class="fakture_l_i_child" id="iz_valuta_fakture">
 					</div>
 				</div>
 			</div>
