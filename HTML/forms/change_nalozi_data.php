@@ -5,7 +5,7 @@
 			<h3>Izmjeni nalog</h3>
 		</div>
 		<div class="cnd-text">
-			<p>Ovim procesom mijenjate već upisane <br/> podatke unutar nalog!</p>
+			<p>Ovim procesom mijenjate već upisane <br/> podatke unutar naloga!</p>
 		</div>
 		<div class="cnd-option">
 			<div class="cnd-option_child">
