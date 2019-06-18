@@ -1,0 +1,174 @@
+#provajderi_form{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+#pf-bg{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: gray;
+    opacity: 0.5;
+}
+#pf-container{
+    position: absolute;
+    top: 10%;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    height: 45%;
+    width: 25%;
+    background: white;
+    border-radius: 5px;
+}
+.pf-header{
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    right: 15%;
+    height: 20%;
+}
+.pf-header h3{
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.3vw;
+    text-align: center;
+    color: gray;
+}
+.pf-header p{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 3%;
+    font-size: 1vw;
+    text-align: center;
+    color: gray;
+}
+.pf-container{
+    position: absolute;
+    top: 37%;
+    left: 15%;
+    right: 15%;
+    height: 35%;
+}
+.pf-input_con{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+}
+.pf-input_header{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 50%;
+}
+.pf-ih-align{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 60%;
+    margin: auto;
+}
+.pf-ih-align-r{
+    width: 50%;
+    right: 0px;
+}
+.pf-ih-align p{
+    margin: 0px;
+    padding: 0px;
+    color: darkgray;
+}
+.pf-input_div{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50%;
+}
+.pf-left_long{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 90%;
+    border: 2px solid skyblue;
+    border-radius: 2px 0px 0px 2px;
+}
+.pf-right_short{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 10%;
+    background: skyblue;
+    color: white;
+    border-radius: 0px 2px 2px 0px;
+}
+.pf-right_short:hover{
+    opacity: 0.8;
+}
+.pf-right_short:active{
+    opacity: 0.7;
+}
+.pf-ic2{
+    top: 50%;
+}
+.pf-left{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 49%;
+    border: 2px solid skyblue;
+    border-radius: 2px;
+}
+.pf-right{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 49%;
+    border: 2px solid skyblue;
+    border-radius: 2px;
+}
+.pf-buttons{
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    bottom: 12%;
+    height: 10%;
+}
+.pf-bt_otkazi{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 49%;
+    background: #A9A9A9;
+    color: white;
+    border-radius: 2px;
+}
+.pf-bt_otkazi:hover{
+    opacity: 0.8;
+}
+.pf-bt_otkazi:active{
+    opacity: 0.7;
+}
+.pf-button_right{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 49%;
+    background: #CE5E4A;
+    color: white;
+    border-radius: 2px;
+}
+.pf-button_right:hover{
+    opacity: 0.8;
+}
+.pf-button_right:active{
+    opacity: 0.7;
+}

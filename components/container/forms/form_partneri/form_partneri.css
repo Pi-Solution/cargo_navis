@@ -1,0 +1,167 @@
+#form_partneri{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#fp-bg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: gray;
+    opacity: 0.5;
+}
+#fp-arrow{
+    position: absolute;
+    top: 10%;
+    right: -2%;
+    height: 2vw;
+    width: 2vw;
+    background: white;
+    transform: rotate(45deg);
+}
+#fp-container{
+    position: absolute;
+    top: 10%;
+    left: 2.5%;
+    width: 30%;
+    height: 60%;
+    background: white;
+    border-radius: 5px;
+}
+.pf-text{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 20%;
+}
+.pf-text h3{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: gray;
+    font-size: 1.2vw;
+}
+.pf-text p{
+    margin: 0px;
+    margin-top: 5%;
+    padding: 0px;
+    text-align: center;
+    color: darkgrey;
+    font-size: 1vw;
+}
+.fp-input_container{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    right: 15%;
+    height: 50%;
+}
+.fp_input_main_con{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+}
+.fp_input_header{
+    position: absolute;
+    top: 0px;
+    height: 50%;
+    width: 100%;
+}
+.fp_input_header_all{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.fp_input_header_all p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1vw;
+    color: darkgray;
+}
+.fp-rigth-all{
+    width: 49%;
+    right: 0px;
+}
+.fp-input_field_div{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0px;
+}
+.fp-input_field_div-left{
+    position: absolute;
+    height: 50%;
+    width: 49%;
+    left: 0px;
+    bottom: 0px;
+}
+.fp-input_field_div-right{
+    position: absolute;
+    height: 50%;
+    width: 49%;
+    right: 0px;
+    bottom: 0px;
+}
+.fp-input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid skyblue;
+    border-radius: 2px;
+    color: gray;
+}
+.fp-2{
+    top: 0%;
+}
+.fp-2{
+    top: 25%;
+}
+.fp-3{
+    top: 50%;
+}
+.fp-4{
+    top: 75%;
+}
+.fp-buttons_con{
+    position: absolute;
+    height: 7%;
+    bottom: 10%;
+    left: 15%;
+    right: 15%;
+}
+.fp-buttons{
+    position: absolute;
+    height: 100%;
+    width: 49%;
+    border-radius: 2px;
+    color: white;
+}
+.fpb-left{
+    background: #A9A9A9;
+    left: 0px;
+}
+.fpb-left:hover{
+    opacity: 0.8;
+}
+.fpb-left:active{
+    opacity: 0.7;
+}
+.fpb-right{
+    background: #CE5E4A;
+    right: 0px;
+}
+.fpb-right:hover{
+    opacity: 0.8;
+}
+.fpb-right:active{
+    opacity: 0.7;
+}

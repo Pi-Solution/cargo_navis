@@ -10,7 +10,7 @@
 			$this->hostname = 'localhost';
 			$this->username = 'root';
 			$this->password = '';
-			$this->dbname = 'cargo_navis';
+			$this->dbname = 'cargonavis';
 			$this->charset = 'utf8mb4';
 		}
 		protected function connect(){
@@ -19,13 +19,13 @@
 			$dsn = 'mysql:host=' . $this->servername . ';dbname=' . $this->dbname . ';charset=' . $this->charset;
 
 			$options = [
-				PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
-				PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //turn on errors in the form of exceptions
-				PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //make the default fetch be an associative array
+  				PDO::ATTR_EMULATE_PREPARES   => TRUE, // turn off emulation mode for "real" prepared statements
+  				PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //turn on errors in the form of exceptions
+  				PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //make the default fetch be an associative array
 			];
 			
 			try{
-				$pdo = new PDO($dsn, $this->username, $this->password);
+				$pdo = new PDO($dsn, $this->username, $this->password, $options);
 				$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				return $pdo;
 			}catch (PDOException $e){

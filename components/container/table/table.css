@@ -1,0 +1,69 @@
+#table{
+    position: absolute;
+    top: 0.5%;
+    left: 0.3%;
+    height: 55%;
+    width: 30%;
+    border: 1px solid black;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+ 
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
+#table_header{
+    position: absolute;
+    top: 0px;
+    height: 10%;
+    width: 100%;
+    background: black;
+    color: white;
+    border-collapse: collapse;
+    font-size: 1vw;
+}
+#table_header th, td{
+    text-align: center;
+    border-collapse: collapse;
+}
+#table_content_parent{
+    position: absolute;
+    top: 9.5%;
+    width: 100%;
+    height: 90.5%;
+    overflow-y: scroll;
+    font-size: 1vw;
+}
+#table_content{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    border-collapse: collapse;
+}
+#table_content tr:hover{
+    background: #efefef;
+}
+#table_content tr:active{
+    background: #dddddd;
+}
+#table_content_active{
+    background: #dddddd !important;
+}
+#table_content td{
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #dddddd;
+}
+.table_tr_bor_right{
+    border-right: 1px solid #dddddd;
+}
+.t-tr_active{
+    background: #dddddd;
+}
+.t-tr_active:hover{
+    background: #dddddd !important;
+}

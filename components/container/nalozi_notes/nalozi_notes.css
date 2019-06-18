@@ -1,0 +1,56 @@
+#nalozi_notes{
+    position: absolute;
+    bottom: 6.5%;
+    left: 0.3%;
+    width: 30%;
+    height: 37.5%;
+    border: 1px solid black;
+}
+.nn_header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 13%;
+    background: black;
+}
+#nn-container{
+    position: absolute;
+    top: 13%;
+    height: 87%;
+    width: 100%;
+    resize: none;
+}
+.nn_aling{
+    position: absolute;
+    top: 0px;
+    left: 2%;
+    bottom: 0px;
+    width: 50%;
+    height: 60%;
+    font-size: 1vw;
+    margin: auto;
+    color: white;
+}
+.nn_aling p{
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+}
+#nn-sacuvaj_napomenu{
+    position: absolute;
+    right: 2%;
+    top: 20%;
+    bottom: 20%;
+    width: 25%;
+    background: rgb(8, 96, 99);
+    color: white;
+    font-size: 0.8vw;
+    font-weight: 800;
+}
+#nn-sacuvaj_napomenu:hover{
+    background: rgb(15, 121, 124)
+}
+#nn-sacuvaj_napomenu:active{
+    background: rgb(18, 147, 151)
+}

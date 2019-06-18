@@ -1,0 +1,200 @@
+#nalozi_form{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.nf-bg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: gray;
+    opacity: 0.5;
+}
+.nf-container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 30%;
+    height: 80%;
+    margin: auto;
+    background: white;
+    border-radius: 5px;
+}
+.nf-header_and_para{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    right: 15%;
+    height: 15%;
+}
+.nf-h3{
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    font-size: 1.5vw;
+    color: dimgray;
+}
+.nf-p{
+    text-align: center;
+    font-weight: bold;
+    color: gray;
+    font-size: 1vw;
+    margin: 0%;
+    margin-top: 5%;
+    padding: 0%;
+}
+.nf-form{
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    right: 15%;
+    height: 58.5%;
+}
+.nf-input_main_container{
+    position: absolute;
+    width: 100%;
+    height: 16.6%;
+    color: gray;
+}
+.nf-input_header{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 50%;
+}
+.nf-header_align{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.nf-h-right{
+    width: 50%;
+    left: 51%;
+}
+.nf-header_align h3{
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.9vw;
+    margin-left: 1%;
+}
+.nf-input_container{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50%;
+}
+.nf-input{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 2px solid lightskyblue;
+    border-radius: 2px;
+}
+.nf-left_input{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 49%;
+    border: 2px solid lightskyblue;
+    border-radius: 2px;
+}
+.nf-right_input{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 49%;
+    border: 2px solid lightskyblue;
+    border-radius: 2px;
+}
+.nf-left_input-special{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 90%;
+    border: 2px solid lightskyblue;
+    border-radius: 2px 0px 0px 2px;
+}
+.nf-rigth_input-special{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 10%;
+    border: 2px solid lightskyblue;
+    background: lightskyblue;
+    border-radius: 0px 2px 2px 0px;
+    color: white;
+}
+.nf-rigth_input-special:hover{
+    opacity: 0.9;
+}
+.nf-rigth_input-special:active{
+    opacity: 0.8;
+}
+.nf-buttons_div{
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    right: 15%;
+    height: 6%;
+
+}
+.nfc-2{
+    top: 16.6%;
+}
+.nfc-3{
+    top: 33.3%;
+}
+.nfc-4{
+    top: 50%;
+}
+.nfc-5{
+    top: 66.6%;
+}
+.nfc-6{
+    top: 83.3%;
+}
+.nf-button{
+    position: absolute;
+    height: 100%;
+    width: 49%;
+    border-radius: 2px;
+    color: white;
+    font-size: 1vw;
+}
+.nf-b-otkazi{
+    left: 0px;
+    background: #A9A9A9;
+}
+.nf-b-otkazi:hover{
+    opacity: 0.9;
+}
+.nf-b-otkazi:active{
+    opacity: 0.7;
+}
+.nf-b-sacuvaj{
+    right: 0px;
+    background: #CE5E4A;
+}
+.nf-b-sacuvaj:hover{
+    opacity: 0.9;
+}
+.nf-b-sacuvaj:active{
+    opacity: 0.7;
+}

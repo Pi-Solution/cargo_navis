@@ -1,0 +1,220 @@
+#uif{
+    position: absolute;
+    bottom: 6.5%;
+    right: 0.3%;
+    height: 37.5%;
+    width: 69.1%;
+}
+#uif-ulazne_fakture_container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 49.8%;
+}
+#uif-izlazne_fakture_container{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 49.8%;
+}
+.uif-faktura{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.uif-ulaz{
+    background: #D3333F;
+    display: none;
+}
+.uif-ulaz_b{
+    background: #D3333F;
+}
+.uif-izlaz{
+    background: #3CABB6;
+    display: none;
+}
+.uif-izlaz_b{
+    background: #3CABB6;
+}
+.uif-faktura_header{
+    position: absolute;
+    top: 0px;
+    height: 13%;
+    width: 100%;
+    background: black;
+}
+.uif-faktura_content{
+    position: absolute;
+    top: 13%;
+    height: 87%;
+    width: 100%;
+}
+.uif-left_arrow{
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    border-right: 1px solid white;
+    color: white;
+}
+.uif-left_arrow:hover{
+    background: #161616;
+}
+.uif-left_arrow:active{
+    background: #232323;
+}
+.uif-right_arrow{
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    right: 0px;
+    border-left: 1px solid white;
+    color: white;
+}
+.uif-right_arrow:hover{
+    background: #161616;
+}
+.uif-right_arrow:active{
+    background: #232323;
+}
+.uif-h-align{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    height: 50%;
+    left: 10%;
+    right: 10%;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+.uif-h-align p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 1vw;
+    font-weight: bold;
+}
+.uif-c-text{
+    position: absolute;
+    height: 14.28%;
+    left: 2%;
+    right: 2%;
+}
+.uif-c-text-align{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    height: 50%;
+    width: 100%;
+    margin: auto;
+}
+.uif-c-text-align p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1vw;
+}
+.uif-ct-left{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0px;
+}
+.uif-ct-right{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0px;
+    text-align: right;
+}
+.uift2{
+    top: 14.28%;
+}
+.uift3{
+    top: 28.56%;
+}
+.uift4{
+    top: 42.84%;
+}
+.uift5{
+    top: 57.12%;
+}
+.uift6{
+    top: 71.4%;
+}
+.uift7{
+    position: absolute;
+    top: 85.68%;
+    left: 1.3%;
+    right: 1.3%;
+    height: 11.28%;
+}
+.uift7-buttons{
+    position: absolute;
+    height: 100%;
+    background: black;
+    width: 33.33%;
+    color: white;
+    font-size: 0.8vw;
+}
+.uift7-2{
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+.uift7-3{
+    right: 0px;
+}
+.uift-hover1:hover{
+    background: #161616;
+}
+.uift-hover1:active{
+    background: #232323;
+}
+.uift-hover2:hover{
+    background: #161616;
+}
+.uift-hover2:active{
+    background: #232323;
+}
+.uift-hover3:hover{
+    background: #161616;
+}
+.uift-hover3:active{
+    background: #232323;
+}
+.uif-ulaz_button{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+
+}
+.uif-ulaz_button:hover{
+    opacity: 0.8;
+}
+.uif-ulaz_button:active{
+    opacity: 0.7;
+}
+.uif-izlaz_button{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+
+}
+.uif-izlaz_button:hover{
+    opacity: 0.8;
+}
+.uif-izlaz_button:active{
+    opacity: 0.7;
+}
+.active_faktura{
+    display: block;
+}
