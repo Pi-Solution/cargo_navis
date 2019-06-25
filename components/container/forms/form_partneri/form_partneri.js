@@ -10,8 +10,8 @@ function reset_partneri_form(){
     document.getElementById("fp-ime_partnera").value = ""
     document.getElementById("fp-drzava").value = ""
     document.getElementById("fp-grad").value = ""
-    document.getElementById("adresa").value = ""
-    document.getElementById("broj_telefona").value = ""
+    document.getElementById("fp-adresa").value = ""
+    document.getElementById("fp-broj_telefona").value = ""
     document.getElementById("tip_suradnje").value = "Komitent"
     
 }
@@ -61,6 +61,7 @@ function send_partneri_to_server(to_server){
                 alert("Sacuvano");
                 get_partneri();
                 show_partneri();
+                reset_partneri_form();
             }
 		}
 	};
