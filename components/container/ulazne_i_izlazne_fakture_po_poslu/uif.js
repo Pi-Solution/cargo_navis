@@ -247,7 +247,7 @@ function printout_izlazne_fakture_po_poslu(){
                     </div>
     
                     <div class="uift7">
-                        <button class="uift7-buttons uift-hover1">Dodaj Fakturu</button>
+                        <button class="uift7-buttons uift-hover1" onclick="show_form_izlazne_fakture()">Dodaj Fakturu</button>
                         <button class="uift7-buttons uift7-2 uift-hover2">Izmjeni Fakturu</button>
                         <button class="uift7-buttons uift7-3 uift-hover3">Obriši Fakturu</button>
                     </div>

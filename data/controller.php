@@ -6,12 +6,14 @@
 	include_once 'classes/Delete.php';
 
 	header("Content-Type: application/json");
+
 	$browser_data = json_decode(file_get_contents("php://input"),true);
 	//print_r($browser_data);
 	//create global array so we can use it later for server response
 	$server_response = array();
-	//controller
-		#check for array keys and decide what to do
+	
+	#check for array keys and decide what to do
+	
     //select
     if (array_key_exists('select', $browser_data)) {
 		//validate data from browser
@@ -44,8 +46,8 @@
 		}
 	}
 	if (array_key_exists('update', $browser_data)){
-		$update_data = new Update();
-		$update_data->get_values($browser_data["update"]["table_name"],$browser_data["update"]["name_of_row"],$browser_data["update"]["value"],$browser_data["update"]["id"]);
-		$server_response["update"]["messange"] = $update_data->save_to_db();
+		$update = new Update();
+		$update->set_values($browser_data["update"]);
+		$server_response["update"]["messange"] = $update->save_to_db();
 	}
 	echo json_encode($server_response);
