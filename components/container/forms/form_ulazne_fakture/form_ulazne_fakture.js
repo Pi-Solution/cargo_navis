@@ -1,11 +1,27 @@
 var kurs = 1;
 var fufProvajder = "N/A";
-function show_form_ulazne_fakture(){
+var ul_f = 1;
+var ul_f_id;
+function show_form_ulazne_fakture(update_or_dalete, index){
+    ul_f_id = index;
     var form = document.getElementById("form_ulazne_fakture");
     if(form.style.display == "block"){
         form.style.display = "none";
     }else{
         form.style.display = "block";
+    }
+    if (update_or_dalete == 2) {
+        document.getElementById("fuf-provajder").value = s_data.ulazne_fakture[index].ime_partnera
+        document.getElementById("fuf-broj_ulazne").value = s_data.ulazne_fakture[index].broj_ulazne_fakture
+        document.getElementById("fuf-datum_fakture").value = s_data.ulazne_fakture[index].datum_fakture
+        document.getElementById("fuf-valuta_fakture").value = s_data.ulazne_fakture[index].valuta_fakture
+        document.getElementById("fuf-valuta").value = s_data.ulazne_fakture[index].valuta_placanja
+        document.getElementById("fuf-s_val").value = s_data.ulazne_fakture[index].iznos_strana_valuta
+        document.getElementById("fuf-domaca_valuta").value = s_data.ulazne_fakture[index].iznos_domaca_valuta
+        fakture_chose_valuta(s_data.ulazne_fakture[index].valuta_placanja);
+        ul_f = 2;
+    }else{
+        ul_f = 1;
     }
 }
 function reset_form_ulazne_fakture(){
@@ -85,11 +101,29 @@ function save_id_provajdera_ulazna_f(){
     }
 }
 function save_form_ulazne_fakture(){
-    var data = {
-       insert: {
-            table_name: "ulazne_fakture",
-            data: [
-                {
+    if (ul_f == 1) {    
+        var data = {
+            insert: {
+                table_name: "ulazne_fakture",
+                data: [
+                    {
+                        id_provajdera: fufProvajder,
+                        broj_ulazne_fakture: document.getElementById("fuf-broj_ulazne").value,
+                        id_naloga: s_data.nalozi[active_element].id,
+                        datum_fakture: document.getElementById("fuf-datum_fakture").value,
+                        valuta_fakture: document.getElementById("fuf-valuta_fakture").value,
+                        valuta_placanja: document.getElementById("fuf-valuta").value,
+                        iznos_strana_valuta: document.getElementById("fuf-s_val").value,
+                        iznos_domaca_valuta: document.getElementById("fuf-domaca_valuta").value
+                    }
+                ]
+            }
+        }
+    }else{
+        var data = {
+            update: {
+                table_name: "ulazne_fakture",
+                collums: {
                     id_provajdera: fufProvajder,
                     broj_ulazne_fakture: document.getElementById("fuf-broj_ulazne").value,
                     id_naloga: s_data.nalozi[active_element].id,
@@ -98,8 +132,12 @@ function save_form_ulazne_fakture(){
                     valuta_placanja: document.getElementById("fuf-valuta").value,
                     iznos_strana_valuta: document.getElementById("fuf-s_val").value,
                     iznos_domaca_valuta: document.getElementById("fuf-domaca_valuta").value
+                },
+                index: {
+                    index_name: "id_ulazne_fakture",
+                    index_value: s_data.ulazne_fakture[ul_f_id].id_ulazne_fakture
                 }
-            ]
+            }
         }
     }
     if (fufProvajder == "N/A") {
@@ -116,12 +154,10 @@ function send_ulazne_fakture_form(to_server){
             //console.log(this.responseText)
             $server_response = JSON.parse(this.responseText);
             //console.log($server_response);
-            if($server_response.insert.messange == 101){
-                alert("Sačuvano");
-                show_form_ulazne_fakture();
-                reset_form_ulazne_fakture();
-                get_ulazne_fakture();
-            }
+            alert("Sačuvano");
+            show_form_ulazne_fakture();
+            reset_form_ulazne_fakture();
+            get_ulazne_fakture();
         }
     };
     //send data
