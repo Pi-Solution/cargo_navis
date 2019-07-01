@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/css" href="container/forms/form_provajderi_po_poslu/provajderi_form.css">
         <link rel="stylesheet" type="text/css" href="container/forms/form_update/update.css">
         <link rel="stylesheet" type="text/css" href="container/forms/form_kontejneri/form_kontejneri.css">
+        <link rel="stylesheet" type="text/css" href="container/forms/form_delete/delete.css">
     </head>
     <body onload="set_select_database_par();">
         <?php
@@ -46,6 +47,8 @@
             include "container/forms/form_update/update.php";
             //partneri form
             include "container/forms/form_partneri/form_partneri.php";
+            //delete form
+            include "container/forms/form_delete/delete.php";
         ?>
         <script type="text/javascript" src="global_scripts/get_data.js"></script>
         <script type="text/javascript" src="global_scripts/main.js"></script>
@@ -59,5 +62,6 @@
         <script type="text/javascript" src="container/forms/form_ulazne_fakture/form_ulazne_fakture.js"></script>
         <script type="text/javascript" src="container/forms/form_izlazne_fakture/f_izlazne_fakture.js"></script>
         <script type="text/javascript" src="container/forms/form_update/update.js"></script>
+        <script type="text/javascript" src="container/forms/form_delete/delete.js"></script>
     </body>
 </html>

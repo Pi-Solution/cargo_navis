@@ -38,7 +38,7 @@ function printout_ulazne_fakture_po_poslu(){
     var container = document.getElementById('uif-ulazne_fakture_container')
     if(s_data.ulazne_fakture == null){
         console.log("radi");
-        container.innerHTML = `<button class="uif-ulaz_button uif-ulaz_b" onclick="show_form_ulazne_fakture(1, ${index});">DODAJ ULAZNU FAKTURU</button>`
+        container.innerHTML = `<button class="uif-ulaz_button uif-ulaz_b" onclick="show_form_ulazne_fakture(1, null);">DODAJ ULAZNU FAKTURU</button>`
     }else{
         var f_class
         container.innerHTML = ""
@@ -116,7 +116,7 @@ function printout_ulazne_fakture_po_poslu(){
                 <div class="uift7">
                     <button class="uift7-buttons uift-hover1" onclick="show_form_ulazne_fakture(1, ${index});">Dodaj Fakturu</button>
                     <button class="uift7-buttons uift7-2 uift-hover2" onclick="show_form_ulazne_fakture(2, ${index});">Izmjeni Fakturu</button>
-                    <button class="uift7-buttons uift7-3 uift-hover3">Obriši Fakturu</button>
+                    <button class="uift7-buttons uift7-3 uift-hover3" onclick="show_delete_form('ulazne_fakture', ${index})">Obriši Fakturu</button>
                 </div>
 
             </div>
@@ -179,7 +179,7 @@ function printout_izlazne_fakture_po_poslu(){
     var container = document.getElementById('uif-izlazne_fakture_container')
     if(s_data.izlazne_fakture == null){
         console.log("radi");
-        container.innerHTML = `<button class="uif-izlaz_button uif-izlaz_b" onclick="show_form_izlazne_fakture(1, ${index});">DODAJ IZLAZNU FAKTURU</button>`
+        container.innerHTML = `<button class="uif-izlaz_button uif-izlaz_b" onclick="show_form_izlazne_fakture(1, null);">DODAJ IZLAZNU FAKTURU</button>`
     }else{
         var f_class
         container.innerHTML = ""
@@ -250,7 +250,7 @@ function printout_izlazne_fakture_po_poslu(){
                     <div class="uift7">
                         <button class="uift7-buttons uift-hover1" onclick="show_form_izlazne_fakture(1, ${index})">Dodaj Fakturu</button>
                         <button class="uift7-buttons uift7-2 uift-hover2" onclick="show_form_izlazne_fakture(2, ${index}); iz_f = ${s_data.izlazne_fakture[index].id_izlazne_fakture}">Izmjeni Fakturu</button>
-                        <button class="uift7-buttons uift7-3 uift-hover3">Obriši Fakturu</button>
+                        <button class="uift7-buttons uift7-3 uift-hover3" onclick="show_delete_form('izlazne_fakture', ${index})"">Obriši Fakturu</button>
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@
 
                 $this->set_db_parametars();
                 $this->stmt = $this->connect()->prepare("DELETE FROM $this->table_name WHERE $this->index_name = ?");
+                //echo "DELETE FROM $this->table_name WHERE $this->index_name = ?";
             }
             public function delete_data($index){
                 $this->stmt->execute([$index]);

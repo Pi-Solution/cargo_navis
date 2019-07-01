@@ -27,7 +27,8 @@ function reset_form_izlazne_fakture(){
 }
 
 function save_form_izlazne_fakture(){
-    if (ins_or_upd == null) {
+    console.log(ins_or_upd);
+    if (ins_or_upd == 1) {
         var data = {
         insert: {
                 table_name: "izlazne_fakture",
