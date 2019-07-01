@@ -54,7 +54,7 @@ function outprint_provajderi(){
                     <td class="nc-p-td" width="40%">${s_data.provajderi_po_poslu[index].ime_partnera}</td>
                     <td class="nc-p-td" width="20%">${s_data.provajderi_po_poslu[index].cijena}</td>
                     <td class="nc-p-td" width="20%">${s_data.provajderi_po_poslu[index].valuta}</td>
-                    <td class="nc-p-td nc-p-td-buttons" width="10%"><img src="container/nalozi_container/icons/pen.svg" height="20" width="20"></td>
+                    <td class="nc-p-td nc-p-td-buttons" width="10%" onclick="show_provajderi_form(1, ${index});"><img src="container/nalozi_container/icons/pen.svg" height="20" width="20"></td>
                     <td class="nc-p-td nc-p-td-buttons" width="10%"><img src="container/nalozi_container/icons/delete.svg" height="20" width="20"></td>
                 </tr>
             `
