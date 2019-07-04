@@ -39,7 +39,7 @@
 			//run query
 			$this->set_db_parametars();
 			$this->stmt = $this->connect()->prepare("INSERT INTO $this->table_name ($prepared_collum_names) VALUES ($place_holders)");
-			return "INSERT INTO $this->table_name ($prepared_collum_names) VALUES ($place_holders)";
+			//echo "INSERT INTO $this->table_name ($prepared_collum_names) VALUES ($place_holders)";
 		}
 		public function set_values($data){
 			$this->collum_values = [];
@@ -48,6 +48,8 @@
 			}
 		}
 		public function insert_data(){
+			$this->stmt->execute($this->collum_values);
+			/*
 			try{
 				$this->stmt->execute($this->collum_values);
 			}catch(Exception $e) {
@@ -57,6 +59,7 @@
 					return 102;
 			  	}
 			}
+			*/
 			//echo $this->connect()->lastInsertId();
 
 			if ($this->stmt->rowCount() > 0) {

@@ -243,8 +243,18 @@ function printout_izlazne_fakture_po_poslu(){
                             <div class="uif-ct-left">
                                 <p>Iznos:</p>
                             </div>
-                            <div class="uif-ct-right">${s_data.izlazne_fakture[index].iznos}</div>
+                            <div class="uif-ct-right">${s_data.izlazne_fakture[index].iznos} ${s_data.izlazne_fakture[index].valuta_placanja}</div>
                         </div>
+                    </div>
+                    <div class="uif-c-text uift6">
+                        <label>CIM</label>
+                        <input id="uif-cim" type="checkbox">
+                        <label>CMR</label>
+                        <input id="uif-cmr" type="checkbox">
+                        <label>ZUT</label>
+                        <input id="uif-zut" type="checkbox">
+                        <label>CD</label>
+                        <input id="uif-cd" type="checkbox">
                     </div>
     
                     <div class="uift7">
@@ -255,6 +265,12 @@ function printout_izlazne_fakture_po_poslu(){
                 </div>
             </div>
             `
+
+            document.getElementById("uif-cim").checked = parseInt(s_data.izlazne_fakture[index].cim)
+            document.getElementById("uif-cmr").checked = parseInt(s_data.izlazne_fakture[index].cmr)
+            document.getElementById("uif-zut").checked = parseInt(s_data.izlazne_fakture[index].zut)
+            document.getElementById("uif-cd").checked = parseInt(s_data.izlazne_fakture[index].cd)
+
         }
     }  
 }

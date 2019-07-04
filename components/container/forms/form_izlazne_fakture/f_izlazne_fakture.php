@@ -7,7 +7,7 @@
         </div>
         <div class="fuf-input_container">
             
-            <div class="fuf-input_con fuf-ic2">
+            <div class="fuf-input_con fuf-ic1">
                 <div class="fuf-input-text">
                     <div class="fuf-it-align1">
                         <p>Broj Fakture:</p>
@@ -16,7 +16,7 @@
                 <input id="fif-broj_izlazne" type="text" class="fuf-input" style="text-transform:uppercase">
             </div>
 
-            <div class="fuf-input_con fuf-ic3">
+            <div class="fuf-input_con fuf-ic2">
                 <div class="fuf-input-text">
                     <div class="fuf-it-align1">
                         <p>Datum Fakture:</p>
@@ -28,13 +28,36 @@
                 <input id="fif-datum_fakture" type="date" class="fuf-input_left" style="text-transform:uppercase">
                 <input id="fif-valuta_fakture" type="date" class="fuf-input_right" style="text-transform:uppercase">
             </div>
-            <div class="fuf-input_con fuf-ic4">
+            <div class="fuf-input_con fuf-ic3">
                 <div class="fuf-input-text">
                     <div class="fuf-it-align1">
                         <p>Iznos:</p>
                     </div>
                 </div>
                 <input id="fif-domaca_valuta" type="number" class="fuf-input" style="text-transform:uppercase">
+            </div>
+            <div class="fuf-input_con fuf-ic4">
+                <div class="fuf-input-text">
+                    <div class="fuf-it-align1">
+                        <p>Valuta:</p>
+                    </div>
+                </div>
+                <select id="fif-koja_valuta"class="fuf-input">
+                    <option>KM</option>
+                    <option>EUR</option>
+                </select>
+            </div>
+            <div class="fuf-input_con fuf-ic5">
+                <div class="fif-checkbox">
+                    <label>CIM</label>
+                    <input id="fif-cim" type="checkbox">
+                    <label>CMR</label>
+                    <input id="fif-cmr" type="checkbox">
+                    <label>ZUT</label>
+                    <input id="fif-zut" type="checkbox">
+                    <label>CD</label>
+                    <input id="fif-cd" type="checkbox">
+                </div>
             </div>
 
         </div>

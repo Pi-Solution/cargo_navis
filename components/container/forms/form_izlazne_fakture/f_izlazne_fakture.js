@@ -39,6 +39,11 @@ function save_form_izlazne_fakture(){
                         datum_fakture: document.getElementById("fif-datum_fakture").value,
                         valuta_fakture: document.getElementById("fif-valuta_fakture").value,
                         iznos: document.getElementById("fif-domaca_valuta").value,
+                        valuta_placanja: document.getElementById("fif-koja_valuta").value,
+                        cim: document.getElementById("fif-cim").checked,
+                        cmr: document.getElementById("fif-cmr").checked,
+                        zut: document.getElementById("fif-zut").checked,
+                        cd: document.getElementById("fif-cd").checked,
                     }
                 ]
             }
@@ -53,6 +58,11 @@ function save_form_izlazne_fakture(){
                     datum_fakture: document.getElementById("fif-datum_fakture").value,
                     valuta_fakture: document.getElementById("fif-valuta_fakture").value,
                     iznos: document.getElementById("fif-domaca_valuta").value,
+                    valuta_placanja: document.getElementById("fif-koja_valuta").value,
+                    cim: document.getElementById("fif-cim").checked,
+                    cmr: document.getElementById("fif-cmr").checked,
+                    zut: document.getElementById("fif-zut").checked,
+                    cd: document.getElementById("fif-cd").checked,
                 },
                 index: {
                     index_name: "id_izlazne_fakture",
