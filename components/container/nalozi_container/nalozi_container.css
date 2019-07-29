@@ -171,6 +171,12 @@
     border-bottom: 1px solid #dddddd; 
     border-right:  1px solid #dddddd; 
 }
+.nc-p-td-buttons:hover{
+    background: lightgray;
+}
+.nc-p-td-buttons:active{
+    background: gray;
+}
 /*kontejneri*/
 .nc-kontejneri{
     position: absolute;

@@ -50,4 +50,10 @@
 		$update->set_values($browser_data["update"]);
 		$server_response["update"]["messange"] = $update->save_to_db();
 	}
+	if (array_key_exists('delete', $browser_data)) {
+		$delete = new Delete();
+		$delete->set_data($browser_data["delete"]);
+		$delete->prepare_delete();
+		$server_response["delete"]["messange"] = $delete->delete_data($browser_data["delete"]["index_value"]);
+	}
 	echo json_encode($server_response);

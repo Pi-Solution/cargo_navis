@@ -1,26 +1,26 @@
 <?php
-	/**
-	 * 
-	 */
-	class Deleter extends Database {
-		private $table_name;
-		private $id;
-		private $stmt;
+        class Delete extends Database{
+            
+            private $table_name;
+            private $index_name;
+            private $stmt;
 
-		public function get_values($s1, $s2){
-			$this->table_name = $s1;
-			$this->id = $s2;
-		}
+            public function set_data($data){
+                $this->table_name = $data["table_name"];
+                $this->index_name = $data["index_name"];
+            }
+            public function prepare_delete(){
 
-		public function delete_from_db(){
-
-			$this->set_db_parametars();
-			$this->stmt = $this->connect()->prepare("DELETE FROM $this->table_name WHERE id = ?");
-			$this->stmt->execute([$this->id]);
-			
-			return "102";
-		}
-		function __destruct(){
-        	$this->stmt = null;
-    	}
-	}
+                $this->set_db_parametars();
+                $this->stmt = $this->connect()->prepare("DELETE FROM $this->table_name WHERE $this->index_name = ?");
+                //echo "DELETE FROM $this->table_name WHERE $this->index_name = ?";
+            }
+            public function delete_data($index){
+                $this->stmt->execute([$index]);
+                return 104;
+            }
+            public function __destruct(){
+                $this->stmt = null;
+            }
+        }
+        
