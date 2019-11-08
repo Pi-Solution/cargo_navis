@@ -1,0 +1,23 @@
+.search_bar{
+    position: absolute;
+    width: 30%;
+    height: 9%;
+    bottom: 32.5%;
+    left: 0.3%;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.sb-input{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.sb-bar_button{
+    position: absolute;
+    width: 100%;
+    
+}

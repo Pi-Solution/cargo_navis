@@ -22,6 +22,8 @@
         <link rel="stylesheet" type="text/css" href="container/forms/form_update/update.css">
         <link rel="stylesheet" type="text/css" href="container/forms/form_kontejneri/form_kontejneri.css">
         <link rel="stylesheet" type="text/css" href="container/forms/form_delete/delete.css">
+
+        <link rel="stylesheet" type="text/css" href="container/search/style.css">
     </head>
     <body onload="set_select_database_par();">
         <?php
@@ -31,6 +33,8 @@
             include "container/container.php";
             //button tab
             include "container/button_tab/button_tab.php";
+            //search bar
+            include "container/search/search.php";
             
             
             //nalozi form
@@ -63,5 +67,6 @@
         <script type="text/javascript" src="container/forms/form_izlazne_fakture/f_izlazne_fakture.js"></script>
         <script type="text/javascript" src="container/forms/form_update/update.js"></script>
         <script type="text/javascript" src="container/forms/form_delete/delete.js"></script>
+        <script type="text/javascript" src="container/search/script.js"></script>
     </body>
 </html>
